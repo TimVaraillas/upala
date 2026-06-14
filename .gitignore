@@ -19,6 +19,7 @@ yarn-error.log
 *.launch
 .settings/
 *.sublime-workspace
+.github/
 
 # Visual Studio Code
 .vscode/*
@@ -41,3 +42,7 @@ __screenshots__/
 # System files
 .DS_Store
 Thumbs.db
+
+# AI files
+AGENTS.md
+.github/

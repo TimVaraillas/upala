@@ -1,8 +1,71 @@
-# HorsSentier
+# Hors Sentier
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 21.0.1.
+A fast, SEO-friendly, statically generated travel & trekking blog built with
+Angular 21 (standalone components + SSR/SSG) and Tailwind CSS 4. Content is
+Markdown-based, stored in Git, with **no backend and no database**.
+
+## Architecture (Atomic Design)
+
+```
+src/app/
+  components/
+    atoms/        button, icon, tag, heading, paragraph, image
+    molecules/    article-card, navbar-item, breadcrumb, author-info
+    organisms/    navbar, footer, article-list, article-header, sidebar, reading-progress
+    templates/    main-layout, blog-layout, article-layout
+  pages/          home, blog, article, about, not-found  (lazy-loaded routes)
+  core/
+    models/       article.model.ts
+    services/     blog.service.ts (Markdown loading), seo.service.ts (OG/Twitter)
+    utils/        frontmatter.ts, markdown.ts (dependency-free parsers)
+content/articles/ *.md + generated index.json
+scripts/          generate-articles-index.mjs, generate-sitemap.mjs
+```
+
+## Routes
+
+| Path              | Page          | Render mode |
+| ----------------- | ------------- | ----------- |
+| `/`               | Home          | Prerender   |
+| `/blog`           | Blog listing  | Prerender   |
+| `/article/:slug`  | Article       | Prerender   |
+| `/about`          | About         | Prerender   |
+| `**`              | 404           | Server      |
+
+## Content workflow
+
+Articles live in `content/articles/*.md` with YAML frontmatter:
+
+```markdown
+---
+title: "My trek"
+date: 2026-05-28
+tags: [expédition, itinéraire]
+coverImage: https://example.com/cover.jpg
+slug: my-trek
+author: Hors Sentier
+excerpt: "Optional short summary."
+---
+
+Markdown body here…
+```
+
+`npm run content:index` scans the folder and regenerates
+`content/articles/index.json` (the manifest used for listings and
+prerendering). It runs automatically on `prestart` / `prebuild`.
+`npm run content:sitemap` regenerates `public/sitemap.xml`.
+
+## Commands
+
+```bash
+npm start                       # dev server (regenerates the manifest first)
+npm run build                   # SSG/SSR production build (prerenders all routes)
+npm test                        # unit tests
+npm run serve:ssr:hors-sentier  # run the SSR server after a build
+```
 
 ## Development server
+
 
 To start a local development server, run:
 

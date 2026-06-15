@@ -7,6 +7,10 @@
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
+    "content:index": "node scripts/generate-articles-index.mjs",
+    "content:sitemap": "node scripts/generate-sitemap.mjs",
+    "prestart": "npm run content:index",
+    "prebuild": "npm run content:index && npm run content:sitemap",
     "serve:ssr:hors-sentier": "node dist/hors-sentier/server/server.mjs"
   },
   "prettier": {

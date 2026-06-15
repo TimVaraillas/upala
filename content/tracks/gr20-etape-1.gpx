@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gpx version="1.1" creator="Hors Sentier"
+     xmlns="http://www.topografix.com/GPX/1/1">
+  <metadata>
+    <name>Étape 1 — Calenzana › Ortu di u Piobbu</name>
+  </metadata>
+  <trk>
+    <name>GR20 — Étape 1</name>
+    <trkseg>
+      <trkpt lat="42.5083" lon="8.8556"><ele>275</ele></trkpt>
+      <trkpt lat="42.5061" lon="8.8602"><ele>360</ele></trkpt>
+      <trkpt lat="42.5039" lon="8.8651"><ele>470</ele></trkpt>
+      <trkpt lat="42.5018" lon="8.8703"><ele>610</ele></trkpt>
+      <trkpt lat="42.4997" lon="8.8758"><ele>760</ele></trkpt>
+      <trkpt lat="42.4979" lon="8.8817"><ele>905</ele></trkpt>
+      <trkpt lat="42.4963" lon="8.8879"><ele>1060</ele></trkpt>
+      <trkpt lat="42.4948" lon="8.8944"><ele>1215</ele></trkpt>
+      <trkpt lat="42.4936" lon="8.9012"><ele>1360</ele></trkpt>
+      <trkpt lat="42.4927" lon="8.9083"><ele>1490</ele></trkpt>
+      <trkpt lat="42.4921" lon="8.9156"><ele>1575</ele></trkpt>
+      <trkpt lat="42.4915" lon="8.9231"><ele>1560</ele></trkpt>
+      <trkpt lat="42.4908" lon="8.9305"><ele>1530</ele></trkpt>
+      <trkpt lat="42.4899" lon="8.9376"><ele>1570</ele></trkpt>
+      <trkpt lat="42.4888" lon="8.9444"><ele>1530</ele></trkpt>
+    </trkseg>
+  </trk>
+</gpx>

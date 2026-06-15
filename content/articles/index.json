@@ -1,5 +1,19 @@
 [
   {
+    "title": "Traversée de Madère en autonomie : notre itinéraire en 7 étapes",
+    "date": "2026-06-15",
+    "tags": [
+      "trek",
+      "Madère",
+      "itinéraire"
+    ],
+    "coverImage": "https://picsum.photos/seed/madere/1280/720",
+    "slug": "madere-autonomie-7-etapes",
+    "author": "Hors Sentier",
+    "excerpt": "Récit de notre traversée intégrale de Madère en totale autonomie : étapes, refuges, ravitaillement et conseils pour profiter pleinement de l'île aux mille sentiers.",
+    "readingTime": 3
+  },
+  {
     "title": "Traverser le GR20 en autonomie : 15 jours sur l'épine dorsale corse",
     "date": "2026-05-28",
     "tags": [
@@ -11,7 +25,7 @@
     "slug": "gr20-autonomie-15-jours",
     "author": "Hors Sentier",
     "excerpt": "Récit d'une traversée intégrale du GR20 en totale autonomie : étapes, cols, refuges manqués et leçons d'un sentier qui ne pardonne pas l'improvisation.",
-    "readingTime": 1
+    "readingTime": 2
   },
   {
     "title": "Bivouac en montagne : le guide pratique pour dormir dehors léger",

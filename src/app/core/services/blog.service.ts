@@ -7,6 +7,7 @@ import { parseFrontmatter } from '../utils/frontmatter';
 import {
   estimateReadingTime,
   excerptFromMarkdown,
+  parseBlocks,
   renderMarkdown,
 } from '../utils/markdown';
 
@@ -100,6 +101,7 @@ export class BlogService {
       readingTime: estimateReadingTime(markdown),
       markdown,
       html: renderMarkdown(markdown),
+      blocks: parseBlocks(markdown),
     };
   }
 }

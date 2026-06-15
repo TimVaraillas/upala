@@ -55,6 +55,22 @@ Markdown body here…
 prerendering). It runs automatically on `prestart` / `prebuild`.
 `npm run content:sitemap` regenerates `public/sitemap.xml`.
 
+### GPX tracks
+
+Drop `.gpx` files in `content/tracks/` (served at `/content/tracks/`) and embed
+an interactive Leaflet map + elevation profile + download button anywhere in an
+article with a `gpx` shortcode:
+
+````markdown
+```gpx
+src: /content/tracks/my-trek.gpx
+title: Optional caption
+```
+````
+
+The map is loaded only in the browser (SSR-safe); the track is parsed with a
+dependency-free GPX parser in `core/utils/gpx.ts`.
+
 ## Commands
 
 ```bash

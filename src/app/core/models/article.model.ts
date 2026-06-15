@@ -1,6 +1,8 @@
 /**
  * Frontmatter metadata stored at the top of every Markdown article.
  */
+import { ArticleBlock } from '../utils/markdown';
+
 export interface ArticleFrontmatter {
   title: string;
   date: string;
@@ -27,4 +29,6 @@ export interface Article extends ArticleSummary {
   markdown: string;
   /** Rendered, sanitized HTML body. */
   html: string;
+  /** Body split into renderable blocks (HTML + embeds such as GPX viewers). */
+  blocks: ArticleBlock[];
 }

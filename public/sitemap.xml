@@ -16,6 +16,11 @@
     <priority>0.5</priority>
   </url>
   <url>
+    <loc>https://hors-sentier.example/article/madere-autonomie-7-etapes</loc>
+    <lastmod>2026-06-15</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://hors-sentier.example/article/gr20-autonomie-15-jours</loc>
     <lastmod>2026-05-28</lastmod>
     <priority>0.7</priority>

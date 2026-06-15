@@ -10,6 +10,7 @@ import { BreadcrumbComponent } from '../components/molecules/breadcrumb.componen
 import { ArticleLayoutComponent } from '../components/templates/article-layout.component';
 import { ArticleHeaderComponent } from '../components/organisms/article-header.component';
 import { ReadingProgressComponent } from '../components/organisms/reading-progress.component';
+import { GpxViewerComponent } from '../components/organisms/gpx-viewer.component';
 
 /** Single article page: renders Markdown content for a given slug. */
 @Component({
@@ -22,6 +23,7 @@ import { ReadingProgressComponent } from '../components/organisms/reading-progre
     ArticleLayoutComponent,
     ArticleHeaderComponent,
     ReadingProgressComponent,
+    GpxViewerComponent,
   ],
   template: `
     @if (article(); as post) {
@@ -40,10 +42,18 @@ import { ReadingProgressComponent } from '../components/organisms/reading-progre
           <hs-article-header [article]="post" />
         </div>
 
-        <div
-          class="prose-trail max-w-none text-stone-700"
-          [innerHTML]="post.html"
-        ></div>
+        <div class="prose-trail max-w-none text-stone-700">
+          @for (block of post.blocks; track $index) {
+            @switch (block.type) {
+              @case ('gpx') {
+                <hs-gpx-viewer [src]="block.src" [title]="block.title" />
+              }
+              @default {
+                <div [innerHTML]="block.html"></div>
+              }
+            }
+          }
+        </div>
 
         <div footer class="border-t border-sand-200 pt-8">
           <hs-button [routerLink]="'/blog'" variant="ghost">

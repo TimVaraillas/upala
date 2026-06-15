@@ -7,6 +7,60 @@
  * rules and fenced code blocks. For richer needs swap in a library such as
  * `marked` behind this same function signature.
  */
+
+/** A rendered chunk of an article: either inline HTML or an embed. */
+export type ArticleBlock =
+  | { type: 'html'; html: string }
+  | { type: 'gpx'; src: string; title?: string };
+
+/**
+ * Split a Markdown document into renderable blocks, extracting custom
+ * ` ```gpx ` fenced shortcodes so they can be rendered by an Angular
+ * component (a GPX map viewer) instead of being injected as raw HTML.
+ *
+ * GPX shortcode syntax:
+ * ```gpx
+ * src: /content/tracks/my-trek.gpx
+ * title: Optional caption
+ * ```
+ */
+export function parseBlocks(markdown: string): ArticleBlock[] {
+  const lines = markdown.replace(/\r\n/g, '\n').split('\n');
+  const blocks: ArticleBlock[] = [];
+  let buffer: string[] = [];
+
+  const flushMarkdown = () => {
+    const text = buffer.join('\n').trim();
+    if (text) {
+      blocks.push({ type: 'html', html: renderMarkdown(text) });
+    }
+    buffer = [];
+  };
+
+  for (let i = 0; i < lines.length; i++) {
+    if (/^```gpx\s*$/.test(lines[i].trim())) {
+      flushMarkdown();
+      const meta: Record<string, string> = {};
+      i++;
+      while (i < lines.length && !/^```\s*$/.test(lines[i].trim())) {
+        const kv = /^([A-Za-z0-9_]+):\s*(.*)$/.exec(lines[i].trim());
+        if (kv) {
+          meta[kv[1]] = kv[2].trim();
+        }
+        i++;
+      }
+      if (meta['src']) {
+        blocks.push({ type: 'gpx', src: meta['src'], title: meta['title'] });
+      }
+      continue;
+    }
+    buffer.push(lines[i]);
+  }
+
+  flushMarkdown();
+  return blocks;
+}
+
 export function renderMarkdown(markdown: string): string {
   const source = markdown.replace(/\r\n/g, '\n');
   const lines = source.split('\n');
@@ -16,6 +70,7 @@ export function renderMarkdown(markdown: string): string {
   let codeBuffer: string[] = [];
   let listType: 'ul' | 'ol' | null = null;
   let paragraph: string[] = [];
+  let tableBuffer: string[] = [];
 
   const flushParagraph = () => {
     if (paragraph.length) {
@@ -31,7 +86,68 @@ export function renderMarkdown(markdown: string): string {
     }
   };
 
+  const isTableRow = (value: string) => /^\s*\|.*\|\s*$/.test(value);
+
+  const tableCells = (row: string) =>
+    row
+      .trim()
+      .replace(/^\|/, '')
+      .replace(/\|$/, '')
+      .split('|')
+      .map((cell) => cell.trim());
+
+  const flushTable = () => {
+    if (!tableBuffer.length) return;
+    const rows = tableBuffer;
+    tableBuffer = [];
+
+    const delimiterCells = rows.length > 1 ? tableCells(rows[1]) : [];
+    const isTable =
+      rows.length >= 2 &&
+      delimiterCells.length > 0 &&
+      delimiterCells.every((cell) => /^:?-+:?$/.test(cell));
+
+    if (!isTable) {
+      for (const row of rows) html.push(`<p>${inline(row.trim())}</p>`);
+      return;
+    }
+
+    const aligns = delimiterCells.map((cell) => {
+      const left = cell.startsWith(':');
+      const right = cell.endsWith(':');
+      if (left && right) return 'center';
+      if (right) return 'right';
+      if (left) return 'left';
+      return '';
+    });
+    const alignAttr = (index: number) =>
+      aligns[index] ? ` style="text-align:${aligns[index]}"` : '';
+
+    const header = tableCells(rows[0]);
+    const bodyRows = rows.slice(2).map(tableCells);
+
+    let table = '<table><thead><tr>';
+    header.forEach((cell, index) => {
+      table += `<th${alignAttr(index)}>${inline(cell)}</th>`;
+    });
+    table += '</tr></thead><tbody>';
+    for (const row of bodyRows) {
+      table += '<tr>';
+      for (let index = 0; index < header.length; index++) {
+        table += `<td${alignAttr(index)}>${inline(row[index] ?? '')}</td>`;
+      }
+      table += '</tr>';
+    }
+    table += '</tbody></table>';
+    html.push(table);
+  };
+
   for (const line of lines) {
+    // Flush any pending table once the current line is no longer a table row.
+    if (tableBuffer.length && (inCodeBlock || !isTableRow(line))) {
+      flushTable();
+    }
+
     // Fenced code blocks.
     const fence = /^```(.*)$/.exec(line);
     if (fence) {
@@ -111,11 +227,20 @@ export function renderMarkdown(markdown: string): string {
       continue;
     }
 
+    // Table row (GFM pipe tables).
+    if (isTableRow(line)) {
+      flushParagraph();
+      closeList();
+      tableBuffer.push(line);
+      continue;
+    }
+
     paragraph.push(line.trim());
   }
 
   flushParagraph();
   closeList();
+  flushTable();
   if (inCodeBlock) {
     html.push(`<pre><code>${escapeHtml(codeBuffer.join('\n'))}</code></pre>`);
   }

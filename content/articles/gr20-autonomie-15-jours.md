@@ -37,6 +37,14 @@ du Cirque de la Solitude et du Monte Cinto, concentrent le plus fort dénivelé.
 Chaque journée suivait la même logique : départ avant le lever du soleil pour
 éviter la chaleur, longue pause à midi, et installation du bivouac avant 17h.
 
+Voici la trace de la première étape, de Calenzana à Ortu di u Piobbu — la mise en
+jambes qui donne le ton de toute la traversée :
+
+```gpx
+src: /content/tracks/gr20-etape-1.gpx
+title: Étape 1 — Calenzana › Ortu di u Piobbu
+```
+
 ## Le matériel qui a fait la différence
 
 Trois objets ont justifié chaque gramme :

@@ -11,6 +11,8 @@ import { ArticleLayoutComponent } from '../components/templates/article-layout.c
 import { ArticleHeaderComponent } from '../components/organisms/article-header.component';
 import { ReadingProgressComponent } from '../components/organisms/reading-progress.component';
 import { GpxViewerComponent } from '../components/organisms/gpx-viewer.component';
+import { TableOfContentsComponent } from '../components/organisms/table-of-contents.component';
+import { SafeHtmlPipe } from '../core/pipes/safe-html.pipe';
 
 /** Single article page: renders Markdown content for a given slug. */
 @Component({
@@ -24,6 +26,8 @@ import { GpxViewerComponent } from '../components/organisms/gpx-viewer.component
     ArticleHeaderComponent,
     ReadingProgressComponent,
     GpxViewerComponent,
+    TableOfContentsComponent,
+    SafeHtmlPipe,
   ],
   template: `
     @if (article(); as post) {
@@ -49,7 +53,7 @@ import { GpxViewerComponent } from '../components/organisms/gpx-viewer.component
                 <hs-gpx-viewer [src]="block.src" [title]="block.title" />
               }
               @default {
-                <div [innerHTML]="block.html"></div>
+                <div [innerHTML]="block.html | safeHtml"></div>
               }
             }
           }
@@ -61,6 +65,8 @@ import { GpxViewerComponent } from '../components/organisms/gpx-viewer.component
             Retour aux carnets
           </hs-button>
         </div>
+
+        <hs-table-of-contents aside [entries]="post.toc" />
       </hs-article-layout>
     } @else {
       <div class="mx-auto max-w-3xl px-4 py-24 text-center sm:px-6">

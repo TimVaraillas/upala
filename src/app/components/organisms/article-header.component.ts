@@ -21,7 +21,7 @@ import { AuthorInfoComponent } from '../molecules/author-info.component';
 
       <hs-heading [level]="1">{{ article().title }}</hs-heading>
 
-      <p class="max-w-2xl text-lg leading-relaxed text-stone-600">
+      <p class="max-w-2xl text-md italic leading-relaxed text-stone-600">
         {{ article().excerpt }}
       </p>
 
@@ -32,7 +32,7 @@ import { AuthorInfoComponent } from '../molecules/author-info.component';
       />
 
       <div
-        class="aspect-[16/9] overflow-hidden rounded-3xl border border-sand-200"
+        class="aspect-video overflow-hidden rounded-xl my-3  border border-sand-200"
       >
         <hs-image
           [src]="article().coverImage"

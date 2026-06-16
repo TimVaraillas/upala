@@ -8,6 +8,7 @@ import express from 'express';
 import { join } from 'node:path';
 
 const browserDistFolder = join(import.meta.dirname, '../browser');
+const contentFolder = join(import.meta.dirname, '../../content');
 
 const app = express();
 const angularApp = new AngularNodeAppEngine();
@@ -34,6 +35,11 @@ app.use(
     redirect: false,
   }),
 );
+
+/**
+ * Serve content assets (articles, images, GPX tracks) from /content
+ */
+app.use('/content', express.static(contentFolder, { maxAge: '1y', redirect: false }));
 
 /**
  * Handle all other requests by rendering the Angular application.

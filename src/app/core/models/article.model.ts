@@ -1,7 +1,7 @@
 /**
  * Frontmatter metadata stored at the top of every Markdown article.
  */
-import { ArticleBlock } from '../utils/markdown';
+import { ArticleBlock, TocEntry } from '../utils/markdown';
 
 export interface ArticleFrontmatter {
   title: string;
@@ -31,4 +31,6 @@ export interface Article extends ArticleSummary {
   html: string;
   /** Body split into renderable blocks (HTML + embeds such as GPX viewers). */
   blocks: ArticleBlock[];
+  /** Table of contents extracted from headings. */
+  toc: TocEntry[];
 }

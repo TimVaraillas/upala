@@ -54,12 +54,26 @@ body {
 .prose-trail > * + * {
   margin-top: 1.25rem;
 }
+/* Offset in-page anchor jumps so headings clear the sticky navbar. */
+.prose-trail :is(h1, h2, h3, h4, h5, h6) {
+  scroll-margin-top: 6rem;
+}
+.prose-trail h1 {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 2rem;
+  line-height: 1.25;
+  margin-top: 2.5rem;
+  margin-bottom: 2rem;
+  color: var(--color-stone-900);
+}
 .prose-trail h2 {
   font-family: var(--font-display);
   font-weight: 600;
   font-size: 1.6rem;
   line-height: 1.25;
   margin-top: 2.5rem;
+  margin-bottom: 2rem;
   color: var(--color-stone-900);
 }
 .prose-trail h3 {
@@ -67,7 +81,24 @@ body {
   font-weight: 600;
   font-size: 1.3rem;
   margin-top: 2rem;
+  margin-top: 1.6rem;
   color: var(--color-stone-900);
+}
+.prose-trail h4 {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 1.1rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  color: var(--color-stone-900);
+}
+.prose-trail p {
+  margin-top: 1.25rem;
+}
+.prose-trail a {
+  color: var(--color-moss-700);
+  text-decoration: underline;
+  text-underline-offset: 3px;
 }
 .prose-trail a {
   color: var(--color-moss-700);
@@ -109,7 +140,7 @@ body {
   color: var(--color-stone-600);
 }
 .prose-trail img {
-  border-radius: 1rem;
+  border-radius: .5rem;
   margin-top: 1.75rem;
   width: 100%;
   height: auto;
@@ -117,14 +148,14 @@ body {
 .prose-trail code {
   background-color: var(--color-sand-100);
   padding: 0.15rem 0.4rem;
-  border-radius: 0.4rem;
+  border-radius: 0.5rem;
   font-size: 0.9em;
 }
 .prose-trail pre {
   background-color: var(--color-moss-900);
   color: var(--color-sand-50);
   padding: 1.1rem 1.25rem;
-  border-radius: 0.9rem;
+  border-radius: 0.5rem;
   overflow-x: auto;
 }
 .prose-trail pre code {
@@ -139,10 +170,12 @@ body {
 }
 .prose-trail table {
   width: 100%;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
   border-collapse: collapse;
   font-size: 0.95em;
   overflow: hidden;
-  border-radius: 0.9rem;
+  border-radius: 0.5rem;
   border: 1px solid var(--color-sand-200);
 }
 .prose-trail thead {

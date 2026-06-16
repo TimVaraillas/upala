@@ -13,6 +13,13 @@ export type ArticleBlock =
   | { type: 'html'; html: string }
   | { type: 'gpx'; src: string; title?: string };
 
+/** A single entry in the table of contents. */
+export interface TocEntry {
+  id: string;
+  text: string;
+  level: number;
+}
+
 /**
  * Split a Markdown document into renderable blocks, extracting custom
  * ` ```gpx ` fenced shortcodes so they can be rendered by an Angular
@@ -28,11 +35,14 @@ export function parseBlocks(markdown: string): ArticleBlock[] {
   const lines = markdown.replace(/\r\n/g, '\n').split('\n');
   const blocks: ArticleBlock[] = [];
   let buffer: string[] = [];
+  // Shared across every block so duplicate headings get globally-unique ids
+  // that stay in sync with `extractToc`.
+  const headingSlugs = new Map<string, number>();
 
   const flushMarkdown = () => {
     const text = buffer.join('\n').trim();
     if (text) {
-      blocks.push({ type: 'html', html: renderMarkdown(text) });
+      blocks.push({ type: 'html', html: renderMarkdown(text, headingSlugs) });
     }
     buffer = [];
   };
@@ -61,7 +71,10 @@ export function parseBlocks(markdown: string): ArticleBlock[] {
   return blocks;
 }
 
-export function renderMarkdown(markdown: string): string {
+export function renderMarkdown(
+  markdown: string,
+  headingSlugs: Map<string, number> = new Map<string, number>(),
+): string {
   const source = markdown.replace(/\r\n/g, '\n');
   const lines = source.split('\n');
   const html: string[] = [];
@@ -188,7 +201,12 @@ export function renderMarkdown(markdown: string): string {
       flushParagraph();
       closeList();
       const level = heading[1].length;
-      html.push(`<h${level}>${inline(heading[2].trim())}</h${level}>`);
+      const text = heading[2].trim();
+      let id = slugify(text);
+      const count = headingSlugs.get(id) ?? 0;
+      headingSlugs.set(id, count + 1);
+      if (count > 0) id += `-${count}`;
+      html.push(`<h${level} id="${id}">${inline(text)}</h${level}>`);
       continue;
     }
 
@@ -273,6 +291,44 @@ function inline(text: string): string {
   out = out.replace(/_([^_]+)_/g, '<em>$1</em>');
 
   return out;
+}
+
+/** Turn a heading text into a URL-friendly slug. */
+function slugify(text: string): string {
+  return text
+    .toLowerCase()
+    .normalize('NFD')
+    .replace(/[\u0300-\u036f]/g, '')
+    .replace(/[^a-z0-9]+/g, '-')
+    .replace(/^-|-$/g, '');
+}
+
+/** Extract a table of contents from Markdown source. */
+export function extractToc(markdown: string): TocEntry[] {
+  const toc: TocEntry[] = [];
+  const slugCounts = new Map<string, number>();
+  let inCodeBlock = false;
+  for (const line of markdown.replace(/\r\n/g, '\n').split('\n')) {
+    // Skip fenced code blocks (including ```gpx shortcodes) so the TOC stays
+    // aligned with the headings that are actually rendered.
+    if (/^```/.test(line.trim())) {
+      inCodeBlock = !inCodeBlock;
+      continue;
+    }
+    if (inCodeBlock) continue;
+
+    const match = /^(#{1,6})\s+(.*)$/.exec(line);
+    if (match) {
+      const level = match[1].length;
+      const text = match[2].trim();
+      let id = slugify(text);
+      const count = slugCounts.get(id) ?? 0;
+      slugCounts.set(id, count + 1);
+      if (count > 0) id += `-${count}`;
+      toc.push({ id, text, level });
+    }
+  }
+  return toc;
 }
 
 function escapeHtml(text: string): string {

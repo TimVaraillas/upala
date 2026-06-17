@@ -78,17 +78,16 @@ Avec le recul, cette étape remplit parfaitement son rôle d'introduction à la 
 
 #### Randonnée
 
-| **Critère**      | **Valeur**                                             |
-|:----------------:|:------------------------------------------------------:|
-| Départ           | Phare de Ponta do Pargo                                |
-| Arrivée          | Fonte do Bispo                                         |
-| Distance         | 11,1 km                                                |
-| Dénivelé positif | ~1000 m                                                |
-| Temps de marche  | ~3h45                                                  |
-| Type de terrain  | Routes secondaires, chemins ruraux, pistes forestières |
-| Fréquentation    | Très faible                                            |
-| Note             | ★★★☆☆                                                  |
-| Difficulté       | ★★★☆☆                                                  |
+| **Critère**      | **Valeur**              |
+|:----------------:|:-----------------------:|
+| Départ           | Phare de Ponta do Pargo |
+| Arrivée          | Fonte do Bispo          |
+| Distance         | 11,1 km                 |
+| Dénivelé positif | ~1000 m                 |
+| Temps de marche  | ~3h45                   |
+| Fréquentation    | Très faible             |
+| Note             | ★★★☆☆                   |
+| Difficulté       | ★★★☆☆                   |
 
 #### Campement
 
@@ -120,8 +119,11 @@ Cette deuxième journée marque véritablement notre entrée dans les paysages q
 
 L'étape débute par une longue descente d'environ 5 kilomètres. Nous perdons près de 800 mètres d'altitude pour rejoindre la vallée de Ribeira da Janela. Cette section est relativement roulante et permet d'avancer rapidement.
 
-Nous rejoignons ensuite la Levada da Ribeira da Janela que nous suivons sur une dizaine de kilomètres. Cette portion presque plane offre un contraste saisissant avec le début de journée.
-C'est également ici que nous découvrons les premiers tunnels de notre traversée. Sur les fichiers GPX, certaines portions apparaissent comme de longues lignes parfaitement droites : ce sont les tunnels creusés dans la montagne pour permettre le passage de la levada. Cette particularité deviendra l'une des constantes de notre semaine de marche. Nous traverserons de nombreux tunnels tout au long de l'itinéraire, certains très courts, d'autres beaucoup plus impressionnants. Donc n’oubliez pas votre frontale !
+Nous rejoignons ensuite la Levada da Ribeira da Janela (PR15), que nous suivons sur une dizaine de kilomètres. Cette portion presque plane offre un contraste avec le début de journée. Le sentier serpente au cœur d'une vallée sauvage façonnée par l'eau, en suivant l'une des plus longues rivières de Madère. Les vues s'ouvrent régulièrement sur les versants abrupts et les terrasses agricoles qui caractérisent cette partie de l'île.
+
+C'est également ici que nous découvrons les premiers tunnels de notre traversée. Sur les fichiers GPX, certaines portions apparaissent comme de longues lignes parfaitement droites : ce sont les tunnels creusés dans la montagne pour permettre le passage de la levada. Cette particularité deviendra l'une des constantes de notre semaine de marche. Nous traverserons de nombreux tunnels tout au long de l'itinéraire, certains très courts, d'autres beaucoup plus impressionnants. Donc n'oubliez pas votre frontale !
+
+Cette section est idéale pour récupérer après la longue descente du matin tout en découvrant l'un des éléments les plus emblématiques du réseau de sentiers madériens : les levadas.
 
 Après cette longue traversée de la vallée, le sentier plonge brutalement vers Ribeira da Janela. La descente est raide mais offre de très belles vues sur les célèbres rochers qui émergent de l'océan face au village.
 Cette partie de l'étape nous a également permis de découvrir une facette plus agricole de Madère. Les pentes abruptes sont couvertes de terrasses cultivées qui témoignent de l'incroyable adaptation des habitants à un relief particulièrement escarpé.
@@ -136,24 +138,29 @@ La pente reste soutenue mais relativement régulière jusqu'aux derniers kilomè
 Les trois derniers kilomètres de notre trace empruntent une montée extrêmement raide à travers la forêt (2,6km à 25% de pente de moyenne). La progression devient lente et physique, d'autant plus que cette difficulté arrive en fin de journée. Avec le recul, nous pensons qu'il existe probablement une meilleure option en restant davantage sur le GR1 jusqu'à Fanal. Notre variante ressemblait parfois davantage à un chemin de chèvres qu'à un véritable sentier de randonnée.
 
 Notre arrivée à Fanal restera l'un des souvenirs marquants de cette traversée.
+
 Alors que nous avions bénéficié d'un temps globalement ensoleillé toute la journée, nous avons progressivement pénétré dans un épais brouillard à mesure que nous approchions du plateau. Les silhouettes tortueuses des lauriers centenaires apparaissaient puis disparaissaient dans la brume. Quelques gouttes de pluie ont commencé à tomber au moment d'installer le camp, avant qu'une pluie plus soutenue ne nous accompagne pendant une partie de la nuit.
-L'ambiance était radicalement différente de celle rencontrée depuis le départ : mystique et silencieuse.
+
+Cette dernière section de l'étape emprunte brièvement le PR14, un sentier qui traverse une partie de la forêt de Fanal et des hauts plateaux environnants. Nous n'en avons parcouru qu'un court tronçon, mais l'ambiance rencontrée ce soir-là nous a donné envie d'en découvrir davantage. Avec le recul, il aurait probablement été intéressant de suivre ce sentier plus longuement afin de profiter pleinement de l'un des secteurs les plus emblématiques de la forêt de lauriers de Madère.
+
+L'ambiance était radicalement différente de celle rencontrée depuis le départ : mystique, silencieuse et presque irréelle.
+
 
 ### Informations pratiques
 
 #### Randonnée
-| **Critère**        | **Valeur**                                              |
-|:------------------:|:-------------------------------------------------------:|
-| Départ             | Fonte do Bispo                                          |
-| Arrivée            | Fanal                                                   |
-| Distance           | 26,6 km                                                 |
-| Dénivelé positif   | ~1300 m                                                 |
-| Dénivelé négatif   | ~1350 m                                                 |
-| Temps de marche    | ~8h30                                                   |
-| Sentiers marquants | Levada da Ribeira da Janela, premiers kilomètres du GR1 |
-| Fréquentation      | Faible à modérée                                        |
-| Note               | ★★★★★                                                   |
-| Difficulté         | ★★★★★                                                   |
+| **Critère**        | **Valeur**                                                   |
+|:------------------:|:------------------------------------------------------------:|
+| Départ             | Fonte do Bispo                                               |
+| Arrivée            | Fanal                                                        |
+| Distance           | 26,6 km                                                      |
+| Dénivelé positif   | ~1300 m                                                      |
+| Dénivelé négatif   | ~1350 m                                                      |
+| Temps de marche    | ~8h30                                                        |
+| Sentiers marquants | Levada da Ribeira da Janela (PR15), premiers kilomètres du GR1, Levada dos Cedros (PR14) |
+| Fréquentation      | Faible à modérée                                             |
+| Note               | ★★★★★                                                        |
+| Difficulté         | ★★★★★                                                        |
 
 #### Campement
 
@@ -177,8 +184,9 @@ L'ambiance était radicalement différente de celle rencontrée depuis le dépar
 #### Ce que nous améliorerions avec le recul
 
 * Éviter la montée très raide des derniers kilomètres dans un chemin difficile.
-* Étudier une variante suivant davantage le GR1 jusqu'à Fanal.
+* Étudier une variante suivant davantage le GR1 jusqu'à Fanal en passant notamment plus longuement sur le PR14.
 * Prévoir une arrivée plus tôt à Fanal pour profiter davantage du site avant l'arrivée du brouillard.
+
 
 ## Étape 3 : de Fanal à Bica di Cana
 
@@ -186,7 +194,73 @@ L'ambiance était radicalement différente de celle rencontrée depuis le dépar
 
 ```gpx
 src: /content/tracks/madeira_3.gpx
-title: Étape 3 — Fanal › Bica di Cana
+title: Étape 2 — Fanal › Bica di Cana
 ```
 
 ### Récit de l’étape
+
+Après une nuit passée dans l'atmosphère brumeuse de Fanal, nous reprenons notre progression en direction de Bica da Cana. Cette troisième journée sera longue et nous fera découvrir des paysages particulièrement variés, entre forêt primaire, levadas, cascades et hauts plateaux exposés au soleil.
+
+Nous quittons Fanal en empruntant le PR13, un sentier qui traverse l'une des plus belles forêts indigènes de Madère. Dans la fraîcheur matinale, nous progressons au milieu des lauriers et de la végétation luxuriante qui caractérisent la forêt de Laurisilva, classée au patrimoine mondial de l'UNESCO. Malgré le brouillard persistant, l'ambiance est particulièrement agréable et apaisante.
+Après quelques kilomètres, nous décidons de quitter temporairement le PR13 pour suivre une variante aperçue sur notre trace GPS. Avec le recul, ce choix n'était probablement pas le meilleur de la journée.
+
+Pendant près de deux kilomètres, nous évoluons sur un sentier peu marqué, parfois difficile à suivre, qui s'apparente davantage à un chemin de chèvres qu'à un véritable itinéraire de randonnée. Certains passages sont étroits et vertigineux, ce qui demande de la prudence, en particulier avec des sacs chargés pour plusieurs jours d'autonomie.
+
+Par beau temps, cette variante doit probablement offrir de très belles vues sur les vallées environnantes. Malheureusement, le brouillard qui nous accompagne depuis le matin réduit fortement la visibilité et nous prive totalement des panoramas. Nous avançons très lentement sur cette section.
+
+Notre conseil est simple : si les conditions sont mauvaises ou si vous n'êtes pas à l'aise sur les sentiers exposés au vide, restez sur le tracé officiel du PR13.
+
+Une fois revenus sur le sentier principal, nous retrouvons immédiatement une progression beaucoup plus agréable. La forêt retrouve son calme et son caractère contemplatif avant qu'une longue descente ponctuée de nombreux escaliers ne nous conduise progressivement vers le PR6.
+
+Nous rejoignons alors l'un des sentiers les plus célèbres de Madère : le PR6, également connu sous le nom des « 25 Fontes ».
+
+Le changement d'ambiance est immédiat. Après plusieurs jours passés sur des sentiers relativement peu fréquentés, nous découvrons ici l'un des sites les plus touristiques de l'île. C'est probablement l'endroit où nous avons croisé le plus de monde durant toute notre traversée.
+
+Il faut cependant reconnaître que la réputation du lieu n'est pas usurpée. Tout au long du parcours, de nombreuses cascades dévalent les falaises pour alimenter des bassins naturels aux eaux cristallines. Certains randonneurs n'hésitent pas à s'y baigner malgré la fraîcheur de l'eau. Le cadre est magnifique, particulièrement photogénique, et mérite largement sa popularité.
+
+Après une quinzaine de kilomètres, nous quittons le PR6 pour remonter vers la Levada do Paul puis la Levada do Paul II.
+
+Cette seconde partie de journée offre un contraste total avec les heures précédentes. Nous évoluons désormais sur les hauteurs de l'île, sur des sentiers orientés plein sud et particulièrement exposés au soleil.
+
+Pendant près de dix kilomètres, la progression est régulière mais interminable. Les paysages changent une nouvelle fois : les forêts humides ont laissé place à de vastes étendues couvertes de genêts jaunes qui colorent les pentes de la montagne.
+
+Cette section est également marquée par la présence de nombreuses éoliennes visibles sur les crêtes. Si elles témoignent de l'engagement de Madère en faveur des énergies renouvelables, leur présence sonore réduit légèrement le sentiment d'isolement que nous avions apprécié sur d'autres portions de la traversée.
+
+À mesure que la journée avance, la fatigue commence à se faire sentir. Ce n'est pas nécessairement l'étape la plus difficile techniquement, même si certains passages demandent de l'attention, mais sa longueur finit par peser sur les jambes.
+
+Nous terminons finalement cette longue journée en regagnant de l'altitude pour rejoindre le campement de Bica da Cana, où nous installons notre bivouac après plusieurs heures de marche.
+
+Avec le recul, cette étape restera pour moi comme l'une des plus éprouvantes de notre traversée, à cause de sa longueur, de la diversité des terrains rencontrés et de son dénivelé cumulé important.
+
+### Informations pratiques
+
+#### Randonnée
+
+| **Critère**        | **Valeur**                                                   |
+|:------------------:|:------------------------------------------------------------:|
+| Départ             | Fanal                                                        |
+| Arrivée            | Bica da Cana                                                 |
+| Distance           | ~30,5 km                                                     |
+| Dénivelé positif   | ~1850 m                                                      |
+| Dénivelé négatif   | ~1450 m                                                      |
+| Temps de marche    | ~9h30                                                        |
+| Sentiers marquants | Vereda do Fanal (PR13), Levada das 25 Fontes (PR6), Levada do Paul, Levada do Paul II |
+| Fréquentation      | Très variable (faible sur le PR13, très forte sur le PR6)    |
+| Note               | ★★★★☆                                                        |
+| Difficulté         | ★★★★★                                                        |
+
+
+### Notre avis
+
+#### Ce que nous avons aimé
+
+* L'ambiance unique du PR13 dans la forêt de Laurisilva.
+* Les paysages très variés rencontrés au cours de la journée.
+* Les cascades et bassins du PR6.
+* Les couleurs des genêts en fleurs sur les hauteurs.
+* Le sentiment de traverser plusieurs Madère en une seule journée.
+
+#### Ce que nous améliorerions avec le recul
+
+* Éviter la variante hors PR13 lorsque les conditions météo sont mauvaises.
+* Fractionner éventuellement l'étape pour les randonneurs souhaitant profiter davantage des différents secteurs traversés.

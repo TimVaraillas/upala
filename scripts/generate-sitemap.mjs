@@ -4,7 +4,7 @@
  * routes. Run via `npm run content:sitemap` (wired into `prebuild`).
  *
  * Set the canonical origin through the `SITE_URL` env var, e.g.
- *   SITE_URL=https://hors-sentier.com npm run build
+ *   SITE_URL=https://un-pas-apres-l-autre.com npm run build
  */
 import { readFile, writeFile, mkdir } from 'node:fs/promises';
 import { join, dirname } from 'node:path';
@@ -12,7 +12,7 @@ import { fileURLToPath } from 'node:url';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const ROOT = join(__dirname, '..');
-const ORIGIN = (process.env.SITE_URL || 'https://hors-sentier.example').replace(
+const ORIGIN = (process.env.SITE_URL || 'https://un-pas-apres-l-autre.example').replace(
   /\/$/,
   '',
 );

@@ -1,37 +1,37 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://hors-sentier.example/</loc>
+    <loc>https://un-pas-apres-l-autre.example/</loc>
     <lastmod>2026-06-16</lastmod>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://hors-sentier.example/blog</loc>
+    <loc>https://un-pas-apres-l-autre.example/blog</loc>
     <lastmod>2026-06-16</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://hors-sentier.example/about</loc>
+    <loc>https://un-pas-apres-l-autre.example/about</loc>
     <lastmod>2026-06-16</lastmod>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://hors-sentier.example/article/madere-autonomie-7-etapes</loc>
+    <loc>https://un-pas-apres-l-autre.example/article/madere-autonomie-7-etapes</loc>
     <lastmod>2026-06-15</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://hors-sentier.example/article/gr20-autonomie-15-jours</loc>
+    <loc>https://un-pas-apres-l-autre.example/article/gr20-autonomie-15-jours</loc>
     <lastmod>2026-05-28</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://hors-sentier.example/article/guide-bivouac-montagne</loc>
+    <loc>https://un-pas-apres-l-autre.example/article/guide-bivouac-montagne</loc>
     <lastmod>2026-04-12</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://hors-sentier.example/article/choisir-chaussures-trek</loc>
+    <loc>https://un-pas-apres-l-autre.example/article/choisir-chaussures-trek</loc>
     <lastmod>2026-03-03</lastmod>
     <priority>0.7</priority>
   </url>

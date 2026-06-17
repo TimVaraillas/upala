@@ -1,4 +1,4 @@
-# Hors Sentier
+# Un pas après l'autre
 
 A fast, SEO-friendly, statically generated travel & trekking blog built with
 Angular 21 (standalone components + SSR/SSG) and Tailwind CSS 4. Content is
@@ -43,7 +43,7 @@ date: 2026-05-28
 tags: [expédition, itinéraire]
 coverImage: https://example.com/cover.jpg
 slug: my-trek
-author: Hors Sentier
+author: Un pas après l'autre
 excerpt: "Optional short summary."
 ---
 
@@ -77,7 +77,7 @@ dependency-free GPX parser in `core/utils/gpx.ts`.
 npm start                       # dev server (regenerates the manifest first)
 npm run build                   # SSG/SSR production build (prerenders all routes)
 npm test                        # unit tests
-npm run serve:ssr:hors-sentier  # run the SSR server after a build
+npm run serve:ssr:un-pas-apres-l-autre  # run the SSR server after a build
 ```
 
 ## Development server

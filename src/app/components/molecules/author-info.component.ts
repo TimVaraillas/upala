@@ -34,7 +34,7 @@ import { IconComponent } from '../atoms/icon.component';
   `,
 })
 export class AuthorInfoComponent {
-  readonly author = input('Hors Sentier');
+  readonly author = input('Un pas après l’autre');
   readonly date = input.required<string>();
   readonly readingTime = input<number | null>(null);
 

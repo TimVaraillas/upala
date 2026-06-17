@@ -14,9 +14,9 @@ import { IconComponent } from '../components/atoms/icon.component';
     <section class="mx-auto max-w-3xl px-4 py-16 sm:px-6">
       <span class="text-moss-700"><hs-icon name="tent" [size]="40" /></span>
       <div class="mt-6 space-y-6">
-        <hs-heading [level]="1">À propos d’Hors Sentier</hs-heading>
+        <hs-heading [level]="1">À propos d’Un pas après l’autre</hs-heading>
         <hs-paragraph variant="lead">
-          Hors Sentier est un carnet d’exploration dédié aux trekkings
+          Un pas après l’autre est un carnet d’exploration dédié aux trekkings
           d’aventure, aux traversées sur plusieurs jours et à l’art de marcher
           léger loin des sentiers balisés.
         </hs-paragraph>
@@ -40,8 +40,8 @@ export default class AboutPage {
     inject(SeoService).update({
       title: 'À propos',
       description:
-        'Hors Sentier : un carnet d’exploration dédié au trek d’aventure et aux longues traversées.',
-      url: 'https://hors-sentier.example/about',
+        'Un pas après l’autre : un carnet d’exploration dédié au trek d’aventure et aux longues traversées.',
+      url: 'https://un-pas-apres-l-autre.example/about',
     });
   }
 }

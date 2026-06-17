@@ -26,7 +26,7 @@ import { AuthorInfoComponent } from '../molecules/author-info.component';
       </p>
 
       <hs-author-info
-        [author]="article().author ?? 'Hors Sentier'"
+        [author]="article().author ?? 'Un pas après l’autre'"
         [date]="article().date"
         [readingTime]="article().readingTime"
       />

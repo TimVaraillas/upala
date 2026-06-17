@@ -93,7 +93,7 @@ async function main() {
       tags: data.tags || [],
       coverImage: data.coverImage || '',
       slug,
-      author: data.author || 'Hors Sentier',
+      author: data.author || 'Un pas après l’autre',
       excerpt: data.excerpt || excerptFromMarkdown(body),
       readingTime: estimateReadingTime(body),
     });

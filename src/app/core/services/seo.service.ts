@@ -13,7 +13,7 @@ export interface SeoData {
   author?: string;
 }
 
-const SITE_NAME = 'Hors Sentier';
+const SITE_NAME = 'Un pas après l’autre';
 const DEFAULT_DESCRIPTION =
   'Récits d’expédition, guides de trek et itinéraires de randonnée sur plusieurs jours.';
 

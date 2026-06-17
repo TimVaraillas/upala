@@ -4,7 +4,7 @@ date: 2026-05-28
 tags: [expédition, GR20, itinéraire]
 coverImage: https://picsum.photos/seed/gr20/1280/720
 slug: gr20-autonomie-15-jours
-author: Hors Sentier
+author: Un pas après l'autre
 excerpt: "Récit d'une traversée intégrale du GR20 en totale autonomie : étapes, cols, refuges manqués et leçons d'un sentier qui ne pardonne pas l'improvisation."
 ---
 

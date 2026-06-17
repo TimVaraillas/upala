@@ -82,8 +82,8 @@ export default class HomePage {
     inject(SeoService).update({
       title: '',
       description:
-        'Hors Sentier — récits d’expédition et guides de trek pour marcher là où les cartes s’arrêtent.',
-      url: 'https://hors-sentier.example/',
+        'Un pas après l’autre — récits d’expédition et guides de trek pour marcher là où les cartes s’arrêtent.',
+      url: 'https://un-pas-apres-l-autre.example/',
     });
   }
 }

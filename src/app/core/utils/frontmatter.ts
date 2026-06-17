@@ -8,7 +8,7 @@ export interface ParsedMarkdown {
 /**
  * Minimal, dependency-free YAML frontmatter parser.
  *
- * Supports the subset of YAML used by Hors Sentier articles:
+ * Supports the subset of YAML used by Un pas après l’autre articles:
  * - `key: value` scalars
  * - inline arrays: `tags: [a, b, c]`
  * - block arrays:

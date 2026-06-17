@@ -4,7 +4,7 @@ date: 2026-04-12
 tags: [guide, bivouac, matériel]
 coverImage: https://picsum.photos/seed/bivouac/1280/720
 slug: guide-bivouac-montagne
-author: Hors Sentier
+author: Un pas après l'autre
 excerpt: "Choisir son emplacement, alléger son couchage, gérer le froid et l'eau : tout ce qu'il faut savoir pour un premier bivouac réussi en montagne."
 ---
 

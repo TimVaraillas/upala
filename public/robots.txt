@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://hors-sentier.example/sitemap.xml
+Sitemap: https://un-pas-apres-l-autre.example/sitemap.xml

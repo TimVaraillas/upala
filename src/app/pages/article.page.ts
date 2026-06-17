@@ -98,7 +98,7 @@ export default class ArticlePage {
             tags: post.tags,
             author: post.author,
             publishedTime: post.date,
-            url: `https://hors-sentier.example/article/${post.slug}`,
+            url: `https://un-pas-apres-l-autre.example/article/${post.slug}`,
           });
         }
       }),

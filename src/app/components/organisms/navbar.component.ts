@@ -21,7 +21,7 @@ import { IconComponent } from '../atoms/icon.component';
           class="flex items-center gap-2 font-display text-lg font-semibold tracking-tight text-stone-900"
         >
           <span class="text-moss-700"><hs-icon name="mountain" [size]="26" /></span>
-          Hors&nbsp;Sentier
+          Un&nbsp;pas&nbsp;après&nbsp;l'autre
         </a>
 
         <nav class="hidden items-center gap-8 md:flex">

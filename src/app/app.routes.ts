@@ -16,12 +16,12 @@ export const routes: Routes = [
         path: '',
         pathMatch: 'full',
         loadComponent: () => import('./pages/home.page'),
-        title: 'Hors Sentier',
+        title: 'Un pas après l’autre',
       },
       {
         path: 'blog',
         loadComponent: () => import('./pages/blog.page'),
-        title: 'Carnets · Hors Sentier',
+        title: 'Carnets · Un pas après l’autre',
       },
       {
         path: 'article/:slug',
@@ -30,12 +30,12 @@ export const routes: Routes = [
       {
         path: 'about',
         loadComponent: () => import('./pages/about.page'),
-        title: 'À propos · Hors Sentier',
+        title: 'À propos · Un pas après l’autre',
       },
       {
         path: '**',
         loadComponent: () => import('./pages/not-found.page'),
-        title: 'Page introuvable · Hors Sentier',
+        title: 'Page introuvable · Un pas après l’autre',
       },
     ],
   },

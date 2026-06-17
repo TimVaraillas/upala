@@ -1,5 +1,5 @@
 {
-  "name": "hors-sentier",
+  "name": "un-pas-apres-l-autre",
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
@@ -11,7 +11,7 @@
     "content:sitemap": "node scripts/generate-sitemap.mjs",
     "prestart": "npm run content:index",
     "prebuild": "npm run content:index && npm run content:sitemap",
-    "serve:ssr:hors-sentier": "node dist/hors-sentier/server/server.mjs"
+    "serve:ssr:un-pas-apres-l-autre": "node dist/un-pas-apres-l-autre/server/server.mjs"
   },
   "prettier": {
     "printWidth": 100,

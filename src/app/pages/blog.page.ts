@@ -93,7 +93,7 @@ export default class BlogPage {
       title: 'Carnets de route',
       description:
         'Récits d’expédition et guides de trek : itinéraires, matériel, bivouac et logistique.',
-      url: 'https://hors-sentier.example/blog',
+      url: 'https://un-pas-apres-l-autre.example/blog',
     });
   }
 }

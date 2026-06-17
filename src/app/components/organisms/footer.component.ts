@@ -18,7 +18,7 @@ import { IconComponent } from '../atoms/icon.component';
             class="flex items-center gap-2 font-display text-lg font-semibold text-stone-900"
           >
             <span class="text-moss-700"><hs-icon name="compass" [size]="22" /></span>
-            Hors Sentier
+            Un pas après l’autre
           </p>
           <p class="mt-3 max-w-xs text-sm leading-relaxed text-stone-600">
             Récits d’expédition et guides de trek pour ceux qui marchent là où
@@ -55,7 +55,7 @@ import { IconComponent } from '../atoms/icon.component';
         <p
           class="mx-auto max-w-6xl px-4 py-5 text-xs text-stone-500 sm:px-6"
         >
-          © {{ year }} Hors Sentier — Conçu pour marcher léger.
+          © {{ year }} Un pas après l’autre — Conçu pour marcher léger.
         </p>
       </div>
     </footer>

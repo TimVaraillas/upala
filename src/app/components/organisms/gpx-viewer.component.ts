@@ -434,7 +434,12 @@ export class GpxViewerComponent {
       return;
     }
 
-    const L = await import('leaflet');
+    // Leaflet ships as a CommonJS module: in the optimized production build it
+    // is bundled with a single `default` export, whereas the dev server exposes
+    // named exports directly. Unwrap `default` so `L.map`/`L.tileLayer` exist in
+    // both environments.
+    const leaflet = await import('leaflet');
+    const L = leaflet.default ?? leaflet;
     this.L = L;
 
     const map = L.map(host, { scrollWheelZoom: false });

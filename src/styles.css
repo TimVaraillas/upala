@@ -92,6 +92,10 @@ body {
   margin-bottom: 1rem;
   color: var(--color-stone-900);
 }
+.prose-trail blockquote {
+  margin-top: 1.75rem;
+  margin-bottom: 1.75rem;
+}
 .prose-trail p {
   margin-top: 1.25rem;
 }

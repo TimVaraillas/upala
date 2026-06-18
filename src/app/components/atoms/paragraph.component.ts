@@ -15,6 +15,6 @@ export class ParagraphComponent {
       lead: 'text-lg sm:text-xl leading-relaxed text-stone-600',
       muted: 'text-sm leading-relaxed text-stone-500',
     } as const;
-    return `max-w-prose ${variants[this.variant()]}`;
+    return `my-5 max-w-prose ${variants[this.variant()]}`;
   });
 }

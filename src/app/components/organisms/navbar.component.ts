@@ -27,7 +27,7 @@ import { IconComponent } from '../atoms/icon.component';
         <nav class="hidden items-center gap-8 md:flex">
           <hs-navbar-item link="/" [exact]="true">Accueil</hs-navbar-item>
           <hs-navbar-item link="/blog">Carnets</hs-navbar-item>
-          <hs-navbar-item link="/about">À propos</hs-navbar-item>
+          <hs-navbar-item link="/about">Qui sommes-nous ?</hs-navbar-item>
         </nav>
 
         <button
@@ -47,7 +47,7 @@ import { IconComponent } from '../atoms/icon.component';
         >
           <a routerLink="/" class="py-2 text-stone-700" (click)="close()">Accueil</a>
           <a routerLink="/blog" class="py-2 text-stone-700" (click)="close()">Carnets</a>
-          <a routerLink="/about" class="py-2 text-stone-700" (click)="close()">À propos</a>
+          <a routerLink="/about" class="py-2 text-stone-700" (click)="close()">Qui sommes-nous ?</a>
         </nav>
       }
     </header>

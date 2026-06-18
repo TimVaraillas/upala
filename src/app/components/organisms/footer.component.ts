@@ -35,7 +35,7 @@ import { IconComponent } from '../atoms/icon.component';
           <ul class="mt-3 space-y-2 text-sm text-stone-600">
             <li><a routerLink="/" class="hover:text-moss-700">Accueil</a></li>
             <li><a routerLink="/blog" class="hover:text-moss-700">Carnets</a></li>
-            <li><a routerLink="/about" class="hover:text-moss-700">À propos</a></li>
+            <li><a routerLink="/about" class="hover:text-moss-700">Qui sommes-nous ?</a></li>
           </ul>
         </div>
 

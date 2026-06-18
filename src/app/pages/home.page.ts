@@ -44,7 +44,7 @@ import { ArticleListComponent } from '../components/organisms/article-list.compo
               <hs-icon name="arrow-right" [size]="18" />
             </hs-button>
             <hs-button [routerLink]="'/about'" variant="secondary" size="lg">
-              À propos
+              Qui sommes-nous ?
             </hs-button>
           </div>
         </div>

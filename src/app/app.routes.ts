@@ -30,7 +30,7 @@ export const routes: Routes = [
       {
         path: 'about',
         loadComponent: () => import('./pages/about.page'),
-        title: 'À propos · Un pas après l’autre',
+        title: 'Qui sommes-nous ? · Un pas après l’autre',
       },
       {
         path: '**',

@@ -14,7 +14,7 @@ Notre traversée intégrale de Madère, d'ouest en est, sur près de 170 kilomè
 ## Introduction
 
 Avant d'entrer dans le détail de l'itinéraire, quelques mots sur cette aventure.
-Nous sommes Tim et Lulu, deux amis passionnés de randonnée itinérante, de trek et plus généralement de voyages à pied. 
+Nous sommes Tim et Lulu, deux amis passionnés de randonnée, de trek et plus généralement de voyages à pied. 
 
 Lorsque nous avons commencé à préparer notre séjour à Madère, nous avions envie de découvrir l'île autrement qu'à travers une simple succession de randonnées à la journée.
 
@@ -23,6 +23,8 @@ Notre objectif était de relier les deux extrémités de l'île à pied, en trav
 Marcher plusieurs jours d'affilée est aussi une façon de voyager qui nous correspond particulièrement. Nous apprécions le rythme lent qu'impose la randonnée itinérante, la simplicité du bivouac et cette sensation unique de découvrir progressivement un territoire au fil des kilomètres… mais aussi de se découvrir soi-même. 
 
 Nous pratiquons également tous les deux le trail et sommes habitués aux longues journées en montagne. Cette expérience influence forcément notre perception de la difficulté ainsi que les temps de marche indiqués dans cet article. Les durées mentionnées correspondent à notre propre progression sur le terrain, sacs chargés et pauses incluses. Elles constituent avant tout un repère et pourront varier sensiblement selon votre niveau, votre rythme ou les conditions rencontrées.
+
+De la même manière, les distances et dénivelés indiqués dans les récapitulatifs de chaque étape correspondent aux données enregistrées par ma montre GPS sur le terrain. Ils peuvent donc différer de ceux affichés automatiquement par les visualiseur de traces GPX. Ces écarts sont relativement fréquents et peuvent s'expliquer par des méthodes de calcul différentes selon les outils utilisés. Pour les informations de distance et de dénivelé, nous vous recommandons donc de vous référer en priorité aux valeurs que nous avons mentionnées dans le récapitulatif de chaque étape.
 
 Au total, cette traversée nous a permis de parcourir près de 170 kilomètres à travers des paysages extrêmement variés : falaises volcaniques, forêts de Laurisilva, levadas, sommets d'altitude et côtes battues par l'Atlantique. Une aventure exigeante mais que nous avons trouvée particulièrement riche et représentative de la diversité de Madère.
 
@@ -91,6 +93,13 @@ L'anecdote s'est poursuivie à notre arrivée au campement de Fonte do Bispo. Al
 
 Avec le recul, cette étape remplit parfaitement son rôle d'introduction à la traversée. En revanche, pour les randonneurs disposant de peu de temps sur l'île, elle ne fait probablement pas partie des sections les plus incontournables de l'itinéraire. Son intérêt réside davantage dans la cohérence de la traversée intégrale de Madère que dans ses paysages spectaculaires.
 
+```photos
+layout: 3
+- /content/images/madeira_001.jpg | Vue depuis le phare de Ponta do Pargo
+- /content/images/madeira_002.jpg | Landes avec vu sur la mer
+- /content/images/madeira_003.jpg | Un bivouac en bonne compagnie
+```
+
 ### Informations pratiques
 
 #### Randonnée
@@ -101,6 +110,7 @@ Avec le recul, cette étape remplit parfaitement son rôle d'introduction à la 
 | Arrivée          | Fonte do Bispo          |
 | Distance         | 11,1 km                 |
 | Dénivelé positif | ~1000 m                 |
+| Dénivelé négatif | ~100 m                  |
 | Temps de marche  | ~3h45                   |
 | Fréquentation    | Très faible             |
 | Note             | ★★★☆☆                   |
@@ -140,10 +150,22 @@ Nous rejoignons ensuite la Levada da Ribeira da Janela (PR15), que nous suivons 
 
 C'est également ici que nous découvrons les premiers tunnels de notre traversée. Sur les fichiers GPX, certaines portions apparaissent comme de longues lignes parfaitement droites : ce sont les tunnels creusés dans la montagne pour permettre le passage de la levada. Cette particularité deviendra l'une des constantes de notre semaine de marche. Nous traverserons de nombreux tunnels tout au long de l'itinéraire, certains très courts, d'autres beaucoup plus impressionnants. Donc n'oubliez pas votre frontale !
 
+```photos
+layout: 2
+- /content/images/madeira_004.jpg | Levada da Ribeira da Janela 
+- /content/images/madeira_005.jpg | Sentier à flanc de falaise
+```
+
 Cette section est idéale pour récupérer après la longue descente du matin tout en découvrant l'un des éléments les plus emblématiques du réseau de sentiers madériens : les levadas.
 
 Après cette longue traversée de la vallée, le sentier plonge brutalement vers Ribeira da Janela. La descente est raide mais offre de très belles vues sur les célèbres rochers qui émergent de l'océan face au village.
 Cette partie de l'étape nous a également permis de découvrir une facette plus agricole de Madère. Les pentes abruptes sont couvertes de terrasses cultivées qui témoignent de l'incroyable adaptation des habitants à un relief particulièrement escarpé.
+
+```photos
+layout: 1
+maxHeight: 500px
+- /content/images/madeira_006.jpg | Arrivée sur les hauteurs de Ribeira da Janela 
+```
 
 La seconde moitié de la journée est dominée par la remontée vers Fanal.
 C'est également à Ribeira da Janela que nous rejoignons pour la première fois le GR1, le sentier de grande randonnée qui traverse Madère d'ouest en est. Nous nous trouvons alors à son extrémité occidentale.
@@ -161,6 +183,12 @@ Alors que nous avions bénéficié d'un temps globalement ensoleillé toute la j
 Cette dernière section de l'étape emprunte brièvement le PR14, un sentier qui traverse une partie de la forêt de Fanal et des hauts plateaux environnants. Nous n'en avons parcouru qu'un court tronçon, mais l'ambiance rencontrée ce soir-là nous a donné envie d'en découvrir davantage. Avec le recul, il aurait probablement été intéressant de suivre ce sentier plus longuement afin de profiter pleinement de l'un des secteurs les plus emblématiques de la forêt de lauriers de Madère.
 
 L'ambiance était radicalement différente de celle rencontrée depuis le départ : mystique, silencieuse et presque irréelle.
+
+```photos
+layout: 2
+- /content/images/madeira_007.jpg | Les premiers lauriers apparaissent dans la forêt
+- /content/images/madeira_008.jpg | Plateau de Fanal
+```
 
 
 ### Informations pratiques
@@ -227,7 +255,9 @@ Par beau temps, cette variante doit probablement offrir de très belles vues sur
 
 Notre conseil est simple : si les conditions sont mauvaises ou si vous n'êtes pas à l'aise sur les sentiers exposés au vide, restez sur le tracé officiel du PR13.
 
-Une fois revenus sur le sentier principal, nous retrouvons immédiatement une progression beaucoup plus agréable. La forêt retrouve son calme et son caractère contemplatif avant qu'une longue descente ponctuée de nombreux escaliers ne nous conduise progressivement vers le PR6.
+Une fois revenus sur le sentier principal, nous retrouvons immédiatement une progression beaucoup plus agréable. La forêt retrouve son calme et son caractère contemplatif. 
+
+Puis les paysages s'ouvrent, le temps se dégage, et la forêt s'estompe laissant place à de beaux points de vue avant qu'une longue descente ponctuée de nombreux escaliers ne nous conduise progressivement vers le PR6.
 
 Nous rejoignons alors l'un des sentiers les plus célèbres de Madère : le PR6, également connu sous le nom des « 25 Fontes ».
 
@@ -235,11 +265,24 @@ Le changement d'ambiance est immédiat. Après plusieurs jours passés sur des s
 
 Il faut cependant reconnaître que la réputation du lieu n'est pas usurpée. Tout au long du parcours, de nombreuses cascades dévalent les falaises pour alimenter des bassins naturels aux eaux cristallines. Certains randonneurs n'hésitent pas à s'y baigner malgré la fraîcheur de l'eau. Le cadre est magnifique, particulièrement photogénique, et mérite largement sa popularité.
 
+```photos
+layout: 3
+- /content/images/madeira_009.jpg | Lagoa das 25 fontes
+- /content/images/madeira_010.jpg | Levada das 25 fontes
+- /content/images/madeira_011.jpg | Cascata do Risco
+```
+
 Après une quinzaine de kilomètres, nous quittons le PR6 pour remonter vers la Levada do Paul puis la Levada do Paul II.
 
 Cette seconde partie de journée offre un contraste total avec les heures précédentes. Nous évoluons désormais sur les hauteurs de l'île, sur des sentiers orientés plein sud et particulièrement exposés au soleil.
 
 Pendant près de dix kilomètres, la progression est régulière mais interminable. Les paysages changent une nouvelle fois : les forêts humides ont laissé place à de vastes étendues couvertes de genêts jaunes qui colorent les pentes de la montagne.
+
+```photos
+layout: 2
+- /content/images/madeira_012.jpg 
+- /content/images/madeira_013.jpg
+```
 
 Cette section est également marquée par la présence de nombreuses éoliennes visibles sur les crêtes. Si elles témoignent de l'engagement de Madère en faveur des énergies renouvelables, leur présence sonore réduit légèrement le sentiment d'isolement que nous avions apprécié sur d'autres portions de la traversée.
 
@@ -257,9 +300,9 @@ Avec le recul, cette étape restera pour moi comme l'une des plus éprouvantes d
 |:------------------:|:------------------------------------------------------------:|
 | Départ             | Fanal                                                        |
 | Arrivée            | Bica da Cana                                                 |
-| Distance           | ~30,5 km                                                     |
-| Dénivelé positif   | ~1850 m                                                      |
-| Dénivelé négatif   | ~1450 m                                                      |
+| Distance           | ~30,6 km                                                     |
+| Dénivelé positif   | ~1300 m                                                      |
+| Dénivelé négatif   | ~900 m                                                      |
 | Temps de marche    | ~9h30                                                        |
 | Sentiers marquants | Vereda do Fanal (PR13), Levada das 25 Fontes (PR6), Levada do Paul, Levada do Paul II |
 | Fréquentation      | Très variable (faible sur le PR13, très forte sur le PR6)    |
@@ -332,6 +375,12 @@ L'effort matinal est largement récompensé. Sous nos pieds, une immense mer de 
 
 C'est sans doute l'un des plus beaux levers de soleil que nous ayons observés durant cette traversée. Si vous passez la nuit à Bica da Cana, nous vous recommandons vivement de ne pas manquer ce détour. Le site doit probablement être tout aussi spectaculaire au coucher du soleil.
 
+```photos
+layout: 2
+- /content/images/madeira_014.jpg | Miradouro da Bica di Cana
+- /content/images/madeira_015.jpg | Quel spectacle !
+```
+
 Après avoir profité du spectacle, nous replions notre campement et prenons la direction du sud-est. Nous rejoignons rapidement un sentier secondaire qui ne figure pas parmi les itinéraires balisés les plus fréquentés de l'île.
 
 Sur un peu plus d'un kilomètre, la progression devient particulièrement engagée. Le terrain est raide et plusieurs passages ont été équipés de cordes fixes ou de prises aménagées pour faciliter la progression.
@@ -341,6 +390,12 @@ Bien que la distance soit faible (à peine plus d’1km), nous mettons plus d'un
 Nous rejoignons ensuite le PR17, l'un des sentiers qui m’a le plus marqués durant cette traversée.
 Moins fréquenté que les grands classiques de l'île, le Caminho do Pináculo e Folhadal offre pourtant une incroyable diversité de paysages. Le sentier alterne passages forestiers, sections le long des levadas, traversées de tunnels et superbes points de vue sur les reliefs environnants.
 Tout au long de la matinée, les panoramas sur les vallées et les mers de nuages se succèdent. L'ambiance est particulièrement agréable. Après environ neuf kilomètres de marche depuis Bica da Cana, nous atteignons le col d'Encumeada.
+
+```photos
+layout: 2
+- /content/images/madeira_016.jpg | La descente est vraiment raide
+- /content/images/madeira_017.jpg | Point de vue spectaculaire sur le PR17
+```
 
 Notre objectif initial était alors de rejoindre le Pico Ruivo en empruntant le PR1.3.
 
@@ -374,6 +429,12 @@ Nous faisons volontairement l'impasse sur le sommet du Pico Ruivo ce soir-là. I
 
 Nous poursuivons ensuite sur le PR1.2 en direction d'Achada do Teixeira. Cette courte section constitue probablement l'accès le plus simple au Pico Ruivo depuis la route. Le sentier est bien aménagé et beaucoup plus fréquenté que les itinéraires empruntés plus tôt dans la journée.
 
+```photos
+layout: 2
+- /content/images/madeira_018.jpg | Les vues sont sympas depuis le chemin de crête
+- /content/images/madeira_019.jpg | Quelque part sur le PR1.2
+```
+
 Le site est bien équipé avec sanitaires, eau potable et plusieurs espaces aménagés pour les tentes. Notre seule réserve concerne les deux poulaillers installés au milieu du campement. Les coqs locaux ne semblent pas connaître les grasses matinées et ont généreusement assuré notre réveil avant l'aube.
 
 Notre conseil : ne vous installez pas au premier emplacement venu. Des zones de bivouac situées plus bas permettent de s'éloigner des poulaillers et probablement d'augmenter vos chances de dormir jusqu'au lever du soleil !
@@ -388,9 +449,9 @@ Notre conseil : ne vous installez pas au premier emplacement venu. Des zones de 
 |:------------------:|:-------------------------------------:|
 | Départ             | Bica da Cana                          |
 | Arrivée            | Encumeada                             |
-| Distance           | 8,6km                                 |
-| Dénivelé positif   | ~250 m                                |
-| Dénivelé négatif   | ~800 m                                |
+| Distance           | 8,6 km                                 |
+| Dénivelé positif   | ~200 m                                |
+| Dénivelé négatif   | ~750 m                                |
 | Temps de marche    | ~2h45                                 |
 | Sentiers marquants | PR17 (Caminho do Pináculo e Folhadal) |
 | Fréquentation      | Faible à modérée                      |
@@ -403,9 +464,9 @@ Notre conseil : ne vous installez pas au premier emplacement venu. Des zones de 
 |:------------------:|:----------------------------------------------------:|
 | Départ             | Ilha                                                 |
 | Arrivée            | Pico das Pedras                                      |
-| Distance           | 14,6km                                               |
-| Dénivelé positif   | ~1450 m                                              |
-| Dénivelé négatif   | ~1000 m                                               |
+| Distance           | 14,7 km                                               |
+| Dénivelé positif   | ~1400 m                                              |
+| Dénivelé négatif   | ~950 m                                               |
 | Temps de marche    | ~4h45                                                |
 | Sentiers marquants | PR1.1 (Verada da Ilha), PR1.2 (Verada do Pico Ruivo) |
 | Fréquentation      | Forte à proximité du Pico Ruivo                      |
@@ -465,6 +526,12 @@ Nous atteignons finalement la magnifique cascade de Caldeirão Verde, point d’
 
 Avec le recul, ce PR est très beau, mais nous l’avons trouvé légèrement surcoté par rapport à d’autres randonnées beaucoup plus sauvages et moins fréquentées sur l’île.
 
+```photos
+layout: 2
+- /content/images/madeira_020.jpg | Vue spectaculaire sur la valée
+- /content/images/madeira_021.jpg | Cascade de Caldeirão Verde
+```
+
 Nous retrouvons ensuite la deuxième partie du PR1.1, déjà empruntée la veille, pour entamer la remontée vers le Pico Ruivo. Le sentier est directement accessible par le PR9.
 
 Cette section marque notre deuxième ascension vers le plus haut sommet de Madère en seulement deux jours, cette fois en ne réalisant que la seconde moitié de la montée.
@@ -491,6 +558,13 @@ Le PR1 est sans doute l’un des sentiers les plus spectaculaires de Madère. Il
 Le sentier suit les crêtes et offre des vues vertigineuses sur les vallées environnantes. C’est un itinéraire exigeant, parfois exposé et sujet au vertige, mais absolument incontournable selon nous.
 Malgré sa beauté, il s’agit également d’un sentier très fréquenté, donc attendez-vous à croiser du monde.
 
+```photos
+layout: 3
+- /content/images/madeira_022.jpg | Les chemins sont creusés à flanc de falaise
+- /content/images/madeira_023.jpg | Quelques passages sont vertigineux
+- /content/images/madeira_024.jpg | Panorama sur le massif central de Madère
+```
+
 Après avoir quitté le Pico do Areeiro, nous bifurquons sur le PR4 – Levada do Barreiro.
 
 Ce changement marque une rupture totale avec l’ambiance spectaculaire mais très fréquentée du PR1. Ici, nous retrouvons un sentier beaucoup plus calme, qui suit une levada en balcon au-dessus des vallées.
@@ -516,9 +590,9 @@ Nous terminons finalement cette très longue journée en arrivant au campement, 
 |:------------------:|:------------------------------------------------------------:|
 | Départ             | Pico das Pedras                                              |
 | Arrivée            | Poiso                                                        |
-| Distance           | 35km                                                         |
-| Dénivelé positif   | ~1800 m                                                      |
-| Dénivelé négatif   | ~1200 m                                                      |
+| Distance           | 34,6 km                                                         |
+| Dénivelé positif   | ~1900 m                                                      |
+| Dénivelé négatif   | ~1400 m                                                      |
 | Temps de marche    | ~10h30                                                       |
 | Sentiers marquants | PR9 (Levada do Caldeirão Verde), PR1.1 (Verada da Ilha), PR1 (Vereda do Areeiro), PR4 (Levada do Barreiro) |
 | Fréquentation      | Très forte sur PR9 et PR1, plus faible sur les dernières sections |
@@ -569,6 +643,12 @@ Ce tronçon joue surtout un rôle de transition entre le massif central et les z
 
 Nous atteignons progressivement les hauteurs de Porto da Cruz, petit village côtier dominé par les falaises volcaniques.
 
+```photos
+layout: 1
+maxHeight: 400px
+- /content/images/madeira_025.jpg | Point de vue sur Porto da Cruz
+```
+
 C’est ici que nous rejoignons le PR5. Le sentier bascule immédiatement dans un décor plus spectaculaire. Nous descendons vers des pentes très abruptes avant de rejoindre une ligne de crête qui longe la côte nord-est de Madère.
 
 Les vues sur l’océan Atlantique sont superbes, avec une sensation de verticalité permanente. Le vent est également très présent sur cette section, renforçant le caractère sauvage du lieu.
@@ -579,6 +659,13 @@ Le sentier alterne montées courtes et descentes abruptes, jamais très longues 
 Au fil de la progression, la silhouette de la Ponta de São Lourenço devient de plus en plus visible à l’horizon. Ce cap rocheux emblématique marque l’extrémité est de Madère et offre déjà de superbes perspectives photographiques bien avant d’y arriver.
 
 La fin de l’étape est assez surprenante. En quittant les hauteurs, nous basculons dans un paysage totalement différent de tout ce que nous avions vu jusque-là : un décor aride, presque désertique, avec une terre rouge, des formations rocheuses et des reliefs érodés qui font penser à des paysages martiens.
+
+```photos
+layout: 3
+- /content/images/madeira_026.jpg | Falaises de la côte nord-est de l'île
+- /content/images/madeira_027.jpg | Vue sur la Ponta de São Lourenço
+- /content/images/madeira_028.jpg | Bienvenue sur Mars
+```
 
 Nous terminons finalement cette étape à Caniçal, petit village côtier où nous avons réservé un logement pour la nuit.
 
@@ -593,8 +680,8 @@ Il ne nous reste désormais plus qu’une ultime journée pour conclure notre it
 | Départ             | Poiso                                                    |
 | Arrivée            | Caniçal                                                  |
 | Distance           | ~25,5 km                                                 |
-| Dénivelé positif   | ~500 m                                                   |
-| Dénivelé négatif   | ~1800 m                                                  |
+| Dénivelé positif   | ~600 m                                                   |
+| Dénivelé négatif   | ~2000 m                                                  |
 | Temps de marche    | ~6h30                                                    |
 | Sentiers marquants | PR5 (Vereda das Funduras), portions de crêtes littorales |
 | Fréquentation      | Faible à modérée                                         |
@@ -649,6 +736,14 @@ Comptez environ 2h à 2h30 pour réaliser l'aller-retour jusqu'au point de vue f
 
 Après avoir parcouru l’intégralité du sentier, nous faisons demi-tour pour rejoindre Caniçal par le même itinéraire.
 
+```photos
+layout: 3
+- /content/images/madeira_029.jpg
+- /content/images/madeira_030.jpg | Ponta de São Lourenço
+- /content/images/madeira_031.jpg
+```
+
+
 Cette dernière étape est un peu plus courte, mais elle constitue une très belle conclusion à notre traversée de Madère. Après les montagnes, les forêts de Laurisilva, les levadas, les sommets volcaniques et les crêtes aériennes du centre de l'île, terminer face à l'océan sur cette péninsule battue par les vents nous a semblé être une fin parfaite pour cette aventure.
 
 ### Informations pratiques
@@ -659,10 +754,10 @@ Cette dernière étape est un peu plus courte, mais elle constitue une très bel
 |:------------------:|:-------------------------------------:|
 | Départ             | Caniçal                               |
 | Arrivée            | Ponta de São Lourenço (aller-retour)  |
-| Distance           | ~16,90 km                             |
+| Distance           | ~16,9 km                             |
 | Dénivelé positif   | ~800 m                                |
 | Dénivelé négatif   | ~800 m                                |
-| Temps de marche    | ~4h30                                 |
+| Temps de marche    | ~4h15                                 |
 | Sentiers marquants | PR8 (Vereda da Ponta de São Lourenço) |
 | Fréquentation      | Très forte                            |
 | Note               | ★★★★☆                                 |

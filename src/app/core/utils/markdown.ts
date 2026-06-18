@@ -8,10 +8,17 @@
  * `marked` behind this same function signature.
  */
 
+/** A single photo entry inside a photo-grid block. */
+export interface PhotoItem {
+  src: string;
+  caption?: string;
+}
+
 /** A rendered chunk of an article: either inline HTML or an embed. */
 export type ArticleBlock =
   | { type: 'html'; html: string }
-  | { type: 'gpx'; src: string; title?: string };
+  | { type: 'gpx'; src: string; title?: string }
+  | { type: 'photos'; layout: 1 | 2 | 3; maxHeight?: string; images: PhotoItem[] };
 
 /** A single entry in the table of contents. */
 export interface TocEntry {
@@ -64,6 +71,32 @@ export function parseBlocks(markdown: string): ArticleBlock[] {
       }
       continue;
     }
+
+    if (/^```photos\s*$/.test(lines[i].trim())) {
+      flushMarkdown();
+      const meta: Record<string, string> = {};
+      const images: PhotoItem[] = [];
+      i++;
+      while (i < lines.length && !/^```\s*$/.test(lines[i].trim())) {
+        const kv = /^([A-Za-z0-9_]+):\s*(.*)$/.exec(lines[i].trim());
+        if (kv) {
+          meta[kv[1]] = kv[2].trim();
+        }
+        const imgLine = /^-\s+([^|]+?)(?:\|\s*(.*))?$/.exec(lines[i].trim());
+        if (imgLine) {
+          images.push({ src: imgLine[1].trim(), caption: imgLine[2]?.trim() || undefined });
+        }
+        i++;
+      }
+      if (images.length > 0) {
+        const rawLayout = parseInt(meta['layout'] ?? '1', 10);
+        const layout = (rawLayout === 2 ? 2 : rawLayout === 3 ? 3 : 1) as 1 | 2 | 3;
+        const maxHeight = meta['maxHeight'] ?? undefined;
+        blocks.push({ type: 'photos', layout, maxHeight, images });
+      }
+      continue;
+    }
+
     buffer.push(lines[i]);
   }
 

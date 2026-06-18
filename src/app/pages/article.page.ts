@@ -11,6 +11,7 @@ import { ArticleLayoutComponent } from '../components/templates/article-layout.c
 import { ArticleHeaderComponent } from '../components/organisms/article-header.component';
 import { ReadingProgressComponent } from '../components/organisms/reading-progress.component';
 import { GpxViewerComponent } from '../components/organisms/gpx-viewer.component';
+import { PhotoGridComponent } from '../components/organisms/photo-grid.component';
 import { TableOfContentsComponent } from '../components/organisms/table-of-contents.component';
 import { SafeHtmlPipe } from '../core/pipes/safe-html.pipe';
 
@@ -26,6 +27,7 @@ import { SafeHtmlPipe } from '../core/pipes/safe-html.pipe';
     ArticleHeaderComponent,
     ReadingProgressComponent,
     GpxViewerComponent,
+    PhotoGridComponent,
     TableOfContentsComponent,
     SafeHtmlPipe,
   ],
@@ -51,6 +53,9 @@ import { SafeHtmlPipe } from '../core/pipes/safe-html.pipe';
             @switch (block.type) {
               @case ('gpx') {
                 <hs-gpx-viewer [src]="block.src" [title]="block.title" />
+              }
+              @case ('photos') {
+                <hs-photo-grid [layout]="block.layout" [images]="block.images" [maxHeight]="block.maxHeight" />
               }
               @default {
                 <div [innerHTML]="block.html | safeHtml"></div>

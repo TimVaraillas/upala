@@ -45,6 +45,39 @@ src: /content/tracks/gr20-etape-1.gpx
 title: Étape 1 — Calenzana › Ortu di u Piobbu
 ```
 
+Le départ de Calenzana, sous les chênes-lièges, ne laisse pas deviner ce qui attend.
+La forêt disparaît rapidement pour laisser place à une mer de rochers.
+
+```photos
+layout: 1
+- https://picsum.photos/seed/gr20-start/1200/600 | Départ de Calenzana au lever du soleil
+```
+
+## Les bivouacs en altitude
+
+Dormir en altitude est l'une des expériences les plus marquantes de cette traversée.
+Les nuits sont fraîches dès 1 800 m, la voie lactée éclate au-dessus des crêtes
+et le silence n'est rompu que par le vent dans les lichens.
+
+```photos
+layout: 2
+- https://picsum.photos/seed/gr20-bivouac1/800/600 | Bivouac au-dessus du lac de Nino
+- https://picsum.photos/seed/gr20-bivouac2/800/600 | Tente au petit matin, condensation sur la toile
+```
+
+## Le Cirque de la Solitude
+
+Avant sa fermeture définitive, ce passage était la section la plus technique du GR20.
+Aujourd'hui contourné par une variante, il reste visible depuis les crêtes — une
+cicatrice de granit suspendue entre deux monde.
+
+```photos
+layout: 3
+- https://picsum.photos/seed/gr20-cirque2/600/400 | Câbles fixes sur la descente
+- https://picsum.photos/seed/gr20-cirque1/900/700 | Le cirque vu depuis le col
+- https://picsum.photos/seed/gr20-cirque3/600/400 | Passage sur les dalles mouillées
+```
+
 ## Le matériel qui a fait la différence
 
 Trois objets ont justifié chaque gramme :

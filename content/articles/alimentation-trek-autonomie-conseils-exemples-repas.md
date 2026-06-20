@@ -1,5 +1,5 @@
 ---
-title: "Quelle alimentation pour un trek en autonomie ? Conseils, besoins énergétiques et exemples de repas"
+title: "Quelle alimentation pour un trek en autonomie ? Conseils et exemples de repas"
 date: 2026-06-20
 tags: [trek, alimentation, autonomie, bivouac]
 coverImage: /content/images/cover-alimentation-trek.png
@@ -8,7 +8,7 @@ author: Tim
 excerpt: "Comment s’alimenter en trek en autonomie ? Besoins énergétiques, choix des aliments, stratégie de repas et exemple concret de ration pour 6 jours en montagne."
 ---
 
-# Quelle alimentation pour un trek en autonomie ? Conseils, besoins énergétiques et exemples de repas
+# Quelle alimentation pour un trek en autonomie ? Conseils et exemples de repas
 
 Lorsque l'on prépare un trek de plusieurs jours en autonomie, on passe souvent beaucoup de temps à étudier l'itinéraire, la météo ou le matériel. Pourtant, un autre sujet mérite toute notre attention : la nourriture.
 

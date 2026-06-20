@@ -1,5 +1,20 @@
 [
   {
+    "title": "Quelle alimentation pour un trek en autonomie ? Conseils, besoins énergétiques et exemples de repas",
+    "date": "2026-06-20",
+    "tags": [
+      "trek",
+      "alimentation",
+      "autonomie",
+      "bivouac"
+    ],
+    "coverImage": "/content/images/cover-alimentation-trek.png",
+    "slug": "alimentation-trek-autonomie-conseils-exemples-repas",
+    "author": "Tim",
+    "excerpt": "Comment s’alimenter en trek en autonomie ? Besoins énergétiques, choix des aliments, stratégie de repas et exemple concret de ration pour 6 jours en montagne.",
+    "readingTime": 12
+  },
+  {
     "title": "Traversée de Madère en autonomie : notre itinéraire en 7 étapes",
     "date": "2026-06-15",
     "tags": [
@@ -7,38 +22,10 @@
       "Madère",
       "itinéraire"
     ],
-    "coverImage": "/content/images/madeira-cover-1.jpg",
+    "coverImage": "/content/images/cover-itineraire-madeira.jpg",
     "slug": "madere-autonomie-7-etapes",
     "author": "Tim",
     "excerpt": "Récit de notre traversée intégrale de Madère en totale autonomie : étapes, lieu de campement et conseils pour profiter pleinement de l'île aux mille sentiers.",
     "readingTime": 39
-  },
-  {
-    "title": "Traverser le GR20 en autonomie : 15 jours sur l'épine dorsale corse",
-    "date": "2026-05-28",
-    "tags": [
-      "expédition",
-      "GR20",
-      "itinéraire"
-    ],
-    "coverImage": "https://picsum.photos/seed/gr20/1280/720",
-    "slug": "gr20-autonomie-15-jours",
-    "author": "Un pas après l'autre",
-    "excerpt": "Récit d'une traversée intégrale du GR20 en totale autonomie : étapes, cols, refuges manqués et leçons d'un sentier qui ne pardonne pas l'improvisation.",
-    "readingTime": 3
-  },
-  {
-    "title": "Bivouac en montagne : le guide pratique pour dormir dehors léger",
-    "date": "2026-04-12",
-    "tags": [
-      "guide",
-      "bivouac",
-      "matériel"
-    ],
-    "coverImage": "https://picsum.photos/seed/bivouac/1280/720",
-    "slug": "guide-bivouac-montagne",
-    "author": "Un pas après l'autre",
-    "excerpt": "Choisir son emplacement, alléger son couchage, gérer le froid et l'eau : tout ce qu'il faut savoir pour un premier bivouac réussi en montagne.",
-    "readingTime": 1
   }
 ]

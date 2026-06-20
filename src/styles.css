@@ -204,6 +204,38 @@ body {
 }
 
 /* ------------------------------------------------------------------ */
+/* Tip / note callout (` ```tip ` Markdown block)                      */
+/* ------------------------------------------------------------------ */
+.prose-trail .tip {
+  display: flex;
+  gap: 0.85rem;
+  margin-top: 1.75rem;
+  margin-bottom: 1.75rem;
+  padding: 1.1rem 1.25rem;
+  border: 1px solid var(--color-moss-200);
+  border-left: 4px solid var(--color-moss-400);
+  border-radius: 0.65rem;
+  background-color: var(--color-moss-50);
+}
+.prose-trail .tip__icon {
+  flex: none;
+  display: flex;
+  margin-top: 0.1rem;
+  color: var(--color-moss-600);
+}
+.prose-trail .tip__body {
+  min-width: 0;
+}
+.prose-trail .tip__body > :first-child {
+  margin-top: 0;
+}
+.prose-trail .tip__title {
+  font-family: var(--font-display);
+  font-weight: 600;
+  color: var(--color-moss-900);
+}
+
+/* ------------------------------------------------------------------ */
 /* Leaflet — guard against Tailwind preflight breaking map tiles.       */
 /* Preflight applies `img { max-width: 100%; height: auto }` which      */
 /* mis-sizes Leaflet's absolutely-positioned 256px tiles. These rules   */

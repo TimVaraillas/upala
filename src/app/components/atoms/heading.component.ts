@@ -28,7 +28,7 @@ export class HeadingComponent {
   readonly level = input<1 | 2 | 3 | 4>(2);
 
   protected readonly classes = computed(() => {
-    const base = 'font-display font-semibold tracking-tight text-stone-900';
+    const base = 'mb-6 font-display font-semibold tracking-tight text-stone-900';
     const scale: Record<number, string> = {
       1: 'text-4xl sm:text-5xl leading-tight',
       2: 'text-3xl sm:text-4xl',

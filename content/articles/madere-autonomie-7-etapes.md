@@ -2,7 +2,7 @@
 title: "Traversée de Madère en autonomie : notre itinéraire en 7 étapes"
 date: 2026-06-15
 tags: [trek, Madère, itinéraire]
-coverImage: /content/images/madeira-cover-1.jpg
+coverImage: /content/images/cover-itineraire-madeira.jpg
 slug: madere-autonomie-7-etapes
 author: Tim
 excerpt: "Récit de notre traversée intégrale de Madère en totale autonomie : étapes, lieu de campement et conseils pour profiter pleinement de l'île aux mille sentiers."

@@ -72,6 +72,27 @@ export function parseBlocks(markdown: string): ArticleBlock[] {
       continue;
     }
 
+    if (/^```tip\s*$/.test(lines[i].trim())) {
+      flushMarkdown();
+      let title = '';
+      const body: string[] = [];
+      i++;
+      while (i < lines.length && !/^```\s*$/.test(lines[i].trim())) {
+        const titleMatch = /^title:\s*(.*)$/.exec(lines[i]);
+        if (!title && titleMatch) {
+          title = titleMatch[1].trim();
+        } else {
+          body.push(lines[i]);
+        }
+        i++;
+      }
+      blocks.push({
+        type: 'html',
+        html: renderTip(title, body.join('\n').trim(), headingSlugs),
+      });
+      continue;
+    }
+
     if (/^```photos\s*$/.test(lines[i].trim())) {
       flushMarkdown();
       const meta: Record<string, string> = {};
@@ -102,6 +123,33 @@ export function parseBlocks(markdown: string): ArticleBlock[] {
 
   flushMarkdown();
   return blocks;
+}
+
+/**
+ * Render a ` ```tip ` callout: a highlighted "note"-style box with an
+ * optional bold title and Markdown body. Bullet lines using `•` are
+ * normalised to Markdown list items so they render as a proper list.
+ */
+function renderTip(
+  title: string,
+  body: string,
+  headingSlugs: Map<string, number>,
+): string {
+  const normalisedBody = body.replace(/^[ \t]*•[ \t]*/gm, '- ');
+  const titleHtml = title
+    ? `<p class="tip__title">${inline(title)}</p>`
+    : '';
+  const bodyHtml = normalisedBody ? renderMarkdown(normalisedBody, headingSlugs) : '';
+  return (
+    `<aside class="tip not-prose">` +
+    `<span class="tip__icon" aria-hidden="true">` +
+    `<svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">` +
+    `<path d="M9 18h6" /><path d="M10 22h4" />` +
+    `<path d="M12 2a7 7 0 0 0-4 12.7c.6.5 1 1.3 1 2.1v.2h6v-.2c0-.8.4-1.6 1-2.1A7 7 0 0 0 12 2Z" />` +
+    `</svg></span>` +
+    `<div class="tip__body">${titleHtml}${bodyHtml}</div>` +
+    `</aside>`
+  );
 }
 
 export function renderMarkdown(

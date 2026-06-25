@@ -11,13 +11,13 @@ import { ParagraphComponent } from '../components/atoms/paragraph.component';
   changeDetection: ChangeDetectionStrategy.OnPush,
   imports: [HeadingComponent, ImageComponent, ParagraphComponent],
   template: `
-    <section class="mx-auto max-w-3xl px-4 py-16 sm:px-6">
+    <section class="mx-auto max-w-3xl px-4 sm:px-6">
       <div class="mt-6 space-y-6">
-        <div class="mb-12 grid grid-cols-5 gap-4 h-100">
-          <div class="col-span-3 overflow-hidden rounded-lg">
+        <div class="mb-12 grid grid-cols-1 gap-4 h-100 sm:grid-cols-5">
+          <div class="overflow-hidden rounded-lg sm:col-span-3">
             <hs-image [src]="photos[0].src" [alt]="photos[0].alt" />
           </div>
-          <div class="col-span-2 overflow-hidden rounded-lg">
+          <div class="hidden overflow-hidden rounded-lg sm:col-span-2 sm:block">
             <hs-image [src]="photos[1].src" [alt]="photos[1].alt" />
           </div>
         </div>

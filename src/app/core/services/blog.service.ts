@@ -2,7 +2,7 @@ import { Injectable, inject } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable, map, of, shareReplay, switchMap } from 'rxjs';
 
-import { Article, ArticleSummary } from '../models/article.model';
+import { Article, ArticleSummary, DestinationNode } from '../models/article.model';
 import { parseFrontmatter } from '../utils/frontmatter';
 import {
   estimateReadingTime,
@@ -73,6 +73,44 @@ export class BlogService {
     );
   }
 
+  /** Destination hierarchy (country > regions) with article counts. */
+  getDestinations(): Observable<DestinationNode[]> {
+    return this.summaries$.pipe(
+      map((articles) => {
+        const countries = new Map<
+          string,
+          { count: number; regions: Map<string, number> }
+        >();
+        for (const article of articles) {
+          if (!article.country) {
+            continue;
+          }
+          const entry = countries.get(article.country) ?? {
+            count: 0,
+            regions: new Map<string, number>(),
+          };
+          entry.count += 1;
+          if (article.region) {
+            entry.regions.set(
+              article.region,
+              (entry.regions.get(article.region) ?? 0) + 1,
+            );
+          }
+          countries.set(article.country, entry);
+        }
+        return [...countries.entries()]
+          .map(([country, entry]) => ({
+            country,
+            count: entry.count,
+            regions: [...entry.regions.entries()]
+              .map(([region, count]) => ({ region, count }))
+              .sort((a, b) => a.region.localeCompare(b.region)),
+          }))
+          .sort((a, b) => a.country.localeCompare(b.country));
+      }),
+    );
+  }
+
   /** Fetch and render a single article by slug. */
   getArticle(slug: string): Observable<Article | null> {
     return this.summaries$.pipe(
@@ -98,6 +136,8 @@ export class BlogService {
       coverImage: data.coverImage ?? fallback.coverImage,
       slug: data.slug ?? fallback.slug,
       author: data.author ?? fallback.author,
+      country: data.country ?? fallback.country,
+      region: data.region ?? fallback.region,
       excerpt: data.excerpt ?? fallback.excerpt ?? excerptFromMarkdown(markdown),
       readingTime: estimateReadingTime(markdown),
       markdown,

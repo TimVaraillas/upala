@@ -28,9 +28,17 @@ import { SidebarComponent } from '../components/organisms/sidebar.component';
       <div main>
         <div class="mb-8 space-y-3">
           <hs-heading [level]="1">Carnets d'exploration</hs-heading>
-          @if (activeTags().length) {
+          @if (hasFilters()) {
             <p class="flex flex-wrap items-center gap-2 text-stone-600">
               Filtré par
+              @if (activeCountry()) {
+                <span
+                  class="inline-flex items-center gap-1 rounded-full bg-sand-200 px-3 py-1 text-sm font-medium text-stone-800"
+                >
+                  {{ activeCountry()
+                  }}{{ activeRegion() ? ' › ' + activeRegion() : '' }}
+                </span>
+              }
               @for (tag of activeTags(); track tag) {
                 <span
                   class="inline-flex items-center gap-1 rounded-full bg-moss-100 px-3 py-1 text-sm font-medium text-moss-800"
@@ -60,7 +68,14 @@ import { SidebarComponent } from '../components/organisms/sidebar.component';
       </div>
 
       <div sidebar>
-        <hs-sidebar [tags]="tags()" [recent]="recent()" [activeTags]="activeTags()" />
+        <hs-sidebar
+          [tags]="tags()"
+          [recent]="recent()"
+          [activeTags]="activeTags()"
+          [destinations]="destinations()"
+          [activeCountry]="activeCountry()"
+          [activeRegion]="activeRegion()"
+        />
       </div>
     </hs-blog-layout>
   `,
@@ -73,6 +88,9 @@ export default class BlogPage {
     initialValue: [],
   });
   protected readonly tags = toSignal(this.blog.getTags(), { initialValue: [] });
+  protected readonly destinations = toSignal(this.blog.getDestinations(), {
+    initialValue: [],
+  });
 
   protected readonly activeTags = toSignal(
     this.route.queryParamMap.pipe(
@@ -86,15 +104,35 @@ export default class BlogPage {
     { initialValue: [] as string[] },
   );
 
+  protected readonly activeCountry = toSignal(
+    this.route.queryParamMap.pipe(map((p) => p.get('country') ?? '')),
+    { initialValue: '' },
+  );
+
+  protected readonly activeRegion = toSignal(
+    this.route.queryParamMap.pipe(map((p) => p.get('region') ?? '')),
+    { initialValue: '' },
+  );
+
+  protected readonly hasFilters = computed(
+    () =>
+      this.activeTags().length > 0 ||
+      !!this.activeCountry() ||
+      !!this.activeRegion(),
+  );
+
   protected readonly filtered = computed(() => {
     const tags = this.activeTags().map((t) => t.toLowerCase());
-    const list = this.articles();
-    if (!tags.length) {
-      return list;
-    }
-    return list.filter((a) =>
-      a.tags.some((t) => tags.includes(t.toLowerCase())),
-    );
+    const country = this.activeCountry().toLowerCase();
+    const region = this.activeRegion().toLowerCase();
+    return this.articles().filter((a) => {
+      const matchTags =
+        !tags.length || a.tags.some((t) => tags.includes(t.toLowerCase()));
+      const matchCountry =
+        !country || (a.country ?? '').toLowerCase() === country;
+      const matchRegion = !region || (a.region ?? '').toLowerCase() === region;
+      return matchTags && matchCountry && matchRegion;
+    });
   });
 
   protected readonly recent = computed(() => this.articles().slice(0, 4));

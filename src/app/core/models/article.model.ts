@@ -11,6 +11,17 @@ export interface ArticleFrontmatter {
   slug: string;
   excerpt?: string;
   author?: string;
+  /** Destination country (top level of the destination hierarchy). */
+  country?: string;
+  /** Destination region within the country (second level). */
+  region?: string;
+}
+
+/** A country node with its regions, used for the destination filter. */
+export interface DestinationNode {
+  country: string;
+  count: number;
+  regions: { region: string; count: number }[];
 }
 
 /**

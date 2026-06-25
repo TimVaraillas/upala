@@ -5,7 +5,6 @@
     "tags": [
       "trek",
       "alimentation",
-      "autonomie",
       "bivouac"
     ],
     "coverImage": "/content/images/cover-alimentation-trek.png",
@@ -19,13 +18,15 @@
     "date": "2026-06-15",
     "tags": [
       "trek",
-      "Madère",
-      "itinéraire"
+      "itinéraire",
+      "bivouac"
     ],
     "coverImage": "/content/images/cover-itineraire-madeira.jpg",
     "slug": "madere-autonomie-7-etapes",
     "author": "Tim",
     "excerpt": "Récit de notre traversée intégrale de Madère en totale autonomie : étapes, lieu de campement et conseils pour profiter pleinement de l'île aux mille sentiers.",
-    "readingTime": 39
+    "readingTime": 39,
+    "country": "Portugal",
+    "region": "Madère"
   }
 ]

@@ -96,6 +96,8 @@ async function main() {
       author: data.author || 'Un pas après l’autre',
       excerpt: data.excerpt || excerptFromMarkdown(body),
       readingTime: estimateReadingTime(body),
+      ...(data.country ? { country: data.country } : {}),
+      ...(data.region ? { region: data.region } : {}),
     });
   }
 

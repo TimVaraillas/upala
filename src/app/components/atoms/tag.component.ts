@@ -10,6 +10,7 @@ import { RouterLink } from '@angular/router';
     <a
       [routerLink]="['/blog']"
       [queryParams]="queryParams()"
+      queryParamsHandling="merge"
       [class]="classes()"
     >
       #{{ label() }}

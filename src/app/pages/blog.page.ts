@@ -27,7 +27,7 @@ import { SidebarComponent } from '../components/organisms/sidebar.component';
     <hs-blog-layout>
       <div main>
         <div class="mb-8 space-y-3">
-          <hs-heading [level]="1">Carnets de route</hs-heading>
+          <hs-heading [level]="1">Carnets d'exploration</hs-heading>
           @if (activeTag()) {
             <p class="flex flex-wrap items-center gap-2 text-stone-600">
               Filtré par
@@ -90,7 +90,7 @@ export default class BlogPage {
 
   constructor() {
     inject(SeoService).update({
-      title: 'Carnets de route',
+      title: 'Carnets d\'exploration',
       description:
         'Récits d’expédition et guides de trek : itinéraires, matériel, bivouac et logistique.',
       url: 'https://un-pas-apres-l-autre.example/blog',

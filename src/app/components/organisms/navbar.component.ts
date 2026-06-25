@@ -3,12 +3,13 @@ import { RouterLink } from '@angular/router';
 
 import { NavbarItemComponent } from '../molecules/navbar-item.component';
 import { IconComponent } from '../atoms/icon.component';
+import { LogoComponent } from '../atoms/logo.component';
 
 /** Top site navigation with responsive mobile menu. */
 @Component({
   selector: 'hs-navbar',
   changeDetection: ChangeDetectionStrategy.OnPush,
-  imports: [RouterLink, NavbarItemComponent, IconComponent],
+  imports: [RouterLink, NavbarItemComponent, IconComponent, LogoComponent],
   template: `
     <header
       class="sticky top-0 z-40 border-b border-sand-200/80 bg-sand-50/85 backdrop-blur"
@@ -16,12 +17,8 @@ import { IconComponent } from '../atoms/icon.component';
       <div
         class="mx-auto flex max-w-6xl items-center justify-between px-4 py-4 sm:px-6"
       >
-        <a
-          routerLink="/"
-          class="flex items-center gap-2 font-display text-lg font-semibold tracking-tight text-stone-900"
-        >
-          <span class="text-moss-700"><hs-icon name="mountain" [size]="26" /></span>
-          Un&nbsp;pas&nbsp;après&nbsp;l'autre
+        <a routerLink="/" class="flex items-center" aria-label="Accueil">
+          <hs-logo variant="inline" imgClass="h-8 w-auto" alt="Upala" />
         </a>
 
         <nav class="hidden items-center gap-8 md:flex">

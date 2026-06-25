@@ -28,14 +28,16 @@ import { SidebarComponent } from '../components/organisms/sidebar.component';
       <div main>
         <div class="mb-8 space-y-3">
           <hs-heading [level]="1">Carnets d'exploration</hs-heading>
-          @if (activeTag()) {
+          @if (activeTags().length) {
             <p class="flex flex-wrap items-center gap-2 text-stone-600">
               Filtré par
-              <span
-                class="inline-flex items-center gap-1 rounded-full bg-moss-100 px-3 py-1 text-sm font-medium text-moss-800"
-              >
-                #{{ activeTag() }}
-              </span>
+              @for (tag of activeTags(); track tag) {
+                <span
+                  class="inline-flex items-center gap-1 rounded-full bg-moss-100 px-3 py-1 text-sm font-medium text-moss-800"
+                >
+                  #{{ tag }}
+                </span>
+              }
               <a
                 routerLink="/blog"
                 class="inline-flex items-center gap-1 text-sm text-stone-500 hover:text-moss-700"
@@ -58,7 +60,7 @@ import { SidebarComponent } from '../components/organisms/sidebar.component';
       </div>
 
       <div sidebar>
-        <hs-sidebar [tags]="tags()" [recent]="recent()" />
+        <hs-sidebar [tags]="tags()" [recent]="recent()" [activeTags]="activeTags()" />
       </div>
     </hs-blog-layout>
   `,
@@ -72,18 +74,27 @@ export default class BlogPage {
   });
   protected readonly tags = toSignal(this.blog.getTags(), { initialValue: [] });
 
-  protected readonly activeTag = toSignal(
-    this.route.queryParamMap.pipe(map((p) => p.get('tag') ?? '')),
-    { initialValue: '' },
+  protected readonly activeTags = toSignal(
+    this.route.queryParamMap.pipe(
+      map((p) =>
+        (p.get('tag') ?? '')
+          .split(',')
+          .map((t) => t.trim())
+          .filter(Boolean),
+      ),
+    ),
+    { initialValue: [] as string[] },
   );
 
   protected readonly filtered = computed(() => {
-    const tag = this.activeTag().toLowerCase();
+    const tags = this.activeTags().map((t) => t.toLowerCase());
     const list = this.articles();
-    if (!tag) {
+    if (!tags.length) {
       return list;
     }
-    return list.filter((a) => a.tags.some((t) => t.toLowerCase() === tag));
+    return list.filter((a) =>
+      a.tags.some((t) => tags.includes(t.toLowerCase())),
+    );
   });
 
   protected readonly recent = computed(() => this.articles().slice(0, 4));

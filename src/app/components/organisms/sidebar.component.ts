@@ -16,7 +16,7 @@ import { ArticleSummary } from '../../core/models/article.model';
         <hs-heading [level]="4">Catégories</hs-heading>
         <div class="mt-4 flex flex-wrap gap-2">
           @for (entry of tags(); track entry.tag) {
-            <hs-tag [label]="entry.tag" />
+            <hs-tag [label]="entry.tag" [activeTags]="activeTags()" />
           } @empty {
             <p class="text-sm text-stone-500">Aucune catégorie.</p>
           }
@@ -53,4 +53,5 @@ import { ArticleSummary } from '../../core/models/article.model';
 export class SidebarComponent {
   readonly tags = input.required<{ tag: string; count: number }[]>();
   readonly recent = input<ArticleSummary[]>([]);
+  readonly activeTags = input<string[]>([]);
 }

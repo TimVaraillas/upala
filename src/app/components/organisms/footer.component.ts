@@ -55,7 +55,7 @@ import { IconComponent } from '../atoms/icon.component';
         <p
           class="mx-auto max-w-6xl px-4 py-5 text-xs text-stone-500 sm:px-6"
         >
-          © {{ year }} Un pas après l’autre — Conçu pour marcher léger.
+          © {{ year }} Un pas après l’autre — Conçu pour marcher l'esprit léger.
         </p>
       </div>
     </footer>

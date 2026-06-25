@@ -74,9 +74,11 @@ import { ArticleListComponent } from '../components/organisms/article-list.compo
 
     <section class="">
       <div class="mx-auto max-w-6xl px-4 py-16 sm:px-6">
-        <div class="mb-8 flex items-end justify-between">
+        <div
+          class="mb-8 flex flex-col items-start gap-4 sm:flex-row sm:items-end sm:justify-between"
+        >
           <hs-heading [level]="2">Derniers carnets</hs-heading>
-          <hs-button [routerLink]="'/blog'" variant="ghost" size="sm">
+          <hs-button [routerLink]="'/blog'" variant="secondary" size="sm">
             Tout voir <hs-icon name="arrow-right" [size]="16" />
           </hs-button>
         </div>

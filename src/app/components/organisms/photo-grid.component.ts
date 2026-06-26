@@ -21,7 +21,13 @@ import { LightboxComponent } from './lightbox.component';
         @case (2) {
           <div class="grid grid-cols-2 gap-2 sm:gap-3">
             @for (photo of images(); track photo.src; let i = $index) {
-              <div class="overflow-hidden rounded-lg cursor-pointer" (click)="openLightbox(i)">
+              <div
+                class="overflow-hidden rounded-lg cursor-pointer"
+                role="button"
+                tabindex="0"
+                (click)="openLightbox(i)"
+                (keyup.enter)="openLightbox(i)"
+              >
                 <img
                   [src]="photo.src"
                   [alt]="photo.caption ?? ''"
@@ -45,7 +51,13 @@ import { LightboxComponent } from './lightbox.component';
         @case (3) {
           <div class="grid grid-cols-3 gap-2 sm:gap-3">
             @for (photo of images(); track photo.src; let i = $index) {
-              <div class="overflow-hidden rounded-lg cursor-pointer" (click)="openLightbox(i)">
+              <div
+                class="overflow-hidden rounded-lg cursor-pointer"
+                role="button"
+                tabindex="0"
+                (click)="openLightbox(i)"
+                (keyup.enter)="openLightbox(i)"
+              >
                 <img
                   [src]="photo.src"
                   [alt]="photo.caption ?? ''"
@@ -68,7 +80,13 @@ import { LightboxComponent } from './lightbox.component';
 
         @default {
           <!-- layout: 1 — single photo -->
-          <div class="overflow-hidden rounded-lg cursor-pointer" (click)="openLightbox(0)">
+          <div
+            class="overflow-hidden rounded-lg cursor-pointer"
+            role="button"
+            tabindex="0"
+            (click)="openLightbox(0)"
+            (keyup.enter)="openLightbox(0)"
+          >
             <img
               [src]="images()[0].src"
               [alt]="images()[0].caption ?? ''"

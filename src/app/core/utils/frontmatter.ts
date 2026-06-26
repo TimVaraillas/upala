@@ -40,7 +40,7 @@ export function parseFrontmatter(raw: string): ParsedMarkdown {
     }
 
     const key = keyMatch[1];
-    let value = keyMatch[2].trim();
+    const value = keyMatch[2].trim();
 
     // Block-style array (items on following indented lines).
     if (value === '') {

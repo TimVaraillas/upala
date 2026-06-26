@@ -2,29 +2,15 @@ import { ChangeDetectionStrategy, Component, input } from '@angular/core';
 
 import { Article } from '../../core/models/article.model';
 import { ImageComponent } from '../atoms/image.component';
-import { TagComponent } from '../atoms/tag.component';
-import { HeadingComponent } from '../atoms/heading.component';
 import { AuthorInfoComponent } from '../molecules/author-info.component';
 
-/** Hero header for an article: cover image, title and metadata. */
+/** Hero header for an article: author metadata and cover image. */
 @Component({
   selector: 'upala-article-header',
   changeDetection: ChangeDetectionStrategy.OnPush,
-  imports: [ImageComponent, TagComponent, HeadingComponent, AuthorInfoComponent],
+  imports: [ImageComponent, AuthorInfoComponent],
   template: `
-    <header class="space-y-6">
-      <div class="flex flex-wrap gap-2">
-        @for (tag of article().tags; track tag) {
-          <upala-tag [label]="tag" />
-        }
-      </div>
-
-      <upala-heading [level]="1">{{ article().title }}</upala-heading>
-
-      <p class="max-w-2xl text-md italic leading-relaxed text-stone-600">
-        {{ article().excerpt }}
-      </p>
-
+    <div class="space-y-6 pt-8">
       <upala-author-info
         [author]="article().author ?? 'Un pas après l’autre'"
         [date]="article().date"
@@ -42,7 +28,7 @@ import { AuthorInfoComponent } from '../molecules/author-info.component';
           [priority]="true"
         />
       </div>
-    </header>
+    </div>
   `,
 })
 export class ArticleHeaderComponent {

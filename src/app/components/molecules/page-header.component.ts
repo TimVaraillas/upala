@@ -11,7 +11,7 @@ import { HeadingComponent } from '../atoms/heading.component';
     <header class="mb-8 space-y-3">
       <upala-heading [level]="1">{{ title() }}</upala-heading>
       @if (subtitle()) {
-        <p class="max-w-prose leading-relaxed text-stone-600 italic">
+        <p class="leading-relaxed text-stone-600 italic">
           {{ subtitle() }}
         </p>
       }

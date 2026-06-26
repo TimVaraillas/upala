@@ -21,12 +21,12 @@ import { TocEntry } from '../../core/utils/markdown';
     @if (entries().length) {
       <nav
         aria-label="Table des matières"
-        class="sticky top-10 flex max-h-[calc(100vh-5rem)] flex-col"
+        class="sticky top-0 flex h-screen flex-col border-l border-sand-200 pt-8 pb-12"
       >
-        <p class="mb-3 text-xs font-semibold uppercase tracking-wider text-stone-400">
+        <p class="mb-5 pl-4 text-sm font-semibold uppercase tracking-wider text-stone-400">
           Sommaire
         </p>
-        <ul class="space-y-1 overflow-y-auto overscroll-contain border-l border-sand-200 pr-2">
+        <ul class="min-h-0 flex-1 space-y-1 overflow-y-auto overscroll-contain pr-2 -ml-px">
           @for (entry of entries(); track entry.id) {
             <li>
               <a

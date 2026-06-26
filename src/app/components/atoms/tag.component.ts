@@ -36,10 +36,10 @@ export class TagComponent {
 
   protected readonly classes = computed(() => {
     const base =
-      'inline-flex items-center rounded-full px-3 py-1 text-xs font-medium tracking-wide uppercase transition-colors';
+      'inline-flex items-center rounded-full border px-3 py-1 text-xs font-medium tracking-wide uppercase transition-colors';
     return this.isActive()
-      ? `${base} bg-moss-700 text-sand-50 hover:bg-moss-800`
-      : `${base} bg-sand-100 text-moss-800 hover:bg-moss-100`;
+      ? `${base} border-transparent bg-moss-700 text-sand-50 hover:bg-moss-800`
+      : `${base} border-sand-300 bg-sand-100 text-moss-800 hover:bg-moss-100`;
   });
 }
 

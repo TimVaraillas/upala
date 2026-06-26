@@ -6,6 +6,7 @@ import { BlogService } from '../core/services/blog.service';
 import { SeoService } from '../core/services/seo.service';
 import { ButtonComponent } from '../components/atoms/button.component';
 import { IconComponent } from '../components/atoms/icon.component';
+import { TagComponent } from '../components/atoms/tag.component';
 import { BreadcrumbComponent } from '../components/molecules/breadcrumb.component';
 import { ArticleLayoutComponent } from '../components/templates/article-layout.component';
 import { ArticleHeaderComponent } from '../components/organisms/article-header.component';
@@ -22,6 +23,7 @@ import { SafeHtmlPipe } from '../core/pipes/safe-html.pipe';
   imports: [
     ButtonComponent,
     IconComponent,
+    TagComponent,
     BreadcrumbComponent,
     ArticleLayoutComponent,
     ArticleHeaderComponent,
@@ -34,17 +36,21 @@ import { SafeHtmlPipe } from '../core/pipes/safe-html.pipe';
   template: `
     @if (article(); as post) {
       <upala-reading-progress />
-      <upala-article-layout>
+      <upala-article-layout [title]="post.title" [subtitle]="post.excerpt">
+        <upala-breadcrumb
+          breadcrumb
+          [items]="[
+            { label: 'Accueil', link: '/' },
+            { label: 'Carnets', link: '/blog' },
+            { label: post.title },
+          ]"
+        />
+        <div tags class="flex flex-wrap gap-2">
+          @for (tag of post.tags; track tag) {
+            <upala-tag [label]="tag" />
+          }
+        </div>
         <div header>
-          <div class="mb-8">
-            <upala-breadcrumb
-              [items]="[
-                { label: 'Accueil', link: '/' },
-                { label: 'Carnets', link: '/blog' },
-                { label: post.title },
-              ]"
-            />
-          </div>
           <upala-article-header [article]="post" />
         </div>
 
@@ -64,7 +70,7 @@ import { SafeHtmlPipe } from '../core/pipes/safe-html.pipe';
           }
         </div>
 
-        <div footer class="border-t border-sand-200 pt-8">
+        <div footer class="pt-10 pb-12">
           <upala-button [routerLink]="'/blog'" variant="ghost">
             <upala-icon name="arrow-right" [size]="18" class="rotate-180" />
             Retour aux carnets

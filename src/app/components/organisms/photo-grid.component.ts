@@ -1,7 +1,8 @@
-import { ChangeDetectionStrategy, Component, input, signal } from '@angular/core';
+import { ChangeDetectionStrategy, Component, inject, input, signal } from '@angular/core';
 
 import { PhotoItem } from '../../core/utils/markdown';
 import { LightboxComponent } from './lightbox.component';
+import { AnalyticsService } from '../../core/services/analytics.service';
 
 /**
  * Renders a responsive photo grid embedded inside an article.
@@ -119,11 +120,17 @@ export class PhotoGridComponent {
   readonly images = input.required<PhotoItem[]>();
   /** CSS height value applied to every image (e.g. '18rem', '256px'). Defaults to 18rem. */
   readonly maxHeight = input<string>();
+  readonly articleSlug = input<string>();
 
+  private readonly analytics = inject(AnalyticsService);
   readonly lightboxIndex = signal<number | null>(null);
 
   openLightbox(index: number): void {
     this.lightboxIndex.set(index);
+    const slug = this.articleSlug();
+    if (slug) {
+      this.analytics.trackGalleryOpen(slug);
+    }
   }
 
   hasAnyCaptions(): boolean {

@@ -61,7 +61,7 @@ import { SafeHtmlPipe } from '../core/pipes/safe-html.pipe';
                 <upala-gpx-viewer [src]="block.src" [title]="block.title" />
               }
               @case ('photos') {
-                <upala-photo-grid [layout]="block.layout" [images]="block.images" [maxHeight]="block.maxHeight" />
+                <upala-photo-grid [layout]="block.layout" [images]="block.images" [maxHeight]="block.maxHeight" [articleSlug]="post.slug" />
               }
               @default {
                 <div [innerHTML]="block.html | safeHtml"></div>

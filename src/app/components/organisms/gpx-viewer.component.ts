@@ -21,6 +21,7 @@ import {
   parseGpx,
 } from '../../core/utils/gpx';
 import { IconComponent } from '../atoms/icon.component';
+import { AnalyticsService } from '../../core/services/analytics.service';
 
 /**
  * Renders a GPX track on an interactive Leaflet map with an elevation
@@ -48,8 +49,7 @@ import { IconComponent } from '../atoms/icon.component';
         </figcaption>
         <a
           [href]="src()"
-          [download]="downloadName()"
-          class="inline-flex items-center gap-1.5 rounded-full bg-moss-700 px-3 py-1.5 text-xs font-medium text-sand-50! transition-colors hover:bg-moss-800"
+          [download]="downloadName()"          (click)="onDownload()"          class="inline-flex items-center gap-1.5 rounded-full bg-moss-700 px-3 py-1.5 text-xs font-medium text-sand-50! transition-colors hover:bg-moss-800"
         >
           <upala-icon name="arrow-right" [size]="14" class="rotate-90" />
           Télécharger le GPX
@@ -193,6 +193,7 @@ export class GpxViewerComponent {
 
   protected readonly isBrowser = isPlatformBrowser(inject(PLATFORM_ID));
   private readonly cdr = inject(ChangeDetectorRef);
+  private readonly analytics = inject(AnalyticsService);
   private readonly mapEl = viewChild<ElementRef<HTMLElement>>('map');
   private readonly profileContainer = viewChild<ElementRef<HTMLElement>>('profileContainer');
   private readonly profileSvg = viewChild<ElementRef<SVGElement>>('profileSvg');
@@ -307,6 +308,10 @@ export class GpxViewerComponent {
 
   constructor() {
     afterNextRender(() => void this.load());
+  }
+
+  protected onDownload(): void {
+    this.analytics.trackGpxDownload(this.title() ?? this.src());
   }
 
   protected onProfileMouseMove(event: MouseEvent): void {

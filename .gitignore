@@ -47,3 +47,7 @@ Thumbs.db
 # AI files
 AGENTS.md
 .github/
+
+*storybook.log
+storybook-static
+documentation.json

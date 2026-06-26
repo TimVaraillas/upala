@@ -12,7 +12,9 @@
     "prestart": "npm run content:index",
     "prebuild": "npm run content:index && npm run content:sitemap",
     "serve:ssr:un-pas-apres-l-autre": "node dist/un-pas-apres-l-autre/server/server.mjs",
-    "lint": "ng lint"
+    "lint": "ng lint",
+    "storybook": "ng run un-pas-apres-l-autre:storybook",
+    "build-storybook": "ng run un-pas-apres-l-autre:build-storybook"
   },
   "prettier": {
     "printWidth": 100,
@@ -59,6 +61,17 @@
     "tailwindcss": "^4.1.12",
     "typescript": "~5.9.2",
     "typescript-eslint": "8.59.2",
-    "vitest": "^4.0.8"
+    "vitest": "^4.0.8",
+    "storybook": "^10.4.6",
+    "@storybook/angular": "^10.4.6",
+    "@storybook/addon-a11y": "^10.4.6",
+    "@storybook/addon-docs": "^10.4.6",
+    "@storybook/addon-onboarding": "^10.4.6",
+    "@angular-devkit/build-angular": "^21.0.0",
+    "@angular-devkit/architect": "^0.2100.0",
+    "@angular-devkit/core": "^21.0.0",
+    "@angular/platform-browser-dynamic": "^21.0.0",
+    "@compodoc/compodoc": "^1.2.1",
+    "eslint-plugin-storybook": "^10.4.6"
   }
 }

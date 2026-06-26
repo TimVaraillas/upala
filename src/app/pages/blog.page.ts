@@ -5,7 +5,6 @@ import { map } from 'rxjs';
 
 import { BlogService } from '../core/services/blog.service';
 import { SeoService } from '../core/services/seo.service';
-import { HeadingComponent } from '../components/atoms/heading.component';
 import { IconComponent } from '../components/atoms/icon.component';
 import { BlogLayoutComponent } from '../components/templates/blog-layout.component';
 import { ArticleListComponent } from '../components/organisms/article-list.component';
@@ -17,50 +16,43 @@ import { SidebarComponent } from '../components/organisms/sidebar.component';
   changeDetection: ChangeDetectionStrategy.OnPush,
   imports: [
     RouterLink,
-    HeadingComponent,
     IconComponent,
     BlogLayoutComponent,
     ArticleListComponent,
     SidebarComponent,
   ],
   template: `
-    <upala-blog-layout>
-      <div main>
-        <div class="mb-8 space-y-3">
-          <upala-heading [level]="1">Carnets d'exploration</upala-heading>
-          @if (hasFilters()) {
-            <p class="flex flex-wrap items-center gap-2 text-stone-600">
-              Filtré par
-              @if (activeCountry()) {
-                <span
-                  class="inline-flex items-center gap-1 rounded-full bg-sand-200 px-3 py-1 text-sm font-medium text-stone-800"
-                >
-                  {{ activeCountry()
-                  }}{{ activeRegion() ? ' › ' + activeRegion() : '' }}
-                </span>
-              }
-              @for (tag of activeTags(); track tag) {
-                <span
-                  class="inline-flex items-center gap-1 rounded-full bg-moss-100 px-3 py-1 text-sm font-medium text-moss-800"
-                >
-                  #{{ tag }}
-                </span>
-              }
-              <a
-                routerLink="/blog"
-                class="inline-flex items-center gap-1 text-sm text-stone-500 hover:text-moss-700"
-              >
-                <upala-icon name="close" [size]="14" /> réinitialiser
-              </a>
-            </p>
-          } @else {
-            <p class="text-stone-600">
-              Tous les récits d’expédition et guides de trek, du plus récent au
-              plus ancien.
-            </p>
+    <upala-blog-layout [title]="pageTitle()" [subtitle]="pageSubtitle()">
+      @if (hasFilters()) {
+        <p
+          header-extra
+          class="flex flex-wrap items-center gap-2 text-stone-600"
+        >
+          Filtré par
+          @if (activeCountry()) {
+            <span
+              class="inline-flex items-center gap-1 rounded-full bg-sand-200 px-3 py-1 text-sm font-medium text-stone-800"
+            >
+              {{ activeCountry()
+              }}{{ activeRegion() ? ' › ' + activeRegion() : '' }}
+            </span>
           }
-        </div>
-
+          @for (tag of activeTags(); track tag) {
+            <span
+              class="inline-flex items-center gap-1 rounded-full bg-moss-100 px-3 py-1 text-sm font-medium text-moss-800"
+            >
+              #{{ tag }}
+            </span>
+          }
+          <a
+            routerLink="/blog"
+            class="inline-flex items-center gap-1 text-sm text-stone-500 hover:text-moss-700"
+          >
+            <upala-icon name="close" [size]="14" /> réinitialiser
+          </a>
+        </p>
+      }
+      <div main>
         <upala-article-list
           [articles]="filtered()"
           emptyMessage="Aucun carnet ne correspond à ce filtre."
@@ -119,6 +111,13 @@ export default class BlogPage {
       this.activeTags().length > 0 ||
       !!this.activeCountry() ||
       !!this.activeRegion(),
+  );
+
+  protected readonly pageTitle = computed(() => "Carnets d'exploration");
+
+  protected readonly pageSubtitle = computed(
+    () =>
+      'Tous les récits d’expédition et guides de trek, du plus récent au plus ancien.',
   );
 
   protected readonly filtered = computed(() => {

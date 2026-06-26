@@ -1,18 +1,22 @@
 import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
 
 import { SeoService } from '../core/services/seo.service';
-import { HeadingComponent } from '../components/atoms/heading.component';
 import { ImageComponent } from '../components/atoms/image.component';
 import { ParagraphComponent } from '../components/atoms/paragraph.component';
+import { PageHeaderComponent } from '../components/molecules/page-header.component';
 
 /** Static About page. */
 @Component({
   selector: 'upala-about-page',
   changeDetection: ChangeDetectionStrategy.OnPush,
-  imports: [HeadingComponent, ImageComponent, ParagraphComponent],
+  imports: [ImageComponent, ParagraphComponent, PageHeaderComponent],
   template: `
     <section class="mx-auto max-w-3xl px-4 sm:px-6">
       <div class="mt-6 space-y-6">
+        <upala-page-header
+          title="Qui sommes-nous ?"
+          subtitle="Deux amis passionnés de trail, de randonnée et de voyages, qui racontent et partagent leurs aventures."
+        />
         <div class="mb-12 grid grid-cols-1 gap-4 h-100 sm:grid-cols-5">
           <div class="overflow-hidden rounded-lg sm:col-span-3">
             <upala-image [src]="photos[0].src" [alt]="photos[0].alt" />
@@ -21,8 +25,6 @@ import { ParagraphComponent } from '../components/atoms/paragraph.component';
             <upala-image [src]="photos[1].src" [alt]="photos[1].alt" />
           </div>
         </div>
-
-        <upala-heading [level]="1">Qui sommes-nous ?</upala-heading>
 
         <upala-paragraph>
           Un pas après l'autre, c'est avant tout un carnet d'exploration et l'envie de raconter nos aventures.

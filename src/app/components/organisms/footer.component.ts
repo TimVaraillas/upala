@@ -9,7 +9,7 @@ import { IconComponent } from '../atoms/icon.component';
   changeDetection: ChangeDetectionStrategy.OnPush,
   imports: [RouterLink, IconComponent],
   template: `
-    <footer class="mt-24 border-t border-sand-200 bg-sand-100/60">
+    <footer class="border-t border-sand-200 bg-sand-100/60">
       <div
         class="mx-auto grid max-w-6xl gap-8 px-4 py-12 sm:px-6 md:grid-cols-3"
       >

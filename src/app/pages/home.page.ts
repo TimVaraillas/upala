@@ -44,7 +44,7 @@ import { ArticleListComponent } from '../components/organisms/article-list.compo
         class="absolute top-[-20%] left-0 h-[140%] w-full object-cover object-center will-change-transform"
         [style.transform]="'translate3d(0,' + parallaxY() + 'px,0)'"
       />
-      <div class="absolute inset-0 bg-moss-600/70"></div>
+      <div class="absolute inset-0 bg-moss-700/70"></div>
 
       <div
         class="relative z-10 mx-auto flex max-w-3xl flex-col items-center gap-12 px-4 py-24 text-center sm:px-6"

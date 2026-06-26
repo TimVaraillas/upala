@@ -5,7 +5,7 @@ import { IconComponent } from '../atoms/icon.component';
 
 /** Site footer with navigation and credits. */
 @Component({
-  selector: 'hs-footer',
+  selector: 'upala-footer',
   changeDetection: ChangeDetectionStrategy.OnPush,
   imports: [RouterLink, IconComponent],
   template: `
@@ -17,7 +17,7 @@ import { IconComponent } from '../atoms/icon.component';
           <p
             class="flex items-center gap-2 font-display text-lg font-semibold text-stone-900"
           >
-            <span class="text-moss-700"><hs-icon name="compass" [size]="22" /></span>
+            <span class="text-moss-700"><upala-icon name="compass" [size]="22" /></span>
             Un pas après l’autre
           </p>
           <p class="mt-3 max-w-xs text-sm leading-relaxed text-stone-600">

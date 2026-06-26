@@ -3,7 +3,7 @@ import { RouterLink, RouterLinkActive } from '@angular/router';
 
 /** A single navigation entry with active-route styling. */
 @Component({
-  selector: 'hs-navbar-item',
+  selector: 'upala-navbar-item',
   changeDetection: ChangeDetectionStrategy.OnPush,
   imports: [RouterLink, RouterLinkActive],
   template: `

@@ -12,7 +12,7 @@ import { LightboxComponent } from './lightbox.component';
  *  - `3` — three photos: one large left + two stacked right.
  */
 @Component({
-  selector: 'hs-photo-grid',
+  selector: 'upala-photo-grid',
   changeDetection: ChangeDetectionStrategy.OnPush,
   imports: [LightboxComponent],
   template: `
@@ -87,7 +87,7 @@ import { LightboxComponent } from './lightbox.component';
       }
 
       @if (lightboxIndex() !== null) {
-        <hs-lightbox
+        <upala-lightbox
           [images]="images()"
           [startIndex]="lightboxIndex() ?? 0"
           (closed)="lightboxIndex.set(null)"

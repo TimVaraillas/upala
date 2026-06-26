@@ -17,7 +17,7 @@ const RATIOS: Record<LogoVariant, string> = {
 
 /** Brand logo atom rendering one of the Upala SVG variants. */
 @Component({
-  selector: 'hs-logo',
+  selector: 'upala-logo',
   changeDetection: ChangeDetectionStrategy.OnPush,
   host: { class: 'contents' },
   template: `

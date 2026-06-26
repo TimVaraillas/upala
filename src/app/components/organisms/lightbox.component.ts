@@ -20,7 +20,7 @@ import { PhotoItem } from '../../core/utils/markdown';
  * Supports keyboard navigation (ArrowLeft / ArrowRight / Escape).
  */
 @Component({
-  selector: 'hs-lightbox',
+  selector: 'upala-lightbox',
   changeDetection: ChangeDetectionStrategy.OnPush,
   host: {
     class: 'fixed inset-0 z-50',
@@ -30,7 +30,7 @@ import { PhotoItem } from '../../core/utils/markdown';
   },
   template: `
     <!-- Backdrop -->
-    <div class="absolute inset-0 bg-black/90" (click)="closed.emit()" aria-hidden="true"></div>
+    <div class="absolute inset-0 bg-black/90 backdrop-blur-md" (click)="closed.emit()" aria-hidden="true"></div>
 
     <!-- Image + controls -->
     <div class="relative z-10 flex h-full w-full flex-col items-center justify-center gap-4 px-16 py-8">

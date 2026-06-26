@@ -2,7 +2,7 @@ import { ChangeDetectionStrategy, Component, computed, input } from '@angular/co
 
 /** Pull-quote atom rendering a quote with an optional author. */
 @Component({
-  selector: 'hs-blockquote',
+  selector: 'upala-blockquote',
   changeDetection: ChangeDetectionStrategy.OnPush,
   template: `
     <blockquote class="max-w-2xl">

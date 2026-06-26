@@ -17,7 +17,7 @@ import { SafeHtmlPipe } from '../core/pipes/safe-html.pipe';
 
 /** Single article page: renders Markdown content for a given slug. */
 @Component({
-  selector: 'hs-article-page',
+  selector: 'upala-article-page',
   changeDetection: ChangeDetectionStrategy.OnPush,
   imports: [
     ButtonComponent,
@@ -33,11 +33,11 @@ import { SafeHtmlPipe } from '../core/pipes/safe-html.pipe';
   ],
   template: `
     @if (article(); as post) {
-      <hs-reading-progress />
-      <hs-article-layout>
+      <upala-reading-progress />
+      <upala-article-layout>
         <div header>
           <div class="mb-8">
-            <hs-breadcrumb
+            <upala-breadcrumb
               [items]="[
                 { label: 'Accueil', link: '/' },
                 { label: 'Carnets', link: '/blog' },
@@ -45,17 +45,17 @@ import { SafeHtmlPipe } from '../core/pipes/safe-html.pipe';
               ]"
             />
           </div>
-          <hs-article-header [article]="post" />
+          <upala-article-header [article]="post" />
         </div>
 
         <div class="prose-trail max-w-none text-stone-700">
           @for (block of post.blocks; track $index) {
             @switch (block.type) {
               @case ('gpx') {
-                <hs-gpx-viewer [src]="block.src" [title]="block.title" />
+                <upala-gpx-viewer [src]="block.src" [title]="block.title" />
               }
               @case ('photos') {
-                <hs-photo-grid [layout]="block.layout" [images]="block.images" [maxHeight]="block.maxHeight" />
+                <upala-photo-grid [layout]="block.layout" [images]="block.images" [maxHeight]="block.maxHeight" />
               }
               @default {
                 <div [innerHTML]="block.html | safeHtml"></div>
@@ -65,19 +65,19 @@ import { SafeHtmlPipe } from '../core/pipes/safe-html.pipe';
         </div>
 
         <div footer class="border-t border-sand-200 pt-8">
-          <hs-button [routerLink]="'/blog'" variant="ghost">
-            <hs-icon name="arrow-right" [size]="18" class="rotate-180" />
+          <upala-button [routerLink]="'/blog'" variant="ghost">
+            <upala-icon name="arrow-right" [size]="18" class="rotate-180" />
             Retour aux carnets
-          </hs-button>
+          </upala-button>
         </div>
 
-        <hs-table-of-contents aside [entries]="post.toc" />
-      </hs-article-layout>
+        <upala-table-of-contents aside [entries]="post.toc" />
+      </upala-article-layout>
     } @else {
       <div class="mx-auto max-w-3xl px-4 py-24 text-center sm:px-6">
         <p class="text-stone-600">Carnet introuvable.</p>
         <div class="mt-6">
-          <hs-button [routerLink]="'/blog'">Voir tous les carnets</hs-button>
+          <upala-button [routerLink]="'/blog'">Voir tous les carnets</upala-button>
         </div>
       </div>
     }

@@ -10,7 +10,7 @@ type ButtonSize = 'sm' | 'md' | 'lg';
  * is provided, otherwise a native button.
  */
 @Component({
-  selector: 'hs-button',
+  selector: 'upala-button',
   changeDetection: ChangeDetectionStrategy.OnPush,
   imports: [RouterLink, NgTemplateOutlet],
   template: `

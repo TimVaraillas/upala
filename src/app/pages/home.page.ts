@@ -1,4 +1,13 @@
-import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
+import {
+  ChangeDetectionStrategy,
+  Component,
+  ElementRef,
+  HostListener,
+  afterNextRender,
+  inject,
+  signal,
+  viewChild,
+} from '@angular/core';
 import { AsyncPipe } from '@angular/common';
 
 import { BlogService } from '../core/services/blog.service';
@@ -12,7 +21,7 @@ import { ArticleListComponent } from '../components/organisms/article-list.compo
 
 /** Landing page: hero + latest carnets. */
 @Component({
-  selector: 'hs-home-page',
+  selector: 'upala-home-page',
   changeDetection: ChangeDetectionStrategy.OnPush,
   imports: [
     AsyncPipe,
@@ -25,20 +34,27 @@ import { ArticleListComponent } from '../components/organisms/article-list.compo
   ],
   template: `
     <section
-      class="relative flex min-h-[70vh] items-center justify-center overflow-hidden border-b border-sand-200 bg-cover bg-center bg-fixed"
-      style="background-image: url('/content/images/home_001.jpg')"
+      #hero
+      class="relative flex min-h-[70vh] items-center justify-center overflow-hidden border-b border-sand-200"
     >
-      <div class="absolute inset-0 bg-stone-900/55"></div>
+      <img
+        src="/content/images/home_001.jpg"
+        alt=""
+        aria-hidden="true"
+        class="absolute top-[-20%] left-0 h-[140%] w-full object-cover object-center will-change-transform"
+        [style.transform]="'translate3d(0,' + parallaxY() + 'px,0)'"
+      />
+      <div class="absolute inset-0 bg-moss-600/70"></div>
 
       <div
         class="relative z-10 mx-auto flex max-w-3xl flex-col items-center gap-12 px-4 py-24 text-center sm:px-6"
       >
-        <hs-logo variant="full" imgClass="h-44 w-auto sm:h-56" fill="bg-white" alt="Upala" />
+        <upala-logo variant="full" imgClass="h-44 w-auto sm:h-56" fill="bg-white" alt="Upala" />
 
-        <hs-blockquote tone="light" author="André Gide">
+        <upala-blockquote tone="light" author="André Gide">
           L’homme ne découvre de nouveaux océans que lorsqu’il a le courage de
           perdre de vue le rivage.
-        </hs-blockquote>
+        </upala-blockquote>
       </div>
     </section>
 
@@ -47,12 +63,12 @@ import { ArticleListComponent } from '../components/organisms/article-list.compo
         <p
           class="inline-flex items-center gap-2 rounded-full bg-moss-100 px-3 py-1 text-xs font-medium tracking-wide text-moss-800 uppercase"
         >
-          <hs-icon name="compass" [size]="14" /> Carnets d’exploration
+          <upala-icon name="compass" [size]="14" /> Carnets d’exploration
         </p>
 
-        <hs-heading [level]="1">
+        <upala-heading [level]="1">
           Marcher là où les cartes s’arrêtent.
-        </hs-heading>
+        </upala-heading>
 
         <p class="max-w-xl text-lg leading-relaxed text-stone-600">
           Récits d’expédition, guides de trek détaillés et itinéraires sur
@@ -61,13 +77,13 @@ import { ArticleListComponent } from '../components/organisms/article-list.compo
         </p>
 
         <div class="mt-2 flex flex-wrap justify-center gap-3">
-          <hs-button [routerLink]="'/blog'" size="lg">
+          <upala-button [routerLink]="'/blog'" size="lg">
             Explorer les carnets
-            <hs-icon name="arrow-right" [size]="18" />
-          </hs-button>
-          <hs-button [routerLink]="'/about'" variant="secondary" size="lg">
+            <upala-icon name="arrow-right" [size]="18" />
+          </upala-button>
+          <upala-button [routerLink]="'/about'" variant="secondary" size="lg">
             Qui sommes-nous ?
-          </hs-button>
+          </upala-button>
         </div>
       </div>
     </section>
@@ -77,13 +93,13 @@ import { ArticleListComponent } from '../components/organisms/article-list.compo
         <div
           class="mb-8 flex flex-col items-start gap-4 sm:flex-row sm:items-end sm:justify-between"
         >
-          <hs-heading [level]="2">Derniers carnets</hs-heading>
-          <hs-button [routerLink]="'/blog'" variant="secondary" size="sm">
-            Tout voir <hs-icon name="arrow-right" [size]="16" />
-          </hs-button>
+          <upala-heading [level]="2">Derniers carnets</upala-heading>
+          <upala-button [routerLink]="'/blog'" variant="secondary" size="sm">
+            Tout voir <upala-icon name="arrow-right" [size]="16" />
+          </upala-button>
         </div>
 
-        <hs-article-list [articles]="(latest$ | async) ?? []" />
+        <upala-article-list [articles]="(latest$ | async) ?? []" />
       </div>
     </section>
   `,
@@ -93,7 +109,21 @@ export default class HomePage {
 
   protected readonly latest$ = this.blog.getLatestArticles(6);
 
+  private readonly hero = viewChild<ElementRef<HTMLElement>>('hero');
+  protected readonly parallaxY = signal(0);
+
+  @HostListener('window:scroll')
+  @HostListener('window:resize')
+  protected onScroll(): void {
+    const el = this.hero()?.nativeElement;
+    if (!el) return;
+    // Move the image at ~30% of the scroll speed for a parallax feel.
+    this.parallaxY.set(el.getBoundingClientRect().top * -0.3);
+  }
+
   constructor() {
+    afterNextRender(() => this.onScroll());
+
     inject(SeoService).update({
       title: '',
       description:

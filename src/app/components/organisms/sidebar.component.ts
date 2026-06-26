@@ -7,14 +7,14 @@ import { ArticleSummary, DestinationNode } from '../../core/models/article.model
 
 /** Sidebar with tag cloud and a list of recent carnets. */
 @Component({
-  selector: 'hs-sidebar',
+  selector: 'upala-sidebar',
   changeDetection: ChangeDetectionStrategy.OnPush,
   imports: [RouterLink, HeadingComponent, TagComponent],
   template: `
     <aside class="space-y-10">
       @if (destinations().length) {
         <section>
-          <hs-heading [level]="4">Destinations</hs-heading>
+          <upala-heading [level]="4">Destinations</upala-heading>
           <ul class="mt-4 space-y-2">
             @for (dest of destinations(); track dest.country) {
               <li>
@@ -59,10 +59,10 @@ import { ArticleSummary, DestinationNode } from '../../core/models/article.model
       }
 
       <section>
-        <hs-heading [level]="4">Catégories</hs-heading>
+        <upala-heading [level]="4">Catégories</upala-heading>
         <div class="mt-4 flex flex-wrap gap-2">
           @for (entry of tags(); track entry.tag) {
-            <hs-tag [label]="entry.tag" [activeTags]="activeTags()" />
+            <upala-tag [label]="entry.tag" [activeTags]="activeTags()" />
           } @empty {
             <p class="text-sm text-stone-500">Aucune catégorie.</p>
           }
@@ -71,7 +71,7 @@ import { ArticleSummary, DestinationNode } from '../../core/models/article.model
 
       @if (recent().length) {
         <section>
-          <hs-heading [level]="4">Derniers carnets</hs-heading>
+          <upala-heading [level]="4">Derniers carnets</upala-heading>
           <ul class="mt-4 space-y-4">
             @for (article of recent(); track article.slug) {
               <li>

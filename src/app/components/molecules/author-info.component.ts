@@ -5,7 +5,7 @@ import { IconComponent } from '../atoms/icon.component';
 
 /** Author + publication metadata block shown on articles. */
 @Component({
-  selector: 'hs-author-info',
+  selector: 'upala-author-info',
   changeDetection: ChangeDetectionStrategy.OnPush,
   imports: [DatePipe, IconComponent],
   template: `
@@ -19,12 +19,12 @@ import { IconComponent } from '../atoms/icon.component';
         <p class="font-medium text-stone-800">{{ author() }}</p>
         <p class="flex items-center gap-3 text-stone-500">
           <span class="inline-flex items-center gap-1">
-            <hs-icon name="calendar" [size]="13" />
+            <upala-icon name="calendar" [size]="13" />
             {{ date() | date: 'mediumDate' }}
           </span>
           @if (readingTime()) {
             <span class="inline-flex items-center gap-1">
-              <hs-icon name="clock" [size]="13" />
+              <upala-icon name="clock" [size]="13" />
               {{ readingTime() }} min de lecture
             </span>
           }

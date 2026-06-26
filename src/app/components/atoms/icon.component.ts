@@ -28,7 +28,7 @@ const PATHS: Record<IconName, string> = {
 
 /** Minimal inline SVG icon atom (no icon-font dependency). */
 @Component({
-  selector: 'hs-icon',
+  selector: 'upala-icon',
   changeDetection: ChangeDetectionStrategy.OnPush,
   template: `
     <svg

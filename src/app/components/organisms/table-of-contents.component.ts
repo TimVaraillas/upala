@@ -15,7 +15,7 @@ import { TocEntry } from '../../core/utils/markdown';
 
 /** Interactive table of contents that highlights the current section on scroll. */
 @Component({
-  selector: 'hs-table-of-contents',
+  selector: 'upala-table-of-contents',
   changeDetection: ChangeDetectionStrategy.OnPush,
   template: `
     @if (entries().length) {

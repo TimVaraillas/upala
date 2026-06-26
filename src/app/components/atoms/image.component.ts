@@ -8,7 +8,7 @@ import { NgOptimizedImage } from '@angular/common';
  * and layout-stable rendering via explicit dimensions.
  */
 @Component({
-  selector: 'hs-image',
+  selector: 'upala-image',
   changeDetection: ChangeDetectionStrategy.OnPush,
   imports: [NgOptimizedImage],
   template: `

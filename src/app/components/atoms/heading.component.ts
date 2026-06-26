@@ -3,7 +3,7 @@ import { ChangeDetectionStrategy, Component, computed, input } from '@angular/co
 
 /** Typographic heading atom with consistent scale across the site. */
 @Component({
-  selector: 'hs-heading',
+  selector: 'upala-heading',
   changeDetection: ChangeDetectionStrategy.OnPush,
   imports: [NgTemplateOutlet],
   template: `

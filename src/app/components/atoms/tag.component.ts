@@ -3,7 +3,7 @@ import { RouterLink } from '@angular/router';
 
 /** A clickable tag/category pill that toggles itself in the blog filter. */
 @Component({
-  selector: 'hs-tag',
+  selector: 'upala-tag',
   changeDetection: ChangeDetectionStrategy.OnPush,
   imports: [RouterLink],
   template: `

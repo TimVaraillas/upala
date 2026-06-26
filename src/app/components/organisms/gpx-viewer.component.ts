@@ -32,7 +32,7 @@ import { IconComponent } from '../atoms/icon.component';
  * emitted, then progressively enhanced on the client.
  */
 @Component({
-  selector: 'hs-gpx-viewer',
+  selector: 'upala-gpx-viewer',
   changeDetection: ChangeDetectionStrategy.OnPush,
   imports: [IconComponent],
   template: `
@@ -43,7 +43,7 @@ import { IconComponent } from '../atoms/icon.component';
         <figcaption
           class="flex items-center gap-2 text-sm font-medium text-stone-700"
         >
-          <span class="text-moss-700"><hs-icon name="map" [size]="18" /></span>
+          <span class="text-moss-700"><upala-icon name="map" [size]="18" /></span>
           {{ title() || track()?.name || 'Trace GPX' }}
         </figcaption>
         <a
@@ -51,7 +51,7 @@ import { IconComponent } from '../atoms/icon.component';
           [download]="downloadName()"
           class="inline-flex items-center gap-1.5 rounded-full bg-moss-700 px-3 py-1.5 text-xs font-medium text-sand-50! transition-colors hover:bg-moss-800"
         >
-          <hs-icon name="arrow-right" [size]="14" class="rotate-90" />
+          <upala-icon name="arrow-right" [size]="14" class="rotate-90" />
           Télécharger le GPX
         </a>
       </div>

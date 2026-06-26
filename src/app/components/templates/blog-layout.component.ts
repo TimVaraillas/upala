@@ -5,7 +5,7 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
  * Projects `[main]` and `[sidebar]` content.
  */
 @Component({
-  selector: 'hs-blog-layout',
+  selector: 'upala-blog-layout',
   changeDetection: ChangeDetectionStrategy.OnPush,
   template: `
     <div class="mx-auto max-w-6xl px-4 py-12 sm:px-6">

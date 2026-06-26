@@ -7,7 +7,7 @@ import { LogoComponent } from '../atoms/logo.component';
 
 /** Top site navigation with responsive mobile menu. */
 @Component({
-  selector: 'hs-navbar',
+  selector: 'upala-navbar',
   changeDetection: ChangeDetectionStrategy.OnPush,
   imports: [RouterLink, NavbarItemComponent, IconComponent, LogoComponent],
   template: `
@@ -18,13 +18,13 @@ import { LogoComponent } from '../atoms/logo.component';
         class="mx-auto flex max-w-6xl items-center justify-between px-4 py-4 sm:px-6"
       >
         <a routerLink="/" class="flex items-center" aria-label="Accueil">
-          <hs-logo variant="inline" imgClass="h-8 w-auto" alt="Upala" />
+          <upala-logo variant="inline" imgClass="h-8 w-auto" alt="Upala" />
         </a>
 
         <nav class="hidden items-center gap-8 md:flex">
-          <hs-navbar-item link="/" [exact]="true">Accueil</hs-navbar-item>
-          <hs-navbar-item link="/blog">Carnets</hs-navbar-item>
-          <hs-navbar-item link="/about">Qui sommes-nous ?</hs-navbar-item>
+          <upala-navbar-item link="/" [exact]="true">Accueil</upala-navbar-item>
+          <upala-navbar-item link="/blog">Carnets</upala-navbar-item>
+          <upala-navbar-item link="/about">Qui sommes-nous ?</upala-navbar-item>
         </nav>
 
         <button
@@ -34,7 +34,7 @@ import { LogoComponent } from '../atoms/logo.component';
           aria-label="Ouvrir le menu"
           (click)="toggle()"
         >
-          <hs-icon [name]="open() ? 'close' : 'menu'" [size]="24" />
+          <upala-icon [name]="open() ? 'close' : 'menu'" [size]="24" />
         </button>
       </div>
 

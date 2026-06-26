@@ -2,7 +2,7 @@ import { ChangeDetectionStrategy, Component, computed, input } from '@angular/co
 
 /** Body / lead paragraph atom with readable measure. */
 @Component({
-  selector: 'hs-paragraph',
+  selector: 'upala-paragraph',
   changeDetection: ChangeDetectionStrategy.OnPush,
   template: `<p [class]="classes()"><ng-content /></p>`,
 })

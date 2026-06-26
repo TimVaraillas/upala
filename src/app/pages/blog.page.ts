@@ -13,7 +13,7 @@ import { SidebarComponent } from '../components/organisms/sidebar.component';
 
 /** Blog listing with tag filtering driven by the `?tag=` query param. */
 @Component({
-  selector: 'hs-blog-page',
+  selector: 'upala-blog-page',
   changeDetection: ChangeDetectionStrategy.OnPush,
   imports: [
     RouterLink,
@@ -24,10 +24,10 @@ import { SidebarComponent } from '../components/organisms/sidebar.component';
     SidebarComponent,
   ],
   template: `
-    <hs-blog-layout>
+    <upala-blog-layout>
       <div main>
         <div class="mb-8 space-y-3">
-          <hs-heading [level]="1">Carnets d'exploration</hs-heading>
+          <upala-heading [level]="1">Carnets d'exploration</upala-heading>
           @if (hasFilters()) {
             <p class="flex flex-wrap items-center gap-2 text-stone-600">
               Filtré par
@@ -50,7 +50,7 @@ import { SidebarComponent } from '../components/organisms/sidebar.component';
                 routerLink="/blog"
                 class="inline-flex items-center gap-1 text-sm text-stone-500 hover:text-moss-700"
               >
-                <hs-icon name="close" [size]="14" /> réinitialiser
+                <upala-icon name="close" [size]="14" /> réinitialiser
               </a>
             </p>
           } @else {
@@ -61,14 +61,14 @@ import { SidebarComponent } from '../components/organisms/sidebar.component';
           }
         </div>
 
-        <hs-article-list
+        <upala-article-list
           [articles]="filtered()"
           emptyMessage="Aucun carnet ne correspond à ce filtre."
         />
       </div>
 
       <div sidebar>
-        <hs-sidebar
+        <upala-sidebar
           [tags]="tags()"
           [recent]="recent()"
           [activeTags]="activeTags()"
@@ -77,7 +77,7 @@ import { SidebarComponent } from '../components/organisms/sidebar.component';
           [activeRegion]="activeRegion()"
         />
       </div>
-    </hs-blog-layout>
+    </upala-blog-layout>
   `,
 })
 export default class BlogPage {

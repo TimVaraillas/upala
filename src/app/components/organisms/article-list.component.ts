@@ -5,14 +5,14 @@ import { ArticleCardComponent } from '../molecules/article-card.component';
 
 /** Responsive grid of article cards with an empty state. */
 @Component({
-  selector: 'hs-article-list',
+  selector: 'upala-article-list',
   changeDetection: ChangeDetectionStrategy.OnPush,
   imports: [ArticleCardComponent],
   template: `
     @if (articles().length) {
       <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
         @for (article of articles(); track article.slug) {
-          <hs-article-card [article]="article" />
+          <upala-article-card [article]="article" />
         }
       </div>
     } @else {

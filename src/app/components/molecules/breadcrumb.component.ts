@@ -10,7 +10,7 @@ export interface BreadcrumbItem {
 
 /** Breadcrumb trail molecule for nested pages. */
 @Component({
-  selector: 'hs-breadcrumb',
+  selector: 'upala-breadcrumb',
   changeDetection: ChangeDetectionStrategy.OnPush,
   imports: [RouterLink, IconComponent],
   template: `
@@ -29,7 +29,7 @@ export interface BreadcrumbItem {
               <span class="text-stone-700">{{ item.label }}</span>
             }
             @if (!last) {
-              <hs-icon name="arrow-right" [size]="14" class="text-stone-300" />
+              <upala-icon name="arrow-right" [size]="14" class="text-stone-300" />
             }
           </li>
         }

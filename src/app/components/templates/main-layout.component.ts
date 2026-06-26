@@ -6,16 +6,16 @@ import { FooterComponent } from '../organisms/footer.component';
 
 /** Base layout: navbar + routed content + footer. */
 @Component({
-  selector: 'hs-main-layout',
+  selector: 'upala-main-layout',
   changeDetection: ChangeDetectionStrategy.OnPush,
   imports: [RouterOutlet, NavbarComponent, FooterComponent],
   template: `
     <div class="flex min-h-screen flex-col bg-sand-50 text-stone-800">
-      <hs-navbar />
+      <upala-navbar />
       <main class="flex-1">
         <router-outlet />
       </main>
-      <hs-footer />
+      <upala-footer />
     </div>
   `,
 })

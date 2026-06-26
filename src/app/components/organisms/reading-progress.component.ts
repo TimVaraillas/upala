@@ -9,7 +9,7 @@ import { isPlatformBrowser } from '@angular/common';
 
 /** Fixed top reading-progress bar driven by scroll position. */
 @Component({
-  selector: 'hs-reading-progress',
+  selector: 'upala-reading-progress',
   changeDetection: ChangeDetectionStrategy.OnPush,
   host: {
     '(window:scroll)': 'onScroll()',

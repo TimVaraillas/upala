@@ -9,7 +9,7 @@ import { IconComponent } from '../atoms/icon.component';
 
 /** Card combining cover image, title, excerpt, tags and metadata. */
 @Component({
-  selector: 'hs-article-card',
+  selector: 'upala-article-card',
   changeDetection: ChangeDetectionStrategy.OnPush,
   imports: [RouterLink, DatePipe, ImageComponent, TagComponent, IconComponent],
   template: `
@@ -20,7 +20,7 @@ import { IconComponent } from '../atoms/icon.component';
         [routerLink]="['/article', article().slug]"
         class="block aspect-[16/10] overflow-hidden"
       >
-        <hs-image
+        <upala-image
           [src]="article().coverImage"
           [alt]="article().title"
           [width]="640"
@@ -32,7 +32,7 @@ import { IconComponent } from '../atoms/icon.component';
       <div class="flex flex-1 flex-col gap-3 p-5">
         <div class="flex flex-wrap gap-2">
           @for (tag of article().tags.slice(0, 3); track tag) {
-            <hs-tag [label]="tag" />
+            <upala-tag [label]="tag" />
           }
         </div>
 
@@ -53,11 +53,11 @@ import { IconComponent } from '../atoms/icon.component';
           class="mt-auto flex items-center gap-4 pt-2 text-xs text-stone-500"
         >
           <span class="inline-flex items-center gap-1.5">
-            <hs-icon name="calendar" [size]="14" />
+            <upala-icon name="calendar" [size]="14" />
             {{ article().date | date: 'mediumDate' }}
           </span>
           <span class="inline-flex items-center gap-1.5">
-            <hs-icon name="clock" [size]="14" />
+            <upala-icon name="clock" [size]="14" />
             {{ article().readingTime }} min
           </span>
         </div>

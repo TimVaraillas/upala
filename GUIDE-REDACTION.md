@@ -206,9 +206,9 @@ maxHeight: 500px
 ```
 ````
 
-### 💡 Un encadré « astuce »
+### 💡 Un encadré « note »
 
-Pour mettre en avant un conseil pratique :
+Pour mettre en avant une information, un conseil ou un avertissement :
 
 ````markdown
 ```tip
@@ -219,6 +219,23 @@ Plusieurs tunnels jalonnent l'itinéraire : une lampe frontale est indispensable
 
 - `title` : le titre de l'encadré (optionnel).
 - En dessous, ton texte. Tu peux utiliser des puces avec `•` ou `-`.
+
+Cinq variantes sont disponibles, chacune avec sa propre couleur et son icône :
+
+- ```` ```tip ```` : une astuce (vert).
+- ```` ```info ```` : une information (bleu).
+- ```` ```success ```` : un point positif / une réussite (vert).
+- ```` ```warning ```` : une mise en garde (orange).
+- ```` ```danger ```` : un danger / une alerte importante (rouge).
+
+Il suffit de remplacer `tip` par le type souhaité, par exemple :
+
+````markdown
+```info
+title: Cohabiter avec les ours
+Faire régulièrement du bruit en marchant permet d'éviter de les surprendre.
+```
+````
 
 ---
 
@@ -352,7 +369,7 @@ site se met à jour automatiquement après la publication. 🎉
 | Un lien                      | `[texte du lien](https://...)`                                     |
 | Une carte GPX                | bloc ```` ```gpx ```` avec `src: /content/tracks/...`             |
 | Une galerie photo            | bloc ```` ```photos ```` avec `layout:` et des lignes `- ...`     |
-| Un encadré conseil           | bloc ```` ```tip ````                                              |
+| Un encadré note              | bloc ```` ```tip ````, ```` ```info ````, ```` ```success ````, ```` ```warning ```` ou ```` ```danger ```` |
 
 Bonne rédaction ! En cas de doute, inspire-toi des articles déjà publiés dans le
 dossier `content/articles/`. 🥾

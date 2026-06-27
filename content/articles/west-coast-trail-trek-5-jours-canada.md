@@ -12,11 +12,14 @@ excerpt: "Une immersion de 75 km au coeur de la forêt primaire et des plages sa
 
 # 5 jours sur le West Coast Trail : récit de l'une des plus belles aventures de ma vie
 
-📍 Vancouver Island, Colombie-Britannique, Canada
-🌊 Pacific Rim National Park
-🥾 Distance parcourue : 75 km
-🗓️ Durée : 5 jours
-🎒 Mode de déplacement : Trek en autonomie
+```recap
+title: En bref
+- Lieu | Réserve de parc national Pacific Rim, Colombie-Britannique, Canada
+- Distance | 75 km
+- Durée | 5 jours
+- Mode de déplacement | Trek en autonomie
+- Difficulté | Difficile
+```
 
 ## Avant de commencer 
 
@@ -40,7 +43,7 @@ Avec le recul, je crois que c'est cette promesse d'aventure — autant extérieu
 
 ### Jour 0 : Nanaimo
 
-Dans la matinée, je quitte Vancouver où j’étais arriver la veille. Je prend le ferry pour me rendre à Nanaimo sur l’île de Vancouver. Aujourd’hui il s’agit d’une simple étape pour préparer mon trek. Pendant ce trajet en ferry j’aperçois quelques instants un rorqual et une orque qui longent le bateau quelques instant. Cela me met dans le bain et me rappelle que je suis bel et bien dans territoire très sauvage. 
+Dans la matinée, je quitte Vancouver où j’ai atterri la veille. Je prends le ferry pour me rendre à Nanaimo sur l’île de Vancouver. Aujourd’hui il s’agit d’une simple étape pour préparer mon trek. Pendant ce trajet en ferry j’aperçois quelques instants un rorqual et une orque qui longent le bateau. Cela me met dans le bain et me rappelle que je suis bel et bien dans un territoire très sauvage. 
 
 ```photos
 layout: 2
@@ -114,7 +117,9 @@ layout: 3
 
 Au réveil, à une centaine de mètres à peine, deux ours noirs jouent sur la plage. J’hésite entre inquiétude et émerveillement, mais les Canadiens qui bivouaquaient à côté de moi n’ont pas l’air très angoissés : ils ont l’habitude et leur parlent de loin pour signaler notre présence. Un moment aussi beau qu’imprévu.
 
-Sur l’île de Vancouver, plusieurs milliers d’ours noirs sont recensés. Ce sont les habitants emblématiques de la région. Il faut donc prendre quelques précautions pour cohabiter avec eux : faire régulièrement du bruit en marchant pour éviter de les surprendre, ranger sa nourriture dans des casiers prévus à cet effet ou la suspendre à plusieurs mètres du sol lors des bivouacs, et garder une bombe anti-ours en dernier recours. Les accidents restent toutefois très rares, les ours noirs étant généralement peu agressifs.
+```info
+L’île de Vancouver abrite plusieurs milliers d’ours noirs. Ce sont les habitants emblématiques de la région. Il faut donc prendre quelques précautions pour cohabiter avec eux : faire régulièrement du bruit en marchant pour éviter de les surprendre, ranger sa nourriture dans des casiers prévus à cet effet ou la suspendre à plusieurs mètres du sol lors des bivouacs, et garder une bombe anti-ours en dernier recours. Les accidents restent toutefois très rares, les ours noirs étant généralement peu agressifs.
+```
 
 Au cours du trek, j’en ai croisés plusieurs, toujours à distance, dans des moments parfois inattendus. Je n’ai jamais réussi à en photographier un seul. Aucun cliché pour illustrer ces instants — seulement des souvenirs très nets, gravés ailleurs que dans un appareil.
 
@@ -250,7 +255,7 @@ En préparant le dîner, je réalise que c'est déjà mon dernier bivouac sur le
 ```photos
 layout: 1
 maxHeight: 500px
-- /content/images/wct_044.jpg | Ce sentier, j'en ai révé pendant des mois, et me voilà enfin là, assis prêt du feu, heureux d'être ici. Chaque pas m'a offert une variété de paysages et de rencontres incroyables. Ce n'était pas un choix de destination très mainstream, c'est vrai, mais c'est sans doute l'endroit le plus extraordianaire que j'ai jamais découvert.
+- /content/images/wct_044.jpg | Ce sentier, j'en ai rêvé pendant des mois, et me voilà enfin là, assis près du feu, heureux d'être ici. Chaque pas m'a offert une variété de paysages et de rencontres incroyables. Ce n'était pas un choix de destination très mainstream, c'est vrai, mais c'est sans doute l'endroit le plus extraordinaire que j'ai jamais découvert.
 ```
 
 ### Jour 5 : Entre euphorie et nostalgie
@@ -270,7 +275,7 @@ maxHeight: 600px
 - /content/images/wct_049.jpg 
 ```
 
-Je descend ma dernière échelle avant de prendre le bateau passeur qui m'amène au village de l'autre côté de la rivière. C'est donc ici, le point finale à cette incroyable aventure.
+Je descends ma dernière échelle avant de prendre le bateau-passeur qui m'amène au village de l'autre côté de la rivière. C'est donc ici, le point final de cette incroyable aventure.
 
 ```photos
 layout: 2

@@ -13,6 +13,15 @@ excerpt: "Récit de notre traversée intégrale de Madère en totale autonomie :
 
 Notre traversée intégrale de Madère, d'ouest en est, sur près de 170 kilomètres et 7 jours de marche en autonomie. Voici le détail de notre itinéraire, étape par étape.
 
+```recap
+title: En bref
+- Lieu | Madère, Portugal
+- Distance | 170 km
+- Durée | 7 jours
+- Mode de déplacement | Trek en autonomie
+- Difficulté | Difficile
+```
+
 ## Introduction
 
 Avant d'entrer dans le détail de l'itinéraire, quelques mots sur cette aventure.

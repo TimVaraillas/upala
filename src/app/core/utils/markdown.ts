@@ -27,6 +27,13 @@ export interface TocEntry {
   level: number;
 }
 
+/** A single row inside a ` ```recap ` summary box. */
+interface RecapRow {
+  icon?: string;
+  label?: string;
+  value: string;
+}
+
 /**
  * Split a Markdown document into renderable blocks, extracting custom
  * ` ```gpx ` fenced shortcodes so they can be rendered by an Angular
@@ -72,8 +79,10 @@ export function parseBlocks(markdown: string): ArticleBlock[] {
       continue;
     }
 
-    if (/^```tip\s*$/.test(lines[i].trim())) {
+    const calloutMatch = /^```(info|warning|danger|tip|success)\s*$/.exec(lines[i].trim());
+    if (calloutMatch) {
       flushMarkdown();
+      const type = calloutMatch[1] as CalloutType;
       let title = '';
       const body: string[] = [];
       i++;
@@ -88,8 +97,37 @@ export function parseBlocks(markdown: string): ArticleBlock[] {
       }
       blocks.push({
         type: 'html',
-        html: renderTip(title, body.join('\n').trim(), headingSlugs),
+        html: renderCallout(type, title, body.join('\n').trim(), headingSlugs),
       });
+      continue;
+    }
+
+    if (/^```recap\s*$/.test(lines[i].trim())) {
+      flushMarkdown();
+      let title = '';
+      const rows: RecapRow[] = [];
+      i++;
+      while (i < lines.length && !/^```\s*$/.test(lines[i].trim())) {
+        const line = lines[i].trim();
+        const titleMatch = /^title:\s*(.*)$/.exec(line);
+        const rowMatch = /^-\s+(.*)$/.exec(line);
+        if (!rows.length && !title && titleMatch) {
+          title = titleMatch[1].trim();
+        } else if (rowMatch) {
+          const parts = rowMatch[1].split('|').map((p) => p.trim());
+          if (parts.length >= 3) {
+            rows.push({ icon: parts[0], label: parts[1], value: parts.slice(2).join(' | ') });
+          } else if (parts.length === 2) {
+            rows.push({ label: parts[0], value: parts[1] });
+          } else if (parts[0]) {
+            rows.push({ value: parts[0] });
+          }
+        }
+        i++;
+      }
+      if (rows.length > 0) {
+        blocks.push({ type: 'html', html: renderRecap(title, rows) });
+      }
       continue;
     }
 
@@ -126,28 +164,88 @@ export function parseBlocks(markdown: string): ArticleBlock[] {
 }
 
 /**
- * Render a ` ```tip ` callout: a highlighted "note"-style box with an
+ * Supported callout variants for the ` ```info `, ` ```warning `,
+ * ` ```danger `, ` ```tip ` and ` ```success ` Markdown blocks.
+ */
+type CalloutType = 'info' | 'warning' | 'danger' | 'tip' | 'success';
+
+/** Inline SVG icon markup for each callout variant. */
+const CALLOUT_ICONS: Record<CalloutType, string> = {
+  info:
+    `<circle cx="12" cy="12" r="10" /><path d="M12 16v-4" /><path d="M12 8h.01" />`,
+  warning:
+    `<path d="m21.73 18-8-14a2 2 0 0 0-3.46 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3Z" />` +
+    `<path d="M12 9v4" /><path d="M12 17h.01" />`,
+  danger:
+    `<circle cx="12" cy="12" r="10" /><path d="m15 9-6 6" /><path d="m9 9 6 6" />`,
+  tip:
+    `<path d="M9 18h6" /><path d="M10 22h4" />` +
+    `<path d="M12 2a7 7 0 0 0-4 12.7c.6.5 1 1.3 1 2.1v.2h6v-.2c0-.8.4-1.6 1-2.1A7 7 0 0 0 12 2Z" />`,
+  success:
+    `<path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" /><path d="m9 11 3 3L22 4" />`,
+};
+
+/**
+ * Render a callout box (` ```info `, ` ```warning `, ` ```danger `,
+ * ` ```tip ` or ` ```success `): a highlighted "note"-style box with an
  * optional bold title and Markdown body. Bullet lines using `•` are
  * normalised to Markdown list items so they render as a proper list.
  */
-function renderTip(
+function renderCallout(
+  type: CalloutType,
   title: string,
   body: string,
   headingSlugs: Map<string, number>,
 ): string {
   const normalisedBody = body.replace(/^[ \t]*•[ \t]*/gm, '- ');
   const titleHtml = title
-    ? `<p class="tip__title">${inline(title)}</p>`
+    ? `<p class="callout__title">${inline(title)}</p>`
     : '';
   const bodyHtml = normalisedBody ? renderMarkdown(normalisedBody, headingSlugs) : '';
   return (
-    `<aside class="tip not-prose">` +
-    `<span class="tip__icon" aria-hidden="true">` +
+    `<aside class="callout callout--${type} not-prose">` +
+    `<span class="callout__icon" aria-hidden="true">` +
     `<svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">` +
-    `<path d="M9 18h6" /><path d="M10 22h4" />` +
-    `<path d="M12 2a7 7 0 0 0-4 12.7c.6.5 1 1.3 1 2.1v.2h6v-.2c0-.8.4-1.6 1-2.1A7 7 0 0 0 12 2Z" />` +
+    CALLOUT_ICONS[type] +
     `</svg></span>` +
-    `<div class="tip__body">${titleHtml}${bodyHtml}</div>` +
+    `<div class="callout__body">${titleHtml}${bodyHtml}</div>` +
+    `</aside>`
+  );
+}
+
+/**
+ * Render a ` ```recap ` summary box: a framed key/value list used to
+ * introduce an article (location, distance, duration, difficulty…).
+ *
+ * Recap shortcode syntax:
+ * ```recap
+ * title: En bref
+ * - 📍 | Lieu | Vancouver Island, Canada
+ * - 🥾 | Distance | 75 km
+ * - 🗓️ | Durée | 5 jours
+ * ```
+ * Each row is `- icon | label | value`. `icon` and `label` are optional.
+ */
+function renderRecap(title: string, rows: RecapRow[]): string {
+  const titleHtml = title ? `<p class="recap__title">${inline(title)}</p>` : '';
+  const rowsHtml = rows
+    .map((row) => {
+      const iconHtml = row.icon
+        ? `<span class="recap__icon" aria-hidden="true">${inline(row.icon)}</span>`
+        : '';
+      const labelHtml = row.label
+        ? `<dt class="recap__label">${inline(row.label)}</dt>`
+        : '';
+      return (
+        `<div class="recap__row">${iconHtml}` +
+        `<div class="recap__text">${labelHtml}` +
+        `<dd class="recap__value">${inline(row.value)}</dd></div></div>`
+      );
+    })
+    .join('');
+  return (
+    `<aside class="recap not-prose">${titleHtml}` +
+    `<dl class="recap__list">${rowsHtml}</dl>` +
     `</aside>`
   );
 }

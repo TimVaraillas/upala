@@ -129,7 +129,13 @@ export class PhotoGridComponent {
     this.lightboxIndex.set(index);
     const slug = this.articleSlug();
     if (slug) {
-      this.analytics.trackGalleryOpen(slug);
+      const photo = this.images()[index];
+      this.analytics.trackGalleryOpen({
+        article: slug,
+        index,
+        src: photo.src,
+        caption: photo.caption,
+      });
     }
   }
 

@@ -311,7 +311,12 @@ export class GpxViewerComponent {
   }
 
   protected onDownload(): void {
-    this.analytics.trackGpxDownload(this.title() ?? this.src());
+    this.analytics.trackGpxDownload({
+      title: this.title(),
+      trackName: this.track()?.name,
+      fileName: this.downloadName(),
+      src: this.src(),
+    });
   }
 
   protected onProfileMouseMove(event: MouseEvent): void {

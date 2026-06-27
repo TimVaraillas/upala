@@ -16,15 +16,39 @@ export class AnalyticsService {
     });
   }
 
-  trackGpxDownload(stage: string | number): void {
+  trackGpxDownload(params: { title?: string; trackName?: string; fileName: string; src: string }): void {
     if (!isPlatformBrowser(this.platformId)) return;
 
-    gtag('event', 'download_gpx', { stage });
+    gtag('event', 'download_gpx', {
+      track: params.title || params.trackName || params.fileName,
+      file_name: params.fileName,
+      gpx_src: params.src,
+    });
   }
 
-  trackGalleryOpen(article: string): void {
+  trackGalleryOpen(params: {
+    article: string;
+    index: number;
+    src: string;
+    caption?: string;
+  }): void {
     if (!isPlatformBrowser(this.platformId)) return;
 
-    gtag('event', 'open_gallery', { article });
+    gtag('event', 'open_gallery', {
+      article: params.article,
+      photo_position: params.index + 1,
+      photo_src: params.src,
+      photo_caption: params.caption || undefined,
+    });
+  }
+
+  trackArticlesFilter(filters: { tags?: string[]; country?: string; region?: string }): void {
+    if (!isPlatformBrowser(this.platformId)) return;
+
+    gtag('event', 'filter_articles', {
+      tags: filters.tags?.length ? filters.tags.join(',') : undefined,
+      country: filters.country || undefined,
+      region: filters.region || undefined,
+    });
   }
 }

@@ -1,10 +1,11 @@
-import { ChangeDetectionStrategy, Component, computed, inject } from '@angular/core';
+import { ChangeDetectionStrategy, Component, computed, effect, inject } from '@angular/core';
 import { ActivatedRoute, RouterLink } from '@angular/router';
 import { toSignal } from '@angular/core/rxjs-interop';
 import { map } from 'rxjs';
 
 import { BlogService } from '../core/services/blog.service';
 import { SeoService } from '../core/services/seo.service';
+import { AnalyticsService } from '../core/services/analytics.service';
 import { IconComponent } from '../components/atoms/icon.component';
 import { BlogLayoutComponent } from '../components/templates/blog-layout.component';
 import { ArticleListComponent } from '../components/organisms/article-list.component';
@@ -75,6 +76,7 @@ import { SidebarComponent } from '../components/organisms/sidebar.component';
 export default class BlogPage {
   private readonly blog = inject(BlogService);
   private readonly route = inject(ActivatedRoute);
+  private readonly analytics = inject(AnalyticsService);
 
   private readonly articles = toSignal(this.blog.getArticles(), {
     initialValue: [],
@@ -142,6 +144,15 @@ export default class BlogPage {
       description:
         'Récits d’expédition et guides de trek : itinéraires, matériel, bivouac et logistique.',
       url: 'https://un-pas-apres-l-autre.example/blog',
+    });
+
+    effect(() => {
+      const tags = this.activeTags();
+      const country = this.activeCountry();
+      const region = this.activeRegion();
+      if (tags.length || country || region) {
+        this.analytics.trackArticlesFilter({ tags, country, region });
+      }
     });
   }
 }

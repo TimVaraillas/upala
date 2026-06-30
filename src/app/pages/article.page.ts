@@ -7,12 +7,14 @@ import { SeoService } from '../core/services/seo.service';
 import { ButtonComponent } from '../components/atoms/button.component';
 import { IconComponent } from '../components/atoms/icon.component';
 import { TagComponent } from '../components/atoms/tag.component';
+import { CalloutComponent } from '../components/atoms/callout.component';
 import { BreadcrumbComponent } from '../components/molecules/breadcrumb.component';
 import { ArticleLayoutComponent } from '../components/templates/article-layout.component';
 import { ArticleHeaderComponent } from '../components/organisms/article-header.component';
 import { ReadingProgressComponent } from '../components/organisms/reading-progress.component';
 import { GpxViewerComponent } from '../components/organisms/gpx-viewer.component';
 import { PhotoGridComponent } from '../components/organisms/photo-grid.component';
+import { FaqComponent } from '../components/organisms/faq.component';
 import { TableOfContentsComponent } from '../components/organisms/table-of-contents.component';
 import { SafeHtmlPipe } from '../core/pipes/safe-html.pipe';
 
@@ -24,12 +26,14 @@ import { SafeHtmlPipe } from '../core/pipes/safe-html.pipe';
     ButtonComponent,
     IconComponent,
     TagComponent,
+    CalloutComponent,
     BreadcrumbComponent,
     ArticleLayoutComponent,
     ArticleHeaderComponent,
     ReadingProgressComponent,
     GpxViewerComponent,
     PhotoGridComponent,
+    FaqComponent,
     TableOfContentsComponent,
     SafeHtmlPipe,
   ],
@@ -62,6 +66,12 @@ import { SafeHtmlPipe } from '../core/pipes/safe-html.pipe';
               }
               @case ('photos') {
                 <upala-photo-grid [layout]="block.layout" [images]="block.images" [maxHeight]="block.maxHeight" [articleSlug]="post.slug" />
+              }
+              @case ('faq') {
+                <upala-faq [items]="block.items" />
+              }
+              @case ('callout') {
+                <upala-callout [variant]="block.variant" [title]="block.title" [bodyHtml]="block.bodyHtml" />
               }
               @default {
                 <div [innerHTML]="block.html | safeHtml"></div>

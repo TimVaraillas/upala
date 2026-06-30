@@ -1,17 +1,31 @@
 [
   {
+    "title": "West Coast Trail : le guide complet pour préparer votre trek",
+    "date": "2026-06-29",
+    "tags": [
+      "trek",
+      "guide"
+    ],
+    "coverImage": "/content/images/canada-cover-2.jpg",
+    "slug": "west-coast-trail-guide-complet",
+    "author": "Tim",
+    "excerpt": "Préparation, réservation, équipement, budget et conseils : tout ce qu'il faut savoir pour organiser votre trek sur le mythique West Coast Trail.",
+    "readingTime": 15,
+    "country": "Canada",
+    "region": "Colombie-Britannique"
+  },
+  {
     "title": "5 jours sur le West Coast Trail : récit de l'une des plus belles aventures de ma vie",
     "date": "2026-06-27",
     "tags": [
       "trek",
-      "bivouac",
       "récit"
     ],
     "coverImage": "/content/images/canada-cover-1.jpg",
     "slug": "west-coast-trail-trek-5-jours-canada",
     "author": "Tim",
     "excerpt": "Une immersion de 75 km au coeur de la forêt primaire et des plages sauvages du Pacifique, le long du mythique West Coast Trail.",
-    "readingTime": 11,
+    "readingTime": 14,
     "country": "Canada",
     "region": "Colombie-Britannique"
   },
@@ -20,8 +34,7 @@
     "date": "2026-06-20",
     "tags": [
       "trek",
-      "alimentation",
-      "bivouac"
+      "alimentation"
     ],
     "coverImage": "/content/images/cover-alimentation-trek.png",
     "slug": "alimentation-trek-autonomie-conseils-exemples-repas",
@@ -34,8 +47,7 @@
     "date": "2026-06-15",
     "tags": [
       "trek",
-      "itinéraire",
-      "bivouac"
+      "itinéraire"
     ],
     "coverImage": "/content/images/cover-itineraire-madeira.jpg",
     "slug": "madere-autonomie-7-etapes",

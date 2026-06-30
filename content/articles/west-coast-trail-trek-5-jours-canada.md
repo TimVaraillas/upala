@@ -1,7 +1,7 @@
 ---
 title: "5 jours sur le West Coast Trail : récit de l'une des plus belles aventures de ma vie"
 date: 2026-06-27
-tags: [trek, bivouac, récit]
+tags: [trek, récit]
 coverImage: /content/images/canada-cover-1.jpg
 country: Canada
 region: Colombie-Britannique
@@ -23,7 +23,7 @@ title: En bref
 
 ## Avant de commencer 
 
-En juin 2025, j’ai réalisé un voyage dont je rêvais depuis longtemps. Pendant près d’un mois, j’ai quitté mon quotidien pour partir seul explorer l’ouest canadien.
+En juin 2025, j’ai réalisé un voyage dont je rêvais depuis longtemps. Pendant près d’un mois, j’ai quitté mon quotidien pour partir seul explorer l’ouest canadien. 
 
 Mon itinéraire m’a mené du parc national de Banff, au coeur des Rocheuses jusqu’à **la côte ouest de l’île de Vancouver**, dans la réserve de parc national du **Pacific Rim**.
 

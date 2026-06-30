@@ -1,7 +1,7 @@
 ---
 title: "Traversée de Madère en autonomie : notre itinéraire en 7 étapes"
 date: 2026-06-15
-tags: [trek, itinéraire, bivouac]
+tags: [trek, itinéraire]
 country: Portugal
 region: Madère
 coverImage: /content/images/cover-itineraire-madeira.jpg

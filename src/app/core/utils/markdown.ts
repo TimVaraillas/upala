@@ -14,11 +14,26 @@ export interface PhotoItem {
   caption?: string;
 }
 
+/** A single question/answer pair inside a ` ```faq ` accordion block. */
+export interface FaqItem {
+  question: string;
+  /** Rendered, sanitized HTML answer. */
+  answerHtml: string;
+}
+
+/**
+ * Supported callout variants for the ` ```info `, ` ```warning `,
+ * ` ```danger `, ` ```tip ` and ` ```success ` Markdown blocks.
+ */
+export type CalloutType = 'info' | 'warning' | 'danger' | 'tip' | 'success';
+
 /** A rendered chunk of an article: either inline HTML or an embed. */
 export type ArticleBlock =
   | { type: 'html'; html: string }
   | { type: 'gpx'; src: string; title?: string }
-  | { type: 'photos'; layout: 1 | 2 | 3; maxHeight?: string; images: PhotoItem[] };
+  | { type: 'photos'; layout: 1 | 2 | 3; maxHeight?: string; images: PhotoItem[] }
+  | { type: 'faq'; items: FaqItem[] }
+  | { type: 'callout'; variant: CalloutType; title?: string; bodyHtml: string };
 
 /** A single entry in the table of contents. */
 export interface TocEntry {
@@ -82,7 +97,7 @@ export function parseBlocks(markdown: string): ArticleBlock[] {
     const calloutMatch = /^```(info|warning|danger|tip|success)\s*$/.exec(lines[i].trim());
     if (calloutMatch) {
       flushMarkdown();
-      const type = calloutMatch[1] as CalloutType;
+      const variant = calloutMatch[1] as CalloutType;
       let title = '';
       const body: string[] = [];
       i++;
@@ -95,9 +110,12 @@ export function parseBlocks(markdown: string): ArticleBlock[] {
         }
         i++;
       }
+      const normalisedBody = body.join('\n').trim().replace(/^[ \t]*•[ \t]*/gm, '- ');
       blocks.push({
-        type: 'html',
-        html: renderCallout(type, title, body.join('\n').trim(), headingSlugs),
+        type: 'callout',
+        variant,
+        title: title || undefined,
+        bodyHtml: normalisedBody ? renderMarkdown(normalisedBody, headingSlugs) : '',
       });
       continue;
     }
@@ -156,61 +174,42 @@ export function parseBlocks(markdown: string): ArticleBlock[] {
       continue;
     }
 
+    if (/^```faq\s*$/.test(lines[i].trim())) {
+      flushMarkdown();
+      const items: FaqItem[] = [];
+      let question = '';
+      let answer: string[] = [];
+      const pushItem = () => {
+        const body = answer.join('\n').trim();
+        if (question) {
+          items.push({ question, answerHtml: body ? renderMarkdown(body, headingSlugs) : '' });
+        }
+        question = '';
+        answer = [];
+      };
+      i++;
+      while (i < lines.length && !/^```\s*$/.test(lines[i].trim())) {
+        const questionMatch = /^#{2,4}\s+(.*)$/.exec(lines[i].trim());
+        if (questionMatch) {
+          pushItem();
+          question = questionMatch[1].trim();
+        } else {
+          answer.push(lines[i]);
+        }
+        i++;
+      }
+      pushItem();
+      if (items.length > 0) {
+        blocks.push({ type: 'faq', items });
+      }
+      continue;
+    }
+
     buffer.push(lines[i]);
   }
 
   flushMarkdown();
   return blocks;
-}
-
-/**
- * Supported callout variants for the ` ```info `, ` ```warning `,
- * ` ```danger `, ` ```tip ` and ` ```success ` Markdown blocks.
- */
-type CalloutType = 'info' | 'warning' | 'danger' | 'tip' | 'success';
-
-/** Inline SVG icon markup for each callout variant. */
-const CALLOUT_ICONS: Record<CalloutType, string> = {
-  info:
-    `<circle cx="12" cy="12" r="10" /><path d="M12 16v-4" /><path d="M12 8h.01" />`,
-  warning:
-    `<path d="m21.73 18-8-14a2 2 0 0 0-3.46 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3Z" />` +
-    `<path d="M12 9v4" /><path d="M12 17h.01" />`,
-  danger:
-    `<circle cx="12" cy="12" r="10" /><path d="m15 9-6 6" /><path d="m9 9 6 6" />`,
-  tip:
-    `<path d="M9 18h6" /><path d="M10 22h4" />` +
-    `<path d="M12 2a7 7 0 0 0-4 12.7c.6.5 1 1.3 1 2.1v.2h6v-.2c0-.8.4-1.6 1-2.1A7 7 0 0 0 12 2Z" />`,
-  success:
-    `<path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" /><path d="m9 11 3 3L22 4" />`,
-};
-
-/**
- * Render a callout box (` ```info `, ` ```warning `, ` ```danger `,
- * ` ```tip ` or ` ```success `): a highlighted "note"-style box with an
- * optional bold title and Markdown body. Bullet lines using `•` are
- * normalised to Markdown list items so they render as a proper list.
- */
-function renderCallout(
-  type: CalloutType,
-  title: string,
-  body: string,
-  headingSlugs: Map<string, number>,
-): string {
-  const normalisedBody = body.replace(/^[ \t]*•[ \t]*/gm, '- ');
-  const titleHtml = title
-    ? `<p class="callout__title">${inline(title)}</p>`
-    : '';
-  const bodyHtml = normalisedBody ? renderMarkdown(normalisedBody, headingSlugs) : '';
-  return (
-    `<aside class="callout callout--${type} not-prose">` +
-    `<span class="callout__icon" aria-hidden="true">` +
-    `<svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">` +
-    CALLOUT_ICONS[type] +
-    `</svg></span>` +
-    `<div class="callout__body">${titleHtml}${bodyHtml}</div>` +
-    `</aside>`
-  );
 }
 
 /**
@@ -463,6 +462,14 @@ function inline(text: string): string {
 
   // Inline code.
   out = out.replace(/`([^`]+)`/g, (_m, code) => `<code>${code}</code>`);
+
+  // Highlight: ***text*** -> marker highlight, mirroring HighlightComponent's
+  // default (variant="marker", tone="moss") so it renders identically.
+  out = out.replace(
+    /\*\*\*([^*]+)\*\*\*/g,
+    (_m, text) =>
+      `<span class="font-medium rounded px-1.5 py-0.5 bg-moss-100 text-moss-900">${text}</span>`,
+  );
 
   // Bold then italic.
   out = out.replace(/\*\*([^*]+)\*\*/g, '<strong>$1</strong>');

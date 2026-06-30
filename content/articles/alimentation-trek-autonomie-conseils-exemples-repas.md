@@ -1,7 +1,7 @@
 ---
 title: "Quelle alimentation pour un trek en autonomie ? Conseils et exemples de repas"
 date: 2026-06-20
-tags: [trek, alimentation, bivouac]
+tags: [trek, alimentation]
 coverImage: /content/images/cover-alimentation-trek.png
 slug: alimentation-trek-autonomie-conseils-exemples-repas
 author: Tim

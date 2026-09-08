@@ -27,5 +27,5 @@ export const serverRoutes: ServerRoute[] = [
     renderMode: RenderMode.Prerender,
     getPrerenderParams: getArticleSlugs,
   },
-  { path: '**', renderMode: RenderMode.Server },
+  { path: '**', renderMode: RenderMode.Prerender },
 ];

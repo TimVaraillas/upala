@@ -17,10 +17,6 @@ Après tout, pendant plusieurs jours de marche, c'est elle qui va fournir l'éne
 Dans cet article, nous partageons notre façon de réfléchir à l'alimentation sur un trek de plusieurs jours, ainsi que les solutions que nous utilisons sur le terrain.
 Lorsque l'on prépare un trek de plusieurs jours en autonomie, on passe souvent beaucoup de temps à étudier l'itinéraire, la météo ou le matériel. Pourtant, un autre sujet mérite toute notre attention : la nourriture.
 
-Après tout, pendant une semaine de marche, c'est elle qui va fournir l'énergie nécessaire pour avancer chaque jour. Mais elle représente aussi une part importante du poids que l'on transporte sur le dos. Trouver le bon équilibre entre apport énergétique, poids, volume et plaisir est donc un élément clé de la préparation.
-
-Dans cet article, nous partageons notre façon de réfléchir à l'alimentation sur un trek de plusieurs jours, ainsi que les solutions que nous utilisons sur le terrain.
-
 ```photos
 layout: 1
 - /content/images/alimentation-trek_001.jpg | Préparation de 6 jours d'alimentation pour un trek en autonomie dans les Rocheuses canadiennes : environ 2200 kcal par jour réparties en sachets journaliers afin d'optimiser le poids, le volume et l'organisation du sac.

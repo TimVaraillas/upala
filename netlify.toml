@@ -4,3 +4,10 @@
 
 [[plugins]]
   package = "@netlify/angular-runtime"
+
+# Fully static site: prerendered pages are served as files first.
+# Unknown URLs fall back to the client shell, which renders the 404 page.
+[[redirects]]
+  from = "/*"
+  to = "/index.csr.html"
+  status = 200

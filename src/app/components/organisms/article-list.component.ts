@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component, input } from '@angular/core';
+import { ChangeDetectionStrategy, Component, computed, input } from '@angular/core';
 
 import { ArticleSummary } from '../../core/models/article.model';
 import { ArticleCardComponent } from '../molecules/article-card.component';
@@ -10,7 +10,7 @@ import { ArticleCardComponent } from '../molecules/article-card.component';
   imports: [ArticleCardComponent],
   template: `
     @if (articles().length) {
-      <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-2">
+      <div [class]="gridClass()">
         @for (article of articles(); track article.slug) {
           <upala-article-card [article]="article" />
         }
@@ -27,4 +27,11 @@ import { ArticleCardComponent } from '../molecules/article-card.component';
 export class ArticleListComponent {
   readonly articles = input.required<ArticleSummary[]>();
   readonly emptyMessage = input('Aucun carnet pour le moment.');
+  readonly columns = input<2 | 3>(2);
+
+  protected readonly gridClass = computed(() =>
+    this.columns() === 3
+      ? 'grid gap-6 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3'
+      : 'grid gap-6 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2',
+  );
 }

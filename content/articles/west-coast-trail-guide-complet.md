@@ -109,6 +109,8 @@ Le nombre de jours joue aussi un rôle important dans la perception de la diffic
 
 À l’inverse, il n’y a pas de limite de durée imposée sur le sentier, ce qui permet d’adopter une approche beaucoup plus progressive. Pour les débutants ou ceux qui souhaitent profiter pleinement de l’environnement sans pression, je recommande plutôt de prévoir **7 à 8 jours** afin de rendre l’**expérience moins physique et plus confortable**.
 
+Pour vous faire une idée plus concrète de ce que représente cet itinéraire sur 5 jours, vous pouvez découvrir [mon expérience sur le West Coast Trail](/article/west-coast-trail-trek-5-jours-canada).
+
 ## Dans quel sens faire le trek ?
 
 Pour ma part, j’ai réalisé le West Coast Trail du nord vers le sud, de Pachena Bay à Gordon River, sans vraiment savoir s’il existait un sens “idéal”. Avec le recul, j’ai beaucoup apprécié cette direction : la première partie du sentier est globalement plus accessible, ce qui permet de se mettre en jambes progressivement avant d’aborder les sections plus techniques.
@@ -198,53 +200,7 @@ Moralité : même si le sentier affiche complet, cela vaut vraiment la peine de 
 
 Une autre solution consiste à commencer le trek depuis **Nitinaht**, à mi-parcours. Les départs depuis ce point sont généralement moins demandés, ce qui permet souvent de trouver des disponibilités plus facilement.
 
-C'est une excellente alternative si le parcours complet est déjà complet. De nombreux randonneurs choisissent de marcher d'abord vers le nord, où ils passent une ou deux nuits, avant de revenir à Nitinaht puis de poursuivre leur progression vers le sud. Cet itinéraire permet de découvrir de parcourir le sentier en intégralité ou presque, en profitant de plus de temps sur le sentier.
-
-## Combien ça côute ?
-
-En tant que voyageur français ayant réalisé le West Coast Trail dans le cadre d’un road trip plus large dans l’ouest canadien, je ne détaillerai pas ici le coût global du voyage (vols, transports internationaux, hébergements avant et après le trek). Je me concentre uniquement sur les frais directement liés au West Coast Trail : **permis**, **réservations** et **logistique** sur place.
-
-Les prix ci-dessous correspondent à la saison 2026 et peuvent évoluer légèrement d’une année à l’autre.
-
-### Frais obligatoires liés au WCT
-
-- **Permis d’accès au sentier** : 184,75 $CA (~125 €)
-- **Frais de réservation** : 25,75 $ (~18 €CA)
-- **Traversiers (ferries internes)** : 56 $CA (~38 €)
-  * Gordon River : 28 $CA
-  * Nitinaht Narrows : 28 $CA
-- **Droits d’entrée aux parcs nationaux** : 12,25 $CA par personne et par jour (~8 €)*(ou 24,50 $CA par groupe et par jour (~17 €))*→ Il existe aussi des passes annuels “Découverte” (83,50$CA par personne (~57 €) ou 167,50 $CA pour un groupe (~114 €)), intéressants si vous prévoyez de visiter plusieurs parcs au Canada ou de passer plus de temps sur le sentier.
-
-### Frais logistiques
-
-* **Navette West Coast Trail Express** :
-  * 95 $CA (~65 €) (Gordon River ↔ Pachena Bay)
-  * 80 $CA (~54 €) (vers ou depuis Nitinaht Village)
-  * 60 $CA à 145 $CA (~41 € à 99 €) selon les trajets depuis Victoria, Nanaimo ou Sooke
-  → Tarifs détaillés : [West Coast Trail Express tarifs](https://trailbus.com/west-coast-trail-fares/?utm_source=chatgpt.com)
-
-Ces navettes sont coûteuses mais elles sont incontournables, à moins d’avoir deux véhicules sur place. 
-
-```info 
-title: Une route qui met dans l’ambiance
-Les routes forestières qui mènent au sentier sont longues et très accidentées. J’ai mis près de 3 heures pour rejoindre Pachena Bay depuis Nanaimo : une traversée qui secoue, mais qui met déjà dans l’ambiance de l’aventure.
-```
-
-### Dépenses variables
-
-* **Nourriture** : budget très variable selon votre stratégie (lyophilisé, nourriture simple, plats déshydratés maison…). Les repas lyophilisés coûtent généralement beaucoup plus cher que des aliments simples type pâtes ou semoule. Pour en savoir plus, vous pouvez consulter notre article : [Quelle alimentation pour un trek en autonomie ? Conseils et exemples de repas](/article/alimentation-trek-autonomie-conseils-exemples-repas)
-
-* **Matériel** : dépend fortement de votre équipement (tente, sac, chaussures, vêtements imperméables…). Un bon équipement de trek peut représenter un budget important si vous devez tout acheter.
-
-### Budget global estimatif
-
-En moyenne, pour une personne, le coût du West Coast Trail hors transport international peut se situer autour de :
-
-* **Budget minimal (équipement déjà possédé)** : ~400 à 500 $CA (~270 à 340 €)
-* **Budget réaliste (logistique + nourriture + quelques achats)** : ~600 à 800 $CA (~410 à 545 €)
-* **Budget élevé (achat de matériel + confort)** : 800 $CA et plus (~545 € et +)
-
-Le West Coast Trail n’est pas un trek “bon marché”, même sans prendre en compte la nourriture et l’équipement. Une partie du budget s’explique par la logistique nécessaire et les nombreuses interventions d’entretien réalisées chaque année sur le sentier, afin de maintenir un itinéraire sécurisé malgré un environnement particulièrement exposé aux éléments.
+C'est une excellente alternative si le parcours est déjà complet. De nombreux randonneurs choisissent de marcher d'abord vers le nord, où ils passent une ou deux nuits, avant de revenir à Nitinaht puis de poursuivre leur progression vers le sud. Cet itinéraire permet de découvrir de parcourir le sentier en intégralité ou presque, en profitant de plus de temps sur le sentier.
 
 ## Comment arriver jusqu’au West Coast Trail ?
 
@@ -281,7 +237,7 @@ En revanche, la partie forestière est bien plus exigeante. On évolue sur un so
 
 À cela s’ajoutent les nombreuses infrastructures mises en place pour franchir les obstacles : **échelles**, **ponts suspendus**, **passerelles en bois** ou encore **poutres**. Elles sont omniprésentes sur certaines sections et peuvent s’enchaîner pendant de longs moments, parfois avec un sac chargé. Ce n’est pas particulièrement dangereux, mais cela demande de l’attention et peut devenir fatigant sur la durée.
 
-Enfin, certaines rivières sont franchies grâce aux **bacs à câbles** : de petites nacelles que l’on tire soi-même pour traverser d’une rive à l’autre. C’est une expérience assez unique, qui fait pleinement partie du caractère hors norme du West Coast Trail.
+Enfin, certaines rivières sont franchies grâce aux **bacs à câbles** : de petites nacelles que l’on tire soi-même à la force des bras pour traverser d’une rive à l’autre. C’est une expérience assez unique, qui fait pleinement partie du caractère hors norme du West Coast Trail.
 
 ```photos
 layout: 3
@@ -311,7 +267,7 @@ layout: 2
 
 ### Les campements
 
-Le West Coast Trail compte de nombreux campements répartis tout au long du parcours. Le bivouac est uniquement autorisé dans ces zones aménagées, qui sont presque toutes situées directement sur les plages.
+Le West Coast Trail compte de nombreux campements répartis tout au long du parcours. Ils sont bien indiqués sur la carte, et on ne peut pas les louper : des vieilles bouées de bateaux sont accrochées pour les identifier. Le bivouac est uniquement autorisé dans ces zones aménagées, qui sont presque toutes situées directement sur les plages.
 
 La plupart des campements offrent beaucoup d'espace et il est rare de manquer de place, même si certains sont plus petit. Vous êtes donc libre de choisir où vous arrêter en fonction de votre forme ou de votre progression.
 
@@ -443,8 +399,54 @@ Avant de partir, vérifiez que vous avez bien avec vous les documents suivants :
 
 - **Votre passeport** (ou tout autre document d'identité nécessaire à votre voyage)
 - **Votre confirmation de réservation** du West Coast Trail (version papier ou numérique)
-- **Votre laissez-passer Parcs Canada**, si vous en possédez un
+- **Votre laissez-passer Parcs Canada**, si vous en possédez déjà un (vous pouvez également l'acheter sur place à l'entrée du sentier)
 - **Une carte bancaire** ainsi qu'un **peu d'espèces**. Certains frais (comme les traversées en ferry) peuvent être réglés directement sur place si ce n'est pas déjà fait, et quelques services, comme **The Crab Shack** à Nitinaht Narrows, n'acceptent pas toujours tous les moyens de paiement
+
+## Combien ça côute ?
+
+En tant que voyageur français ayant réalisé le West Coast Trail dans le cadre d’un road trip plus large dans l’ouest canadien, je ne détaillerai pas ici le coût global du voyage (vols, transports internationaux, hébergements avant et après le trek). Je me concentre uniquement sur les frais directement liés au West Coast Trail : **permis**, **réservations** et **logistique** sur place.
+
+Les prix ci-dessous correspondent à la saison 2026 et peuvent évoluer légèrement d’une année à l’autre.
+
+### Frais obligatoires liés au WCT
+
+- **Permis d’accès au sentier** : 184,75 $CA (~125 €)
+- **Frais de réservation** : 25,75 $CA (~18 €)
+- **Traversiers (ferries internes)** : 56 $CA (~38 €)
+  * Gordon River : 28 $CA
+  * Nitinaht Narrows : 28 $CA
+- **Laissez-passer Parcs Canada** : 12,25 $CA par personne et par jour (~8 €)*(ou 24,50 $CA par groupe et par jour (~17 €))*→ Il existe aussi des passes annuels “Découverte” (83,50$CA par personne (~57 €) ou 167,50 $CA pour un groupe (~114 €)), intéressants si vous prévoyez de visiter plusieurs parcs au Canada ou de passer plus de temps sur le sentier.
+
+### Frais logistiques
+
+* **Navette West Coast Trail Express** (bus pour accéder au sentier) :
+  * 95 $CA (~65 €) (Gordon River ↔ Pachena Bay)
+  * 80 $CA (~54 €) (vers ou depuis Nitinaht Village)
+  * 60 $CA à 145 $CA (~41 € à 99 €) selon les trajets depuis Victoria, Nanaimo ou Sooke
+  → Tarifs détaillés : [West Coast Trail Express tarifs](https://trailbus.com/west-coast-trail-fares/?utm_source=chatgpt.com)
+
+Ces navettes sont coûteuses mais elles sont incontournables, à moins d’avoir deux véhicules sur place. 
+
+```info 
+title: Une route qui met dans l’ambiance
+Les routes forestières qui mènent au sentier sont longues et très accidentées. J’ai mis près de 3 heures pour rejoindre Pachena Bay depuis Nanaimo : une traversée qui secoue, mais qui met déjà dans l’ambiance de l’aventure.
+```
+
+### Dépenses variables
+
+* **Nourriture** : budget très variable selon votre stratégie (lyophilisé, nourriture simple, plats déshydratés maison…). Les repas lyophilisés coûtent généralement beaucoup plus cher que des aliments simples type pâtes ou semoule. Pour en savoir plus, vous pouvez consulter notre article : [Quelle alimentation pour un trek en autonomie ? Conseils et exemples de repas](/article/alimentation-trek-autonomie-conseils-exemples-repas)
+
+* **Matériel** : dépend fortement de votre équipement (tente, sac, chaussures, vêtements imperméables…). Un bon équipement de trek peut représenter un budget important si vous devez tout acheter.
+
+### Budget global estimatif
+
+En moyenne, pour une personne, le coût du West Coast Trail hors transport international peut se situer autour de :
+
+* **Budget minimal (équipement déjà possédé)** : ~400 à 500 $CA (~270 à 340 €)
+* **Budget réaliste (logistique + nourriture + quelques achats)** : ~600 à 800 $CA (~410 à 545 €)
+* **Budget élevé (achat de matériel + confort)** : 800 $CA et plus (~545 € et +)
+
+Le West Coast Trail n’est pas un trek “bon marché”, même sans prendre en compte la nourriture et l’équipement. Une partie du budget s’explique par la logistique nécessaire et les nombreuses interventions d’entretien réalisées chaque année sur le sentier, afin de maintenir un itinéraire sécurisé malgré un environnement particulièrement exposé aux éléments.
 
 ## FAQ
 
@@ -512,4 +514,9 @@ Le West Coast Trail n’est pas une randonnée “confort”, et c’est précis
 
 Avec une bonne préparation, un peu d’anticipation et du matériel adapté à l’humidité, le trek reste tout à fait accessible pour des randonneurs motivés. On finit rapidement par trouver son rythme entre forêt, plages et campements, porté par un environnement vraiment unique.
 
+Si vous voulez découvrir l’expérience jour par jour, voici mon récit complet de 5 jours sur le West Coast Trail.
+
 C’est un itinéraire exigeant, parfois fatigant, mais qui laisse surtout **l’impression d’avoir traversé un bout de côte encore sauvage, où la nature impose ses règles du début à la fin**.
+
+Si vous souhaitez maintenant découvrir cette aventure telle que je l’ai vécue, jour après jour, je vous invite à lire mon récit : [5 jours sur le West Coast Trail : récit de l'une des plus belles aventures de ma vie](/article/west-coast-trail-trek-5-jours-canada).
+

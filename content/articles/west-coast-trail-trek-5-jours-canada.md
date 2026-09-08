@@ -39,6 +39,8 @@ Enfin, il y avait une image qui me faisait rêver depuis longtemps : celle de mo
 
 Avec le recul, je crois que c'est cette promesse d'aventure — autant extérieure qu'intérieure — qui m'a convaincu de choisir le West Coast Trail.
 
+Si vous cherchez des informations pratiques (budget, réservation, matériel…), j’ai également rédigé [un guide complet pour préparer le West Coast Trail](/article/west-coast-trail-guide-complet).
+
 ## Le récit
 
 ### Jour 0 : Nanaimo
@@ -85,7 +87,7 @@ layout: 2
 - /content/images/wct_010.jpg
 ```
 
-Cette première journée est exceptionnelle à tout point de vue. Je progresse dans nature luxuriante sous un ciel radieux, je croise des otaries posées sur les rochers, indifférentes au monde qui les entoure, et je traverse des sections de forêt dominées par des arbres centenaires.
+Cette première journée est exceptionnelle à tout point de vue. Je progresse dans la nature luxuriante sous un ciel radieux, je croise des otaries posées sur les rochers, indifférentes au monde qui les entoure, et je traverse des sections de forêt dominées par des arbres centenaires.
 
 ```photos
 layout: 1
@@ -215,7 +217,7 @@ maxHeight: 950px
 
 Nouvelle journée, nouvelle épreuve. Je remballe mon campement, cette fois au sec. Le ciel est gris, mais sans pluie.
 
-Le départ est brutal : une quinzaine d'échelles s'enchaînent presque sans interruption. Il faut les gravir avec un sac d'une quinzaine de kilos sur le dos. Elles sont longues, raides, parfois glissantes. Une mise en jambes très particulière... façon West Coast Trail.
+Le départ est brutal : une quinzaine d'échelles s'enchaînent presque sans interruption. Il faut les gravir avec un sac d'une quinzaine de kilos sur le dos. Elles sont longues, raides, parfois glissantes : une mise en jambes très particulière... façon West Coast Trail.
 
 ```photos
 layout: 2
@@ -315,3 +317,5 @@ Je repense à la boue, aux échelles interminables, aux plages infinies, aux for
 Le West Coast Trail m’a rappelé quelque chose d’essentiel : le confort n’est pas toujours nécessaire pour vivre quelque chose de fort. Parfois, il suffit de marcher, d’avancer, et de laisser le temps faire le reste.
 
 Ce sentier est terminé, mais il n’a pas vraiment fini de marcher en moi.
+
+Si cette aventure vous donne envie de partir à votre tour, je vous invite à lire mon article [West Coast Trail : le guide complet pour préparer votre trek](/article/west-coast-trail-guide-complet), dans lequel je rassemble toutes les informations pratiques : réservations, budget, matériel, itinéraire et de nombreux conseils issus de mon expérience sur le terrain.

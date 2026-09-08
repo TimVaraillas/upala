@@ -99,7 +99,7 @@ import { ArticleListComponent } from '../components/organisms/article-list.compo
           </upala-button>
         </div>
 
-        <upala-article-list [articles]="(latest$ | async) ?? []" />
+        <upala-article-list [articles]="(latest$ | async) ?? []" [columns]="3" />
       </div>
     </section>
   `,
@@ -107,7 +107,7 @@ import { ArticleListComponent } from '../components/organisms/article-list.compo
 export default class HomePage {
   private readonly blog = inject(BlogService);
 
-  protected readonly latest$ = this.blog.getLatestArticles(6);
+  protected readonly latest$ = this.blog.getLatestArticles(3);
 
   private readonly hero = viewChild<ElementRef<HTMLElement>>('hero');
   protected readonly parallaxY = signal(0);

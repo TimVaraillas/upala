@@ -11,7 +11,6 @@
     "content:sitemap": "node scripts/generate-sitemap.mjs",
     "prestart": "npm run content:index",
     "prebuild": "npm run content:index && npm run content:sitemap",
-    "serve:ssr:un-pas-apres-l-autre": "node dist/un-pas-apres-l-autre/server/server.mjs",
     "lint": "ng lint",
     "storybook": "ng run un-pas-apres-l-autre:storybook",
     "build-storybook": "ng run un-pas-apres-l-autre:build-storybook"
@@ -39,7 +38,6 @@
     "@angular/platform-server": "^21.0.0",
     "@angular/router": "^21.0.0",
     "@angular/ssr": "^21.0.1",
-    "express": "^5.1.0",
     "leaflet": "^1.9.4",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0"
@@ -51,7 +49,6 @@
     "@eslint/js": "^10.0.1",
     "@netlify/angular-runtime": "^4.0.0",
     "@tailwindcss/postcss": "^4.1.12",
-    "@types/express": "^5.0.1",
     "@types/leaflet": "^1.9.21",
     "@types/node": "^20.17.19",
     "angular-eslint": "21.4.0",
